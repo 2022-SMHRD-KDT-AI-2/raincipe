@@ -1,5 +1,5 @@
 package readRecipe.model;
 
-public class VO {
-
+public class recipeVO {
+	
 }
