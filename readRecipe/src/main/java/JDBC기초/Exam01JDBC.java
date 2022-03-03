@@ -85,7 +85,7 @@ public class Exam01JDBC {
 				if(r > 0) {
 					System.out.println("데이터추가 성공!"); // System.out.println("회원가입 성공!"); 
 				}else {
-				System.out.println("데이터추가 실패.."); // System.out.println("회원가입 실패..");
+				System.out.println("데이터추가 실패..."); // System.out.println("회원가입 실패..");
 				}
 			
 			} catch (ClassNotFoundException e) {
