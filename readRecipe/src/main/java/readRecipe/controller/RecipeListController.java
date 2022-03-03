@@ -26,7 +26,7 @@ public class RecipeListController extends HttpServlet {
       
       // View와 연동(boardList.jsp) : (***객체바인딩+포워딩***)
       request.setAttribute("list", list);
-      RequestDispatcher rd=request.getRequestDispatcher("recipe/recipeList.jsp");
+      RequestDispatcher rd=request.getRequestDispatcher("recipe/recipeList2.jsp");
       rd.forward(request, response);
       }
 

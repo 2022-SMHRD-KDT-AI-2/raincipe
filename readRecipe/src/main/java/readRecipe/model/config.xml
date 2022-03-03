@@ -16,6 +16,6 @@
     </environment>
   </environments>
   <mappers>
-    <mapper resource="readRecipe/BoardMapper.xml"/>
+    <mapper resource="readRecipe/model/RecipeMapper.xml"/>
   </mappers>
 </configuration>
