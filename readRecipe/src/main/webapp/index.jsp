@@ -19,7 +19,7 @@
     <div class="panel-body">
     	<a href="/web/recipeList.do">게시판리스트 </a>
     </div>
-    <div class="panel-footer">인공지능 개발자 과정(정현호) </div>
+    <div class="panel-footer">인공지능 개발자 과정(정현호)</div>
   </div>
 </div>
 
