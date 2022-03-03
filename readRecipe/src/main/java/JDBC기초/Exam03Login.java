@@ -26,12 +26,12 @@ public class Exam03Login {
 	
 		try{
 			Class.forName("oracle.jdbc.driver.OracleDriver");
-			String url = "jdbc:oracle:thin:@localhost:1521:xe";
-			String user = "hr";
-			String userPw = "hr";
+			String url = "jdbc:oracle:thin:@project-db-stu.ddns.net:1524:XE";
+			String user = "cgi_5_0216_5";
+			String userPw = "smhrd5";
 			conn = DriverManager.getConnection(url, user, userPw);
 		
-			String sql = "select * from aimemeber where id = ? and pw = ?"; // 테이블을 먼저 불러온 후 로그인
+			String sql = "select * from T_USER where USER_ID = ? and USER_PW = ?"; // 테이블을 먼저 불러온 후 로그인
 			
 			psmt = conn.prepareStatement(sql);
 			
@@ -47,11 +47,11 @@ public class Exam03Login {
 			// cursor가 가리키는 행에 대해서만 데이터를 가져올 수 있따.
 			if(rs.next()) {
 				// 데이터 꺼내오기
-				String resultId = rs.getString("id");
-				String resultPw = rs.getString("pw");
-				String resultName = rs.getString("name");
-				String resultNick = rs.getString("nick");
-				String resultEmail = rs.getString("email");
+				String resultId = rs.getString("USER_ID");
+				String resultPw = rs.getString("USER_PW");
+				String resultName = rs.getString("USER_NAME");
+				String resultNick = rs.getString("USER_NICK");
+				String resultEmail = rs.getString("USER_EMAIL");
 			
 				System.out.println("아이디\t비밀번호\t이름\t닉네임\t이메일");
 				System.out.print(resultId + "\t");
@@ -59,6 +59,7 @@ public class Exam03Login {
 				System.out.print(resultName + "\t");
 				System.out.print(resultNick + "\t");
 				System.out.print(resultEmail + "\t");
+				
 			}
 			
 		}catch(ClassNotFoundException e) {

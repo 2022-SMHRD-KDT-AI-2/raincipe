@@ -17,28 +17,27 @@ public class Exam01JDBC {
 		
 		// 회원가입
 		System.out.print(" ID 입력 >> ");
-		String id = scan.next();
-		
+		String USER_ID = scan.next();
 		
 		//pw
 		System.out.print(" PW 입력 >> ");
-		String pw = scan.next();
+		String USER_PW = scan.next();
 		
 		//name
 		System.out.print(" 이름 입력 >> ");
-		String name = scan.next();
+		String USER_NAME = scan.next();
 		
 		//nickname
 		System.out.print(" 닉네임 입력 >> ");
-		String nick = scan.next();
+		String USER_NICK = scan.next();
 		
 		//email
 		System.out.print(" 이메일 입력 >> ");
-		String email = scan.next();
+		String USER_EMAIL = scan.next();
 		
 		//profile
 		System.out.print(" 프로필 입력 >> ");
-		String profile = scan.next();
+		String USER_PROFILE_IMG = scan.next();
 				
 			// JDBC 코드
 			// 1. 데이터베이스 연결
@@ -63,19 +62,19 @@ public class Exam01JDBC {
 				conn = DriverManager.getConnection(url, user, userPw);
 				// Connection -> java와 DB를 연결하는 연결통로
 				// 2. SQL문 전송
-				String sql = "insert into T_USER values(?,?,?,?,?,?,LocalDate.now(),N)";
+				String sql = "insert into T_USER values(?,?,?,?,?,?,y,N)";
 
 				//--> 테이블 생성하실때, aimemeber라고 생성하셔서 오타가 있었어요!!
 				psmt = conn.prepareStatement(sql); //sql 구문 담아주는 작업
 				// DB에 전송할 수 있는 규격에 sql을 담아줬다.
 			
 				// ?인자 채우기 작업 진행
-				psmt.setNString(1, id);
-				psmt.setNString(2, pw);
-				psmt.setNString(3, name);
-				psmt.setNString(4, nick);
-				psmt.setNString(5, email);
-				psmt.setNString(6, profile);
+				psmt.setNString(1, USER_ID);
+				psmt.setNString(2, USER_PW);
+				psmt.setNString(3, USER_NAME);
+				psmt.setNString(4, USER_NICK);
+				psmt.setNString(5, USER_EMAIL);
+				psmt.setNString(6, USER_PROFILE_IMG);
 				// Colum순서와 똑같이 채워야함
 			
 				// sql문 전송
