@@ -19,6 +19,7 @@ public class Exam01JDBC {
 		System.out.print(" ID 입력 >> ");
 		String id = scan.next();
 		
+		
 		//pw
 		System.out.print(" PW 입력 >> ");
 		String pw = scan.next();
