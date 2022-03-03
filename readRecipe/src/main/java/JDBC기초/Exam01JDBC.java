@@ -62,7 +62,7 @@ public class Exam01JDBC {
 				conn = DriverManager.getConnection(url, user, userPw);
 				// Connection -> java와 DB를 연결하는 연결통로
 				// 2. SQL문 전송
-				String sql = "insert into T_USER values(?,?,?,?,?,?,sysdate,N)";
+				String sql = "insert into T_USER values(?,?,?,?,?,?,LocalDate.now(),N)";
 
 				//--> 테이블 생성하실때, aimemeber라고 생성하셔서 오타가 있었어요!!
 				psmt = conn.prepareStatement(sql); //sql 구문 담아주는 작업
