@@ -5,7 +5,8 @@
 <mapper namespace="readRecipe.RecipeMapper">
 	
 	<select id="selectAll" resultType="readRecipe.model.RecipeVO">
-		select * from t_recipe
+		select * from t_recipe 
+		order by recipe_seq 
 	</select>
      
 </mapper>
