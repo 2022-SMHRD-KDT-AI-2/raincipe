@@ -8,10 +8,12 @@ public class UserVO {
 	private String user_email;
 	private String user_profile_img;
 	private String user_joindate;
-	private String admin_yn;
+	private char admin_yn;
+	
+	public UserVO() { };
 
 	public UserVO(String user_id, String user_pw, String user_name, String user_nick, String user_email,
-			String user_profile_img, String user_joindate, String admin_yn) {
+			String user_profile_img, String user_joindate, char admin_yn) {
 		
 		this.user_id = user_id;
 		this.user_pw = user_pw;
@@ -79,11 +81,11 @@ public class UserVO {
 		this.user_joindate = user_joindate;
 	}
 
-	public String getAdmin_yn() {
+	public char getAdmin_yn() {
 		return admin_yn;
 	}
 
-	public void setAdmin_yn(String admin_yn) {
+	public void setAdmin_yn(char admin_yn) {
 		this.admin_yn = admin_yn;
 	}
   
