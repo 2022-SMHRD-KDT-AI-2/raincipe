@@ -16,7 +16,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   <script type="text/javascript">
   	function goList() {
-		location.href="/web/RecipeList.do"	
+		location.href="/web//recipeList.do"	
 	}
   </script>
 </head>
@@ -46,6 +46,11 @@
  			<tr>
  				<td>레시피</td>
  				<td><%= vo.getRecipe_step() %></td>
+ 			</tr>
+ 			<tr>
+ 				<td colspan="2" align="center">
+ 				   <Button class = "btn btn-success btn-sm" onclick="goList()">리스트</Button>
+ 				</td>
  			</tr>
  		</table>
     </div>

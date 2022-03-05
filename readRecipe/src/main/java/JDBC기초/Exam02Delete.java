@@ -34,16 +34,21 @@ public class Exam02Delete {
 		
 				conn = DriverManager.getConnection(url, user, userPw);
 				
+				
 		
 		// 2-2. SQL문 전송
 				String sql = "delete T_USER where USER_ID = ? and USER_PW = ?"; // 다해놓고 못함 ? 쓰는법 확인
 				
 				psmt = conn.prepareStatement(sql);
 				
-				psmt.setNString(1, id);
-				psmt.setNString(2, pw);
+				if(psmt == null) {
+					System.out.println("psmt null");
+				}
+				psmt.setString(1, id);
+				psmt.setString(2, pw);
 				
 				int r = psmt.executeUpdate();
+				System.out.println(r);
 			
 							
 		// 3. 회원탈퇴 성공시 회원탈퇴 성공! 출력
