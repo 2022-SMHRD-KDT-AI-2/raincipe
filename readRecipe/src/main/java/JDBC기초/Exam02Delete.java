@@ -25,18 +25,18 @@ public class Exam02Delete {
 		
 		// 2. 아이디와 비밀번호가 일치할때만 회원탈퇴시키기(JDBC)
 			try {
-					Class.forName("oracle.jdbc.driver.OracleDriver");
+				Class.forName("oracle.jdbc.driver.OracleDriver");
 			
 		// 2-1. DB연결
-				String url = "jdbc:oracle:thin:@localhost:1521:xe";
-				String user = "hr";
-				String userPw = "hr";
+				String url = "jdbc:oracle:thin:@project-db-stu.ddns.net:1524:XE";
+				String user = "cgi_5_0216_5";
+				String userPw = "smhrd5";
 		
 				conn = DriverManager.getConnection(url, user, userPw);
 				
 		
 		// 2-2. SQL문 전송
-				String sql = "delete aimemeber where id = ? and pw = ?"; // 다해놓고 못함 ? 쓰는법 확인
+				String sql = "delete T_USER where USER_ID = ? and USER_PW = ?"; // 다해놓고 못함 ? 쓰는법 확인
 				
 				psmt = conn.prepareStatement(sql);
 				
@@ -51,7 +51,7 @@ public class Exam02Delete {
 						System.out.println("회원탈퇴 성공!");
 					}else {
 		// 4. 회원탈퇴 실패시 회원탈퇴 실패.. 출력
-						System.out.println(" 회원탈퇴 실패..");
+						System.out.println("회원탈퇴 실패..");
 					}
 			} catch(ClassNotFoundException e) {
 				e.printStackTrace();
