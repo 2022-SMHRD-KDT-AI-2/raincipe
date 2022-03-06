@@ -1,3 +1,4 @@
+<%@page import="readRecipe.model.UserVO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ page import="readRecipe.model.UserDAO" %> <!-- login 함수를 사용하여 로그인 처리를 하기 위해 user패키지의 UserDAO를 불러온다 -->
@@ -29,14 +30,14 @@
 			script.println("history.back()"); // 이전 페이지로 사용자를 돌려 보냄.	
 			script.println("</script>");
 		}
-		else if (result == -2){ 
+		else if (result == -1){ 
 			PrintWriter script = response.getWriter();
 			script.println("<script>");
 			script.println("alert('존재하지 않는 아이디입니다.')");	
 			script.println("history.back()");	
 			script.println("</script>");
 		}
-		else if (result == -1){ 
+		else if (result == -2){ 
 			PrintWriter script = response.getWriter();
 			script.println("<script>");
 			script.println("alert('데이터베이스에 오류가 발생했습니다.')");	

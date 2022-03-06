@@ -41,6 +41,28 @@
 			</div>
 		</div>
 	</div>
+	<div class="container">
+		<div class="row">
+			<form method="post" name="search" action="search.jsp">
+				<table class="pull-right">
+					<tr>
+						<td><select class="form-control" name="searchField">
+								<option value="0">선택</option>
+								<option value="bbsTitle">요리이름</option>
+								<option value="userID">작성자</option>
+						</select></td>
+						<td><input type="text" class="form-control"
+							placeholder="검색어 입력" name="searchText" maxlength="100"></td>
+						<td><button type="submit" class="btn btn-success">검색</button></td>
+					</tr>
+
+				</table>
+			</form>
+		</div>
+	</div>
+
+	
+	
 	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 	<script src="js/bootstrap.js"></script>
 
