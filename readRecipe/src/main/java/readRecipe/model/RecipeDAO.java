@@ -12,6 +12,8 @@ import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 
+import readRecipe.model.RecipeVO;
+
 public class RecipeDAO{
 	private Connection conn; // Connection : 데이터베이스에 접근하게 해주는 하나의 객체 
 	private PreparedStatement pstmt;
@@ -38,10 +40,16 @@ public class RecipeDAO{
 		return list;
 	}
 	   
-	// 주어진 Recipe_seq에 해당하는 content을 가져오는 동작
-	public RecipeVO getbyRecipe_seq(int Recipe_seq) {
+	public void addCount(int idv) {
+		SqlSession session = sqlSessionFactory.openSession();
+		session.update("addCount",idv);
+		session.commit();
+		session.close();
+	}
+
+	public RecipeVO getByRecipe_seq(int recipe_seq) {
 		SqlSession session=sqlSessionFactory.openSession();
-		RecipeVO vo = session.selectOne("getbyRecipe_seq",Recipe_seq);
+		RecipeVO vo = session.selectOne("getByRecipe_seq",recipe_seq);
 		session.close();
 		return vo;
 	}
