@@ -9,6 +9,11 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+  	function goList() {
+		location.href="/web//recipeList.do"	
+	}
+  </script>
 </head>
 <body>
  
@@ -36,7 +41,6 @@
 						<input type="password" class="form-control" placeholder="user_pw" name="user_pw" maxlength="20">
 					</div>
 					<input type="submit" id = login class="btn btn-primary form-control" value="Login">
-				
 				</form>
 			</div>
 		</div>

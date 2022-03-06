@@ -15,6 +15,9 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   <script type="text/javascript">
+	function goList() {
+		location.href="/web//recipeList.do"	
+	}
   </script>
 </head>
 <body> 
@@ -33,7 +36,7 @@
  				<td id ='step'></td>
  			</tr>
  			<tr>
- 				<td colspan="2" align="center">
+ 				<td colspan="2" align="center" id ='buttonTd'>
  				   <Button class = "btn btn-success btn-sm" id = 'pre'>이전</Button>
  				   <Button class = "btn btn-success btn-sm" id = 're'>다시 재생</Button>
  				   <Button class = "btn btn-success btn-sm" id = 'next'>다음</Button>
@@ -46,10 +49,11 @@
 </div>
 <script>
 	var step_str = "<%=steps %>"
-	console.log(step_str)
-	let step_list = step_str.split(':')
-	console.log(step_list)
+	let step_list = step_str.split(';')
 	cnt = 0
+	if (step_list[step_list.length-1]==""){
+		step_list = step_list.slice(0,-1)
+	}
     $(function(){
     	$('#step').html(step_list[cnt])
         $('#pre').click(function(){
