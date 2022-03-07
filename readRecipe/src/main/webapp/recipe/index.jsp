@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,13 +13,13 @@
 <body>
  
 <div class="container">
-  <h2>¸ÞÀÎÈ­¸é</h2>
+  <h2>ë©”ì¸í™”ë©´</h2>
   <div class="panel panel-default">
     <div class="panel-heading">BOARD</div>
     <div class="panel-body">
-    	<a href="/web/recipeList.do">°Ô½ÃÆÇ¸®½ºÆ® </a>
+    	<a href="/web/recipeList.do">ê²Œì‹œíŒë¦¬ìŠ¤íŠ¸ </a>
     </div>
-    <div class="panel-footer">ÀÎ°øÁö´É °³¹ßÀÚ °úÁ¤(Á¤ÇöÈ£)</div>
+    <div class="panel-footer">ì¸ê³µì§€ëŠ¥ ê°œë°œìž ê³¼ì •(ì •í˜„í˜¸)</div>
   </div>
 </div>
 
@@ -47,13 +47,13 @@
 				<table class="pull-right">
 					<tr>
 						<td><select class="form-control" name="searchField">
-								<option value="0">¼±ÅÃ</option>
-								<option value="bbsTitle">¿ä¸®ÀÌ¸§</option>
-								<option value="userID">ÀÛ¼ºÀÚ</option>
+								<option value="0">ì„ íƒ</option>
+								<option value="recipe_name" name="recipe_name">ìš”ë¦¬ì´ë¦„</option>
+								<option value="userID" id="userID">ìž‘ì„±ìž</option>
 						</select></td>
 						<td><input type="text" class="form-control"
-							placeholder="°Ë»ö¾î ÀÔ·Â" name="searchText" maxlength="100"></td>
-						<td><button type="submit" class="btn btn-success">°Ë»ö</button></td>
+							placeholder="ê²€ìƒ‰ì–´ ìž…ë ¥" name="searchText" maxlength="100"></td>
+						<td><button type="submit" class="btn btn-success">ê²€ìƒ‰</button></td>
 					</tr>
 
 				</table>

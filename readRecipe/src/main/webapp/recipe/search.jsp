@@ -19,13 +19,13 @@
 <div class="container">
 		<div class="row">
 			<table class="active table table-striped"
-				style="text-align: center; border: 1px solid #dddddd">
+				style="text-align: center; border: 1px solid #dddddd" border="1">
 				<thead>
 					<tr>
 						<th style="background-color: #2e8b57; text-align: center;">번호</th>
+						<th style="background-color: #2e8b57; text-align: center;">분류</th>
 						<th style="background-color: #2e8b57; text-align: center;">이름</th>
-						<th style="background-color: #2e8b57; text-align: center;">내용</th>
-					
+						<th style="background-color: #2e8b57; text-align: center;">사진</th>
 					</tr>
 				</thead>
 				<tbody>
@@ -48,8 +48,9 @@
 						<%--현재 게시글에 대한 정보 --%>
 					
 						<td><%=list.get(i).getRecipe_seq()%></td>
-						<td><%=list.get(i).getRecipe_name()%></td>
-						<td><%=list.get(i).getRecipe_step()%></td>
+						<td><%=list.get(i).getRecipe_type()%></td>
+						<td><a href="/web/recipeContent.do?Recipe_seq=<%=list.get(i).getRecipe_seq()%>"><%=list.get(i).getRecipe_name()%></a></td>
+						<td><img src = "<%=list.get(i).getRecipe_img1()%>" height="100"></img></td>
 					</tr>
 					<%
 						}
