@@ -34,7 +34,7 @@
   				<tr>
     				<td><%= vo.getRecipe_seq() %></td>
     				<td><a href="/web/recipeContent.do?Recipe_seq=<%=vo.getRecipe_seq()%>"><%= vo.getRecipe_name() %></a></td>
-    				<td><%= vo.getRecipe_img1() %></td>
+    				<td><img src = "<%= vo.getRecipe_img1() %>" height="100"></img></td>
   				</tr>
   			<% } %>
     	</table>
