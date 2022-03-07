@@ -59,4 +59,4 @@ public class RecipeVO {
 		this.recipe_img1 = recipe_img1;
 	}
 	
-}
+ }
