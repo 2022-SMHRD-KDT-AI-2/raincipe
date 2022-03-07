@@ -5,8 +5,9 @@ public class RecipeVO {
 	private String recipe_name;
 	private String recipe_ingredient;
 	private String recipe_step;
-	private String recipe_img1;
 	private String recipe_type;
+	private String recipe_img1;
+	
 	
 	public RecipeVO() { } 
 	
@@ -17,8 +18,8 @@ public class RecipeVO {
 		this.recipe_name = recipe_name;
 		this.recipe_ingredient = recipe_ingredient;
 		this.recipe_step = recipe_step;
-		this.recipe_img1 = recipe_img1;
 		this.recipe_type = recipe_type;
+		this.recipe_img1 = recipe_img1;
 	}
 
 	public int getRecipe_seq() {
@@ -53,6 +54,14 @@ public class RecipeVO {
 		this.recipe_step = recipe_step;
 	}
 
+	public String getRecipe_type() {
+		return recipe_type;
+	}
+
+	public void setRecipe_type(String recipe_type) {
+		this.recipe_type = recipe_type;
+	}
+	
 	public String getRecipe_img1() {
 		return recipe_img1;
 	}
@@ -61,12 +70,5 @@ public class RecipeVO {
 		this.recipe_img1 = recipe_img1;
 	}
 	
-	public String getRecipe_type() {
-		return recipe_type;
-	}
-
-	public void setRecipe_type(String recipe_type) {
-		this.recipe_img1 = recipe_type;
-	}
 	
  }
