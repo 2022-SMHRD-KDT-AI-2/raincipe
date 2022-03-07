@@ -48,7 +48,6 @@ public class Exam02Delete {
 				psmt.setString(2, pw);
 				
 				int r = psmt.executeUpdate();
-				System.out.println(r);
 			
 							
 		// 3. È¸¿øÅ»Åð ¼º°ø½Ã È¸¿øÅ»Åð ¼º°ø! Ãâ·Â

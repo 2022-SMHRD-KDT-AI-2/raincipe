@@ -18,19 +18,18 @@
   	function goList() {
 		location.href="/web//recipeList.do"	
 	}
+  	function goStep(Recipe_seq){
+  		location.href="/web//recipeStep.do?Recipe_seq="+Recipe_seq;
+  	}
   </script>
 </head>
 <body> 
 <div class="container">
   <h2>MVC Framework 01</h2>
   <div class="panel panel-default">
-    <div class="panel-heading">BOARD</div>
+    <div class="panel-heading">TEST</div>
     <div class="panel-body">
     	<table class="table table-bordered table-hover">
-    	 	<tr>
-    	 		<td>요리 번호</td>
-    	 		<td><%= vo.getRecipe_seq() %></td>
- 			</tr>
  			<tr>
  				<td>요리 이름</td>
  				<td><%= vo.getRecipe_name() %></td>
@@ -44,17 +43,14 @@
  				<td><%= vo.getRecipe_ingredient() %></td>
  			</tr>
  			<tr>
- 				<td>레시피</td>
- 				<td><%= vo.getRecipe_step() %></td>
- 			</tr>
- 			<tr>
  				<td colspan="2" align="center">
+ 				   <Button class = "btn btn-success btn-sm" onclick="goStep(<%=vo.getRecipe_seq()%>)">레시피 시작</Button>
  				   <Button class = "btn btn-success btn-sm" onclick="goList()">리스트</Button>
  				</td>
  			</tr>
  		</table>
     </div>
-    <div class="panel-footer">인공지능 융합서비스 개발자 과정(정현호)</div>
+    <div class="panel-footer"></div>
   </div>
 </div>
 </body>

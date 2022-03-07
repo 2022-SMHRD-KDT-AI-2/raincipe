@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,15 +13,8 @@
 <body>
  
 <div class="container">
-  <h2>¸ÞÀÎÈ­¸é</h2>
-  <div class="panel panel-default">
-    <div class="panel-heading">BOARD</div>
-    <div class="panel-body">
-    	<a href="/web/recipeList.do">°Ô½ÃÆÇ¸®½ºÆ® </a>
-    </div>
-    <div class="panel-footer">ÀÎ°øÁö´É °³¹ßÀÚ °úÁ¤(Á¤ÇöÈ£)</div>
-  </div>
-</div>
+  <h2>ë©”ì¸í™”ë©´</h2>
+
 
 
 <div class="col-lg-4"></div>
@@ -41,6 +34,28 @@
 			</div>
 		</div>
 	</div>
+	<div class="container">
+		<div class="row">
+			<form method="post" name="search" action="search.jsp">
+				<table class="pull-right">
+					<tr>
+						<td><select class="form-control" name="searchField">
+								<option value="0">ì„ íƒ</option>
+								<option value="recipe_name" name="recipe_name">ìš”ë¦¬ì´ë¦„</option>
+								<option value="userID" name="userID">ìž‘ì„±ìž</option>
+						</select></td>
+						<td><input type="text" class="form-control"
+							placeholder="ê²€ìƒ‰ì–´ ìž…ë ¥" name="searchText" maxlength="100"></td>
+						<td><button type="submit" class="btn btn-success">ê²€ìƒ‰</button></td>
+					</tr>
+
+				</table>
+			</form>
+		</div>
+	</div>
+
+	
+	
 	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 	<script src="js/bootstrap.js"></script>
 
