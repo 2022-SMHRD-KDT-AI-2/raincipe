@@ -15,11 +15,11 @@
 <div class="container">
   <h2>메인화면</h2>
   <div class="panel panel-default">
-    <div class="panel-heading">BOARD</div>
+    <div class="panel-heading">TEST</div>
     <div class="panel-body">
-    	<a href="/web/recipeList.do">게시판리스트 </a>
+    	<a href="/web/recipeList.do">음식리스트</a>
     </div>
-    <div class="panel-footer">인공지능 개발자 과정(정현호)</div>
+    <div class="panel-footer"></div>
   </div>
 </div>
 
