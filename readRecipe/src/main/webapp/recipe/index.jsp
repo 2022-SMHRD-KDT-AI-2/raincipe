@@ -14,14 +14,7 @@
  
 <div class="container">
   <h2>메인화면</h2>
-  <div class="panel panel-default">
-    <div class="panel-heading">BOARD</div>
-    <div class="panel-body">
-    	<a href="/web/recipeList.do">게시판리스트 </a>
-    </div>
-    <div class="panel-footer">인공지능 개발자 과정(정현호)</div>
-  </div>
-</div>
+
 
 
 <div class="col-lg-4"></div>
@@ -49,7 +42,7 @@
 						<td><select class="form-control" name="searchField">
 								<option value="0">선택</option>
 								<option value="recipe_name" name="recipe_name">요리이름</option>
-								<option value="userID" id="userID">작성자</option>
+								<option value="userID" name="userID">작성자</option>
 						</select></td>
 						<td><input type="text" class="form-control"
 							placeholder="검색어 입력" name="searchText" maxlength="100"></td>
