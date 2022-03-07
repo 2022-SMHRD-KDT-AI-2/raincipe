@@ -21,7 +21,7 @@
 <div class="container">
   <h2>MVC Framework 01</h2>
   <div class="panel panel-default">
-    <div class="panel-heading">BOARD</div>
+    <div class="panel-heading">TEST</div>
     <div class="panel-body">
     	<table class="table table-bordered table-hover">
     		<tr>
@@ -39,7 +39,7 @@
   			<% } %>
     	</table>
     </div>
-    <div class="panel-footer">인공지능 융합서비스 개발자 과정(정현호)</div>
+    <div class="panel-footer"></div>
   </div>
 </div>
 </body>
