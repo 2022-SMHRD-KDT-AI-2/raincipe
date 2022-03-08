@@ -24,7 +24,7 @@ public class SearchController extends HttpServlet {
 	      String searchText = request.getParameter("searchText");
 	      List<RecipeVO> searchedList = dao.getSearch(searchText);
 	      
-	      // View와 연동(boardList.jsp) : (***객체바인딩+포워딩***)
+	      // View와 연동(search.jsp) : (***객체바인딩+포워딩***)
 	      request.setAttribute("searchedList", searchedList);
 	      RequestDispatcher rd=request.getRequestDispatcher("recipe/search.jsp");
 	      rd.forward(request, response);

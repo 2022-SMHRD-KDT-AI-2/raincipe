@@ -33,7 +33,7 @@
 <div class="col-lg-4"></div>
       <div class="col-lg-4">
          <div class="jumbotron" style="padding-top: 20px;">
-            <form method="post" action="Login.jsp">
+            <form method="post" action="login.do">
                <h3 style="text-align: center;">Welcome!</h3>
                <div class="form-group">
                   <input type="text" class="form-control" placeholder="user_id" name="user_id" maxlength="20">

@@ -21,8 +21,8 @@
   	function goStep(Recipe_seq){
   		location.href="/web//recipeStep.do?Recipe_seq="+Recipe_seq;
   	}
-  	function goFavorite(Recipe_seq){
-  		location.href
+  	function goFavorite(){
+  		location.href="/web//favorite.do"
   	}
   </script>
 </head>
