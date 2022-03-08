@@ -1,4 +1,4 @@
-package readRecipe.model;	
+package readRecipe.controller;	
 
 import java.io.InputStream;
 import java.sql.Connection;
@@ -14,6 +14,7 @@ import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 
+import readRecipe.model.UserVO;
 import readRecipe.model.RecipeVO;
 
 public class RecipeDAO{
@@ -65,30 +66,6 @@ public class RecipeDAO{
 		return usVO;
 	}
 	
-	public List<RecipeVO> getSearch(String searchText){//특정한 리스트를 받아서 반환
-			SqlSession session=sqlSessionFactory.openSession();
-			List<RecipeVO> searched_list = session.selectList("selectRecipes",searchText);
-			session.close();
-	        return searched_list;
-	        }	
-	
-	public void getdb() {
-	      try {
-	         Class.forName("oracle.jdbc.driver.OracleDriver");
-	         
-	         String url = "jdbc:oracle:thin:@project-db-stu.ddns.net:1524:XE";
-	         String dbid = "cgi_5_0216_5";
-	         String dbpw = "smhrd5";
-	         
-	         conn = DriverManager.getConnection(url, dbid, dbpw);
-	         
-	         if(conn != null) {
-	            System.out.println("연결성공");
-	         }
-	         
-	      }catch (Exception e) {
-	         e.printStackTrace();
-	      }
-	   }
+
 
 }
