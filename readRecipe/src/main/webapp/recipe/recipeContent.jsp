@@ -16,10 +16,13 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   <script type="text/javascript">
   	function goList() {
-		location.href="/web//recipeList.do"	
+		location.href="/web//search.jsp"	
 	}
   	function goStep(Recipe_seq){
   		location.href="/web//recipeStep.do?Recipe_seq="+Recipe_seq;
+  	}
+  	function goFavorite(Recipe_seq){
+  		location.href
   	}
   </script>
 </head>
@@ -46,6 +49,7 @@
  				<td colspan="2" align="center">
  				   <Button class = "btn btn-success btn-sm" onclick="goStep(<%=vo.getRecipe_seq()%>)">레시피 시작</Button>
  				   <Button class = "btn btn-success btn-sm" onclick="goList()">리스트</Button>
+ 				   <Button class = "btn btn-success btn-sm" onclick="goFavoirte(<%=vo.getRecipe_seq()%>)">즐겨찾기</Button>
  				</td>
  			</tr>
  		</table>
