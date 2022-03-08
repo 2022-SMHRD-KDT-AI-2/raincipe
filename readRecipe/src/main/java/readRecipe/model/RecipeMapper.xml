@@ -24,4 +24,10 @@
      	where user_id=#{user_id} and user_pw=#{user_pw}
      </select>
      
+     <insert id="boardInsert" parameterType="readRecipe.model.my_recipeVO">
+		insert into my_recipe(my_recipe_seq,my_recipe_name,my_recipe_ingre,my_recipe_step)
+		
+		values(my_recipe_my_recipe_seq.nextval,#{my_recipe_name},#{my_recipe_ingre},#{my_recipe_step})
+	</insert>
+     
 </mapper>

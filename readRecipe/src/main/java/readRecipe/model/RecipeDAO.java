@@ -14,6 +14,7 @@ import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 
+
 import readRecipe.model.RecipeVO;
 
 public class RecipeDAO{
@@ -42,13 +43,6 @@ public class RecipeDAO{
 		List<RecipeVO> list=session.selectList("selectAll");
 		session.close();
 		return list;
-	}
-	   
-	public void addCount(int idv) {
-		SqlSession session = sqlSessionFactory.openSession();
-		session.update("addCount",idv);
-		session.commit();
-		session.close();
 	}
 
 	public RecipeVO getByRecipe_seq(int recipe_seq) {
@@ -90,5 +84,13 @@ public class RecipeDAO{
 	         e.printStackTrace();
 	      }
 	   }
+
+	public void recipeUpdate(RecipeVO vo) {
+		SqlSession session = sqlSessionFactory.openSession();
+		session.update("recipeUpdate",vo);
+		session.commit();
+		session.close();
+	}
+
 
 }

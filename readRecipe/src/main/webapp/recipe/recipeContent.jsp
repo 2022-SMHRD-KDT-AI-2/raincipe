@@ -21,8 +21,8 @@
   	function goStep(Recipe_seq){
   		location.href="/web//recipeStep.do?Recipe_seq="+Recipe_seq;
   	}
-  	function goFavorite(){
-  		location.href="/web//favorite.do"
+  	function goUp(Recipe_seq){
+  		location.href="/web//recipeUpdateForm.do?Recipe_seq="+Recipe_seq;
   	}
   </script>
 </head>
@@ -49,7 +49,7 @@
  				<td colspan="2" align="center">
  				   <Button class = "btn btn-success btn-sm" onclick="goStep(<%=vo.getRecipe_seq()%>)">레시피 시작</Button>
  				   <Button class = "btn btn-success btn-sm" onclick="goList()">리스트</Button>
- 				   <Button class = "btn btn-success btn-sm" onclick="goFavoirte(<%=vo.getRecipe_seq()%>)">즐겨찾기</Button>
+ 				   <Button class = "btn btn-success btn-sm" onclick="goUp(<%=vo.getRecipe_seq()%>)">수정하기</Button>
  				</td>
  			</tr>
  		</table>
