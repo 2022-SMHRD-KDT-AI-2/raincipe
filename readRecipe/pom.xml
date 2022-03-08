@@ -32,9 +32,39 @@
 			<artifactId>gson</artifactId>
 			<version>2.8.5</version>
 		</dependency>
+		<!-- 역시 라이브러리가 없네용 jstl도 라이브러리에요-->
+		<!-- 제발 막 그렇게 움직이지 말아줄래용 -->
+		<!-- maven에서는 그렇게 jar파일 가져와서 넣어봐야 작동안합니다. 이 pom.xml에 기술 해줘야 자동으로 다운받고 동작시키는거에요. -->
+		<!-- https://mvnrepository.com/ 필요한 라이브러리를 maven repository에서 검색해, dependency를 추가 해줘야합니다. -->
+		<!-- https://mvnrepository.com/artifact/javax.servlet.jsp.jstl/jstl -->
+		<!-- 왼쪽에 생긴거 보이죠  넵 이렇게 라이브러리 관리 하는겁니다.-->
+		
+		<!-- jstl.jar 다운로드 -->
+		<!-- https://mvnrepository.com/artifact/javax.servlet/jstl -->
+		<dependency>
+		    <groupId>javax.servlet</groupId>
+		    <artifactId>jstl</artifactId>
+		    <version>1.2</version>
+		</dependency>		
+		
+		<!-- https://mvnrepository.com/artifact/org.apache.taglibs/taglibs-standard-jstlel -->
+		<dependency>
+		    <groupId>org.apache.taglibs</groupId>
+		    <artifactId>taglibs-standard-jstlel</artifactId>
+		    <version>1.2.5</version>
+		</dependency>
+		
+		<!-- https://mvnrepository.com/artifact/org.mybatis/mybatis -->
+		<dependency>
+		    <groupId>org.mybatis</groupId>
+		    <artifactId>mybatis</artifactId>
+		    <version>3.5.8</version>
+		</dependency>
+
 
 	</dependencies>
   <build>
+ 
     <finalName>readRecipe</finalName>
     <plugins>
     	<plugin>

@@ -3,6 +3,9 @@
 <%@page import="java.util.ArrayList"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
+<%-- 확인해보니까 jsp에서 el을 못쓰게 막혀있네요 그래서 밑에 isELIgnored="false"이걸 주고 난 다음에 el을 사용하셔야해용 --%>
+<%-- 이 자리는 jsp에 이걸 넣어줘야되네요 --%>
+<%@ page isELIgnored="false" %>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%
 	List<RecipeVO> list=(List<RecipeVO>)request.getAttribute("list");
