@@ -15,8 +15,8 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   <script type="text/javascript">
-  	function goList() {
-		location.href="/web//search.jsp"	
+	function goList() {
+ 		 history.back();
 	}
   	function goStep(Recipe_seq){
   		location.href="/web//recipeStep.do?Recipe_seq="+Recipe_seq;

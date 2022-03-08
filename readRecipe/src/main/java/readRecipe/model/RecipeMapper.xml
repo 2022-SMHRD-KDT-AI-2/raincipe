@@ -12,5 +12,12 @@
 	<select id="getByRecipe_seq" parameterType ="int" resultType="readRecipe.model.RecipeVO">
 		select * from t_recipe where recipe_seq = #{recipe_seq}
 	</select>
+	
+	<select id="selectRecipes" parameterType = "String" resultType="readRecipe.model.RecipeVO">
+		select * from t_recipe
+		WHERE recipe_name LIKE '%' || #{searchText} || '%'
+		order by recipe_seq 
+	</select>
+     
      
 </mapper>

@@ -31,7 +31,5 @@ public class ContentController extends HttpServlet {
 		request.setAttribute("vo",vo);
 		RequestDispatcher rd=request.getRequestDispatcher("recipe/recipeContent.jsp");
 		rd.forward(request, response);
-		
-		System.out.println(recipe_seq);
 	}
 }
