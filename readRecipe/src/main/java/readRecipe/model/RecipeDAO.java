@@ -66,7 +66,7 @@ public class RecipeDAO{
 	}
 	
 	public List<RecipeVO> getSearch(String searchText){//특정한 리스트를 받아서 반환
-			SqlSession session=sqlSessionFactory.openSession();
+			SqlSession session = sqlSessionFactory.openSession();
 			List<RecipeVO> searched_list = session.selectList("selectRecipes",searchText);
 			session.close();
 	        return searched_list;

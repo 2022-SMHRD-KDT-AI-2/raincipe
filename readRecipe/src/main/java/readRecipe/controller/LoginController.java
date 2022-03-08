@@ -4,6 +4,7 @@ import java.io.IOException;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
@@ -12,9 +13,9 @@ import readRecipe.model.UserVO;
 import readRecipe.model.RecipeDAO;
 
 @WebServlet("/login.do")
-public class LoginController implements Controller{
+public class LoginController extends HttpServlet{
 	@Override
-	public String requestHandler(HttpServletRequest request, HttpServletResponse response)
+	public void service(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		
 		String user_id = request.getParameter("user_id");
@@ -32,6 +33,6 @@ public class LoginController implements Controller{
 			
 		}
 		
-		return "redirect:/recipeList.do";
+		response.sendRedirect("/web/recipeList.do");
 	}
 }
