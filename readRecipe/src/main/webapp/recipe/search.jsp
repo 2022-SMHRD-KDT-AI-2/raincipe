@@ -3,6 +3,7 @@
 <%@page import="java.util.List"%>
 <%@page import="readRecipe.model.RecipeVO"%>
 <%@page import="java.util.ArrayList"%>
+<%@ page isELIgnored="false" %>
 <%
 	List<RecipeVO> searchedList=(List<RecipeVO>)request.getAttribute("searchedList");
 %>

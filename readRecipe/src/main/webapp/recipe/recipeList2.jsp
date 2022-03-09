@@ -52,6 +52,8 @@
 			</div>
 		</c:if>
 	</div>
+	</div>
+	
     <div class="panel-body">
     	<table class="table table-bordered table-hover">
     		<tr>
