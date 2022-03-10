@@ -25,5 +25,64 @@
 		</div>
 		<button type="submit" class="btn btn-default">로그인</button>
 	</form>
+	
+	
+	
+	
+	
+	<form class="form-inline" action="/web/login.do" method="post">
+	
+	<div id="wrapper">
+
+        <!-- content-->
+        <div id="content">
+
+            <!-- ID -->
+            <div>
+                <h3 class="join_title">
+                    <label for="id">Id</label>
+                </h3>
+                <span class="box int_id">
+                    <input type="text" id="id" class="int" maxlength="20" placeholder="아이디를 입력하세요">
+                    <img src="id.png" id="id1_img1" class="Img">
+                </span>
+                <span class="error_next_box"></span>
+            </div>
+
+            <!-- PW1 -->
+            <div>
+                <h3 class="join_title"><label for="pswd1">Pw</label></h3>
+                <span class="box int_pass">
+                    <input type="password" id="pswd1" class="int" maxlength="20" placeholder="비밀번호를 입력하세요">
+                    <span id="alertTxt">사용불가</span>
+                    <img src="pw.png" id="pswd1_img1" class="Img">
+                </span>
+                <span class="error_next_box"></span>
+            </div>
+
+	</form>
+
+
+            <!-- JOIN BTN-->
+            <div class="btn_area">  
+                <button type="button" id="btnlogin">
+                    <span><a href="">로그인</a></span>
+                </button>
+            </div>
+
+            <div class="btn_area">  
+                <button type="button" id="btnJoin">
+                    <span><a href="회원가입.html">회원가입</a></span>
+                </button>
+            </div>
+
+        </div>
+
+	
+	
+	
+	
+	
+	
 </body>
 </html>
