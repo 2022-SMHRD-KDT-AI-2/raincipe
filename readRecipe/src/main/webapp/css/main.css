@@ -51,7 +51,8 @@ html,body{
     height: 30vh;
 }
 .mainSection .searchbutton{
-	border-radius:22px
+	background-color : white;
+	border:0;
 }
 .mainSection .searchContainer .searchBox{
     border: none;
