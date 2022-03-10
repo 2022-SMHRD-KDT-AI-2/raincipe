@@ -30,6 +30,9 @@
   	function goUp(Recipe_seq){
   		location.href="/web//recipeUpdateForm.do?Recipe_seq="+Recipe_seq;
   	}
+	function goFa(Recipe_seq){
+  		location.href="/web//favorite.do?Recipe_seq="+Recipe_seq;
+  	}
   </script>
 </head>
 <body> 
@@ -49,6 +52,7 @@
                         <!-- <Button id="list" class = "btn btn-success btn-sm" onclick="goList()">리스트</Button> -->
                        	<c:if test="${!empty usVO}">
  				   			<Button class = "btn btn-success btn-sm" onclick="goUp(${vo.recipe_seq})">수정하기</Button>
+ 				   			<Button class = "btn btn-success btn-sm" onclick="goFa(${vo.recipe_seq})">즐겨찾기</Button>
  						</c:if>
                          <!-- <button type="button" id="voice_start">
                             <a href="">음성 시작</a>

@@ -43,9 +43,9 @@
     			</tr>
     			<tr>
     				<td colspan="2" align="center">
-    					<button class="btn btn-info btn-sm">수정하기</button>
-    					<button class="btn btn-warning btn-sm">취소</button>	
-    					<button class="btn btn-success btn-sm" location.href="/web/recipeList.do">리스트</button>
+    					<button type="submit" class="btn btn-info btn-sm">수정하기</button>
+    					<button type="reset" class="btn btn-warning btn-sm">취소</button>	
+    					<button type="button" class="btn btn-success btn-sm" onclick="location.href='/web/recipeList.do'">리스트</button>
     				</td>
     			</tr>
     		</table>

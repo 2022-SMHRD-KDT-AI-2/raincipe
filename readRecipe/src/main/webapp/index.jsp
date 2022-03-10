@@ -22,6 +22,9 @@
    	function goOut(){
   		location.href="/web/logout.do";
   	}
+	function goFa(Recipe_seq){
+  		location.href="/web//favorite.do?Recipe_seq="+Recipe_seq;
+  	}
   </script>
 <body>
     <div class="container">

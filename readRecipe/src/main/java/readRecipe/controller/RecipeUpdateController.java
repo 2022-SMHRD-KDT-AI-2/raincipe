@@ -32,8 +32,10 @@ public class RecipeUpdateController extends HttpServlet{
 		vo.setRecipe_seq(recipe_seq);
 		vo.setMy_recipe_name(my_recipe_name);	
 		vo.setMy_recipe_ingredient(my_recipe_ingredient);
+		System.out.println(my_recipe_ingredient);
 		vo.setMy_recipe_step(my_recipe_step);
 		vo.setUser_id(user_id);
+		System.out.println(user_id);
 		vo.setChannel_id(channel_id);
 		
 		

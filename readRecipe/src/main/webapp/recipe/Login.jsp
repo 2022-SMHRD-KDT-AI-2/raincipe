@@ -30,6 +30,7 @@
                     <label for="user_id">Id</label>
                 </h3>
                 <span class="box int_id">
+                	
                     <input type="text" id="id" class="int" maxlength="20" name="user_id" placeholder="아이디를 입력하세요">
                     <img src="<%= request.getContextPath() %>/img/id.png" id="id1_img1" class="Img">
                 </span>

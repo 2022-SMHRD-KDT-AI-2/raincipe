@@ -9,10 +9,13 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
+import readRecipe.model.FavoriteVO;
 import readRecipe.model.RecipeDAO;
 import readRecipe.model.RecipeVO;
-import readRecipe.model.UserDAO;
+import readRecipe.model.UserVO;
+import readRecipe.model.FavoriteDAO;
 
 /**
  * Servlet implementation class FavoriteController
@@ -21,16 +24,21 @@ import readRecipe.model.UserDAO;
 public class FavoriteController extends HttpServlet {
 protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 	
-	int favorite = Integer.parseInt(request.getParameter("favorite")); 
+	int recipe_seq = Integer.parseInt(request.getParameter("Recipe_seq")); 
+	HttpSession session=request.getSession();
+	UserVO user =(UserVO) session.getAttribute("usVO");
+	String usid=user.getUser_id();
 
 	
 	
-	RecipeDAO dao = new RecipeDAO();
-	RecipeVO vo = dao.getByRecipe_seq(favorite);
 	
-
-	request.setAttribute("vo",vo);
-	RequestDispatcher rd=request.getRequestDispatcher("recipe/favorite.jsp");
+	
+	FavoriteDAO dao = new FavoriteDAO();
+	FavoriteVO vo = new FavoriteVO();	
+	vo.setFecipe_seq(recipe_seq);
+	vo.setUser_id(usid);
+	dao.favorite(vo);
+	RequestDispatcher rd=request.getRequestDispatcher("recipe/recipeContent.jsp");
 	rd.forward(request, response);
 }
 }

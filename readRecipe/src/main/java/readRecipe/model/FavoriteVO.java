@@ -26,7 +26,7 @@ public class FavoriteVO {
 		this.favorite_seq = favorite_seq;
 	}
 
-	public int getFecipe_seq() {
+	public int getRecipe_seq() {
 		return fecipe_seq;
 	}
 
