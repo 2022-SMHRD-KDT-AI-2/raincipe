@@ -1,0 +1,145 @@
+@charset "EUC-KR";
+*{
+    color: black;
+}
+html,body{
+    margin: 0;
+    height: 130%;
+}
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;  
+    padding-bottom: 3vh;
+}
+.wrapper .header{
+    width: 100%;
+    height: 20vh;
+    position: relative;
+} 
+.wrapper .prev{
+    width: 7%;
+    height: 7%;
+    position: absolute;
+    top: 7%;
+    left: 2%;
+    opacity: .5;
+}
+
+
+/* 프로필 존 */
+.re_my_page_head{
+    height: 30vh;
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    padding-bottom: 3vh;
+    padding-top: 5vh;
+    
+}
+.re_my_page_head .my_page_section{
+    justify-content: center;
+}
+
+.re_my_profile{
+    width: 30%;
+    height: 100%;
+    margin: 1vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.re_my_profile_img{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.re_my_profile a{
+    font-size: 1.5rem;
+    padding-top: 5%
+}
+
+.re_my_profile_img img{
+    width: 80%;
+    border-radius: 50%
+}
+
+
+.re_my_nick{
+    width: 50%;
+    height: 80%;
+    padding: 2vh 2vh 2vh 2vh;
+}
+#re_my_nick_name{
+    height: 30%;
+    font-size: 2rem;
+}
+#re_my_introduction{
+    font-size: 1.3rem;
+    margin-top: 1vh;
+}
+textarea{
+    width: 80%;
+    height: 20vh;
+}
+
+.my_information{
+    width: 80%;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-around; */
+    /* text-align: center; */
+    margin-top: 3%;
+    margin-left: 10%;
+}
+
+.my_info_section{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: whitesmoke;
+    /* justify-content: space-around; */
+}
+.my_info_section .my_info_title{
+    font-size: 1.2rem;
+    margin-left: 10%;
+    font-weight: bold;
+}
+
+.my_id,.my_pw,.my_name,.my_email{
+    display: flex;
+    justify-content:space-between;
+    /* font-size: 1.3rem; */
+    margin-left: 10%;
+    margin-right: 10%;
+}
+.my_id div,.my_pw div,.my_name div,.my_email div{
+    width: 30%;
+}
+button[type=submit]{
+    width: 30%;
+    align-self: center;
+    margin: 2%;
+}
+
+.withdrawal{
+    font-size: 1.3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5%;
+}
+
+.withdrawal .btn{
+    background-color: rgb(194, 8, 8);
+    color: white;
+    
+}

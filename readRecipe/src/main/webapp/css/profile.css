@@ -1,0 +1,241 @@
+@charset "EUC-KR";
+*{
+    color: black;
+}
+html,body{
+    margin: 0;
+    height: 130%;
+}
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;  
+    padding-bottom: 3vh;
+}
+.wrapper .header{
+    width: 100%;
+    height: 20vh;
+    position: relative;
+} 
+.wrapper .prev{
+    width: 7%;
+    height: 7%;
+    position: absolute;
+    top: 7%;
+    left: 2%;
+    opacity: .5;
+}
+
+
+/* 프로필 존 */
+.my_page_head{
+    height: 30vh;
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    padding-bottom: 3vh;
+    padding-top: 5vh;
+    
+}
+.my_page_head .my_page_section{
+    justify-content: center;
+}
+
+.my_profile{
+    width: 30%;
+    height: 100%;
+    margin: 1vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.my_profile_img{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.my_profile a{
+    font-size: 1.5rem;
+    padding-top: 5%
+}
+
+.my_profile_img img{
+    width: 80%;
+    border-radius: 50%
+}
+
+
+.my_nick{
+    width: 50%;
+    height: 80%;
+    padding: 2vh 2vh 2vh 2vh;
+}
+#my_nick_name{
+    height: 30%;
+    font-size: 2rem;
+}
+#my_introduction{
+    font-size: 1.3rem;
+    margin-top: 1vh;
+}
+.community_create{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+
+}
+
+.btn{
+    display: inline-block;
+    padding: 1em 1.6em;
+    border-radius: 10px;
+    margin-top: 2rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+    transition: all 250ms ease;
+    font-size: 1.3rem;
+    background: #3b3270;
+    color: whitesmoke;
+ }
+
+
+
+
+/* 더보기 */
+/* .container{
+    
+    min-height: calc(100vh - 50px);
+    color: black;
+} */
+
+.recipe-list-container{
+    padding: 0 20px;
+}
+.recipe-title-section{
+    display: flex;
+    justify-content: space-between;
+    width: 95%;
+}
+.more-view{
+    align-self:flex-end;
+    font-size: 1rem;
+    text-decoration: none;
+}
+.recipe-list-wrapper{
+    position: relative;
+    overflow: hidden;
+}
+.recipe-list{
+    display: flex;
+    height: 30vh;
+    align-items: center;
+    transform: translateX(0);
+    transition: all 1s ease-in-out;
+}
+.recipe-list-item{
+    margin-right: 30px;
+    position: relative;
+    
+}
+.recipe-list-item:hover .recipe-list-item-img{
+    transform: scale(1.3);
+    margin: 0 30px;
+    opacity: 0.5;
+}
+.recipe-list-item:hover .recipe-list-item-title,
+.recipe-list-item:hover .recipe-list-item-desc,
+.recipe-list-item:hover .recipe-list-item-button{
+    opacity: 1;
+}
+
+.recipe-list-item-img{
+    transition: all 1s ease-in-out;
+    width: 35vh;
+    height: 25vh;
+    object-fit: cover;
+}
+.recipe-list-item-title{
+    color: #060606;
+    padding: 0 10px;
+    font-size: 1.3rem;
+    font-weight: bold;
+    position: absolute;
+    top: 10%;
+    left: 20%;
+    opacity: 0;
+    transition: 1s all ease-in-out;
+}
+.recipe-list-item-desc{
+    color: rgb(2, 2, 2);
+    padding: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+    position: absolute;
+    top: 15%;
+    left: 20%;
+    width: 65%;
+    opacity: 0;
+    transition: 1s all ease-in-out;
+}
+.recipe-list-item-button{
+    padding: 10px;
+    background-color: orange;
+    color: white;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    bottom: 10%;
+    left: 20%;
+    opacity: 0;
+    transition: 1s all ease-in-out;
+}
+.arrow{
+    width: 7%;
+    position: absolute;
+    top:20%;
+    right: 0;
+    color: black;
+    opacity: .5;
+    cursor: pointer;
+}
+
+ /* 더보기버튼 */
+.more_view{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-bottom: 5%;
+
+}
+
+.btn{
+    display: inline-block;
+    padding: 1em 1.6em;
+    border-radius: 10px;
+    margin-top:2rem;
+    font-weight: bold;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-decoration: none;
+  position: relative;
+  overflow: hidden;
+  transition: all 250ms ease;
+  font-size: 1.5rem;
+  background: #25167a;
+  color: whitesmoke;
+ }
