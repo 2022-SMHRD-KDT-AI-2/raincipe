@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="<%= request.getContextPath() %>/css/search.css">
 <script type="text/javascript">
 	function goMain() {
- 		 history.back();
+		location.href="/web/index.jsp";
 	}
 </script>
 </head>

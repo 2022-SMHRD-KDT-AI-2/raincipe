@@ -35,11 +35,21 @@
          set count = count +1 where my_recipe_seq = #{my_recipe_seq}
       </update>
       
-      <insert id="favorite" parameterType="readRecipe.model.FavoriteVO">
+     <insert id="favorite" parameterType="readRecipe.model.FavoriteVO">
 		insert into t_favorite(favorite_seq,recipe_seq,my_recipe_seq,user_id)
 		
 		values(t_favorite_favorite_seq.nextval,#{recipe_seq},0,#{user_id})
 	</insert>
+	
+	<insert id="signUp" parameterType="readRecipe.model.UserVO">
+		insert into t_user(user_id, user_pw, user_name, user_nick, user_email, user_profile_img, user_joindate, admin_yn, user_intro)
+		values (#{user_id}, #{user_pw}, #{user_name}, #{user_nick}, #{user_email}, #{user_profile_img}, sysdate, 'N', #{user_intro})
+	</insert>
+	
+	<select id="user_id" parameterType="String" resultType="readRecipe.model.UserVO">
+		select * from t_user
+		where user_id = #{"user_id"}
+	</select>
      
  
      

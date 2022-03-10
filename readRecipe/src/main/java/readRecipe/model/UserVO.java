@@ -8,6 +8,7 @@ public class UserVO {
 	private String user_email;
 	private String user_profile_img;
 	private String user_joindate;
+	private String user_intro;
 	private char admin_yn;
 	
 	public UserVO() { };
@@ -87,6 +88,14 @@ public class UserVO {
 
 	public void setAdmin_yn(char admin_yn) {
 		this.admin_yn = admin_yn;
+	}
+
+	public String getUser_intro() {
+		return user_intro;
+	}
+
+	public void setUser_intro(String user_intro) {
+		this.user_intro = user_intro;
 	}
   
 	

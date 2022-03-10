@@ -12,6 +12,11 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <link rel="stylesheet" href="<%= request.getContextPath() %>/css/login.css">
+  <script type="text/javascript">
+   	function goSign(){
+  		location.href="/web/recipe/signUp.jsp";
+  	}
+  </script>
 </head>
 <body>
     <!-- header -->
@@ -55,11 +60,13 @@
                 </button>
             </div>
 			</form>
-            <div class="btn_area">  
-                <button type="button" id="btnJoin">
-                    <span><a href="sign.html">회원가입</a></span>
-                </button>
+			<form method="post" name="login" action="recipe/signUp.jsp">
+            	<div class="btn_area">  
+                	<button type="button" id="btnJoin" onclick="goSign()">
+                    	<span>회원가입</span>
+                	</button>
             </div>
+            </form>
           </div>
       </div>
 

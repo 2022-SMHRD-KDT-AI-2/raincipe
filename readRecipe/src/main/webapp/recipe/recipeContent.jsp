@@ -39,7 +39,6 @@
 <body> 
  <div id="header">
         <img src="<%=request.getContextPath()%>/img/꾸미기.png" id="logo">
-        <a href="#"><img src="<%=request.getContextPath()%>/img/left arrow.png" alt="" class="prev"></a>
     </div>
     
     <div id="wrapper">

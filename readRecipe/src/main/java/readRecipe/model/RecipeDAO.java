@@ -19,10 +19,7 @@ import readRecipe.model.RecipeVO;
 
 public class RecipeDAO{
 	private Connection conn; // Connection : 데이터베이스에 접근하게 해주는 하나의 객체 
-	private PreparedStatement pstmt;
-	private ResultSet rs; // ResultSet : 어떠한 정보를 담을 수 있는 객체 
-	
-	
+
 	
 	private static SqlSessionFactory sqlSessionFactory;
 	// 초기화블럭(프로그램 실행시 한번만 실행되는 부분)
@@ -55,6 +52,13 @@ public class RecipeDAO{
 	public UserVO checkLogin(UserVO vo) {
 		SqlSession session = sqlSessionFactory.openSession();
 		UserVO usVO = session.selectOne("checkLogin", vo);
+		session.close();
+		return usVO;
+	}
+	
+	public UserVO userInfo(String user_id) {
+		SqlSession session = sqlSessionFactory.openSession();
+		UserVO usVO = session.selectOne("user_id", user_id);
 		session.close();
 		return usVO;
 	}

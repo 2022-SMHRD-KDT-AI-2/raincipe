@@ -11,6 +11,7 @@ import javax.servlet.http.HttpSession;
 
 import readRecipe.model.UserVO;
 import readRecipe.model.RecipeDAO;
+import readRecipe.model.UserDAO;
 
 @WebServlet("/login.do")
 public class LoginController extends HttpServlet{
