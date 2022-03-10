@@ -70,6 +70,13 @@ body {
     font-size: 20px;
     border-radius: 20px;
     font-family: Roboto; 
+    display:flex;
+    justify-content: center;
+    align-content: center;
+}
+
+#title p{
+    text-align: center;
 }
 
 #step {
@@ -95,7 +102,7 @@ body {
     width: 100%;
 }
 
-#pre {
+#pre,#next,#re {
     width: 25%;
     height: 10%;
     padding: 15px 0 15px;
@@ -110,20 +117,7 @@ body {
     text-decoration-line: underline;
 }
 
-#next {
-    width: 25%;
-    height: 10%;
-    padding: 15px 0 15px;
-    border: 0;
-    cursor: pointer;
-    color: #fff;
-    background-color: #8483BF;
-    font-size: 15px;
-    font-weight: 400;
-    font-family: Roboto;
-    border-radius: 20px;
-    text-decoration-line: underline;
-}
+
 
 a:visited{
     color: #fff;
