@@ -32,9 +32,9 @@ public class my_recipeDAO {
 		session.close();
 	}
 
-	public int my_recipeInsert(my_recipeVO vo) {
+	public int my_recipe(my_recipeVO vo) {
 		SqlSession session=sqlSessionFactory.openSession();   
-		int cnt=session.insert("my_recipeInsert", vo);
+		int cnt = session.update("my_recipe", vo);
 		session.commit();
 		session.close();
 		return cnt;
@@ -46,4 +46,5 @@ public class my_recipeDAO {
 		session.commit();
 		session.close();
 	}
+
 }

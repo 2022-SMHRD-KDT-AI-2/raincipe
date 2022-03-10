@@ -35,7 +35,7 @@
     			</tr>
     			<tr>
     				<td>재료</td>
-    				<td><textarea rows="5" class="form-control" name="recipe_ingredient">${vo.recipe_ingredient}</textarea></td>
+    				<td><textarea rows="5" class="form-control" name="my_recipe_ingredient">${vo.recipe_ingredient}</textarea></td>
     			</tr>
     			<tr>	
     				<td>레시피</td>

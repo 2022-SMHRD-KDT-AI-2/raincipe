@@ -85,12 +85,5 @@ public class RecipeDAO{
 	      }
 	   }
 
-	public void recipeUpdate(RecipeVO vo) {
-		SqlSession session = sqlSessionFactory.openSession();
-		session.update("recipeUpdate",vo);
-		session.commit();
-		session.close();
-	}
-
 
 }

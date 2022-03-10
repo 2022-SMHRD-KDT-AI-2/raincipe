@@ -8,8 +8,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import readRecipe.model.RecipeVO;
-import readRecipe.model.RecipeDAO;
+import readRecipe.model.my_recipeVO;
+import readRecipe.model.my_recipeDAO;
 
 
 @WebServlet("/recipeUpdate.do")
@@ -17,19 +17,27 @@ public class RecipeUpdateController extends HttpServlet{
 	@Override
 	public void service(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
+		
+		request.setCharacterEncoding("utf-8");
 		int recipe_seq = Integer.parseInt(request.getParameter("recipe_seq"));
-		String recipe_name = request.getParameter("recipe_name");
-		String recipe_ingredient = request.getParameter("recipe_ingredient");
-		String recipe_step = request.getParameter("recipe_step");
+		String my_recipe_name = request.getParameter("my_recipe_name");
+		String my_recipe_ingredient = request.getParameter("my_recipe_ingredient");
+		String my_recipe_step = request.getParameter("my_recipe_step");
+		String user_id = request.getParameter("user_id");
+		String channel_id = request.getParameter("channel_id");
 		
-		RecipeDAO dao = new RecipeDAO();
-		RecipeVO vo = new RecipeVO();
+		my_recipeDAO dao = new my_recipeDAO();
+		my_recipeVO vo = new my_recipeVO();
+		
 		vo.setRecipe_seq(recipe_seq);
-		vo.setRecipe_name(recipe_name);		
-		vo.setRecipe_ingredient(recipe_ingredient);
-		vo.setRecipe_step(recipe_step);
+		vo.setMy_recipe_name(my_recipe_name);	
+		vo.setMy_recipe_ingredient(my_recipe_ingredient);
+		vo.setMy_recipe_step(my_recipe_step);
+		vo.setUser_id(user_id);
+		vo.setChannel_id(channel_id);
 		
-		dao.recipeUpdate(vo);
+		
+		dao.my_recipe(vo);
 		
 		response.sendRedirect("/web/recipeList.do");
 	}

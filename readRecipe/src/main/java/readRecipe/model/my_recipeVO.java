@@ -3,7 +3,7 @@ package readRecipe.model;
 public class my_recipeVO {
 private int my_recipe_seq ;
 private String my_recipe_name ;
-private String my_recipe_ingre ;
+private String my_recipe_ingredient ;
 private String my_recipe_step ;
 private String my_recipe_img1 ;
 private String my_recipe_img2 ;
@@ -14,18 +14,18 @@ private int likes ;
 private int quotes ;
 private int cnt ;
 private String user_id ;
-private int channel_id ;
+private String channel_id ;
 private int super_my_recipe_se;
 
 	public my_recipeVO() {}
 	
-	public my_recipeVO(int my_recipe_seq, String my_recipe_name, String my_recipe_ingre, String my_recipe_step,
+	public my_recipeVO(int my_recipe_seq, String my_recipe_name, String my_recipe_ingredient, String my_recipe_step,
 		String my_recipe_img1, String my_recipe_img2, String my_recipe_img3, String reg_date, int recipe_seq, int likes,
-		int quotes, int cnt, String user_id, int channel_id, int super_my_recipe_se) {
+		int quotes, int cnt, String user_id, String channel_id, int super_my_recipe_se) {
 	
 	this.my_recipe_seq = my_recipe_seq; 
 	this.my_recipe_name = my_recipe_name; //O
-	this.my_recipe_ingre = my_recipe_ingre; //O
+	this.my_recipe_ingredient = my_recipe_ingredient; //O
 	this.my_recipe_step = my_recipe_step; //O
 	this.my_recipe_img1 = my_recipe_img1; //?
 	this.my_recipe_img2 = my_recipe_img2; //?
@@ -52,11 +52,11 @@ private int super_my_recipe_se;
 	public void setMy_recipe_name(String my_recipe_name) {
 		this.my_recipe_name = my_recipe_name;
 	}
-	public String getMy_recipe_ingre() {
-		return my_recipe_ingre;
+	public String getMy_recipe_ingredient() {
+		return my_recipe_ingredient;
 	}
-	public void setMy_recipe_ingre(String my_recipe_ingre) {
-		this.my_recipe_ingre = my_recipe_ingre;
+	public void setMy_recipe_ingredient(String my_recipe_ingre) {
+		this.my_recipe_ingredient = my_recipe_ingre;
 	}
 	public String getMy_recipe_step() {
 		return my_recipe_step;
@@ -118,10 +118,10 @@ private int super_my_recipe_se;
 	public void setUser_id(String user_id) {
 		this.user_id = user_id;
 	}
-	public int getChannel_id() {
+	public String getChannel_id() {
 		return channel_id;
 	}
-	public void setChannel_id(int channel_id) {
+	public void setChannel_id(String channel_id) {
 		this.channel_id = channel_id;
 	}
 	public int getSuper_my_recipe_se() {

@@ -19,15 +19,22 @@
 		order by recipe_seq 
 	</select>
      
-     <select id="checkLogin" parameterType="readRecipe.model.UserVO" resultType="readRecipe.model.UserVO">
+    <select id="checkLogin" parameterType="readRecipe.model.UserVO" resultType="readRecipe.model.UserVO">
      	select * from t_user
      	where user_id=#{user_id} and user_pw=#{user_pw}
      </select>
+
+     <insert id="my_recipe" parameterType="readRecipe.model.my_recipeVO">
+     	insert into t_my_recipe(my_recipe_seq,my_recipe_name,my_recipe_ingredient,my_recipe_step,user_id,channel_id,recipe_seq)
+     	values(t_my_recipe_my_recipe_seq.nextval,#{my_recipe_name},#{my_recipe_ingredient},#{my_recipe_step},#{user_id},#{channel_id},#{recipe_seq})
+     </insert>
      
-     <insert id="boardInsert" parameterType="readRecipe.model.my_recipeVO">
-		insert into my_recipe(my_recipe_seq,my_recipe_name,my_recipe_ingre,my_recipe_step)
-		
-		values(my_recipe_my_recipe_seq.nextval,#{my_recipe_name},#{my_recipe_ingre},#{my_recipe_step})
-	</insert>
+     
+   	<update id = "addCount" parameterType="int">
+   		update t_my_recipe
+   		set count = count +1 where my_recipe_seq = #{my_recipe_seq}
+   	</update>
+   	
+ 
      
 </mapper>
