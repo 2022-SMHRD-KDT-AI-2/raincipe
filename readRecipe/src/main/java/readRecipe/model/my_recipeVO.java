@@ -23,18 +23,18 @@ private int super_my_recipe_se;
 		String my_recipe_img1, String my_recipe_img2, String my_recipe_img3, String reg_date, int recipe_seq, int likes,
 		int quotes, int cnt, String user_id, int channel_id, int super_my_recipe_se) {
 	
-	this.my_recipe_seq = my_recipe_seq; //O 
+	this.my_recipe_seq = my_recipe_seq; 
 	this.my_recipe_name = my_recipe_name; //O
 	this.my_recipe_ingre = my_recipe_ingre; //O
 	this.my_recipe_step = my_recipe_step; //O
-	this.my_recipe_img1 = my_recipe_img1;
-	this.my_recipe_img2 = my_recipe_img2;
-	this.my_recipe_img3 = my_recipe_img3;
+	this.my_recipe_img1 = my_recipe_img1; //?
+	this.my_recipe_img2 = my_recipe_img2; //?
+	this.my_recipe_img3 = my_recipe_img3; //?
 	this.reg_date = reg_date;
 	this.recipe_seq = recipe_seq; //O
-	this.likes = likes;
-	this.quotes = quotes;
-	this.cnt = cnt;
+	this.likes = likes; //?
+	this.quotes = quotes; //?
+	this.cnt = cnt; 
 	this.user_id = user_id; //O
 	this.channel_id = channel_id; //O
 	this.super_my_recipe_se = super_my_recipe_se;
