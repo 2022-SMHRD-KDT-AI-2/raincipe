@@ -1,7 +1,7 @@
 /**
  * 
  */
- const arrows = document.querySelectorAll(".arrow");
+const arrows = document.querySelectorAll(".arrow");
 const recipeLists = document.querySelectorAll(".recipe-list");
 
 arrows.forEach((arrow,i)=>{
