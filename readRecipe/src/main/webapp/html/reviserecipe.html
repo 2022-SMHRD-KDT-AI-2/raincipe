@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lnag="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>raincipe 수정 레시피 작성</title>
+    <link rel="stylesheet" href="../css/reviserecipe.css">
+
+</head>
+
+<body>
+    <div id="header">
+        <img src="../img/KakaoTalk_20220308_171928599.png" id="logo">
+        <a href="#"><img src="../img/left arrow.png" alt="" class="prev"></a>
+    </div>
+
+    <div id="wrapper">
+
+        <div id="content">
+
+            <div>
+                <span class="box int_title">
+                    <input type="text" id="title" class="int" maxlength="20" placeholder="제목을 입력하세요">
+                    <img src="../img/camera.png" id="title_img1" class="Img">
+                    <textarea id="ingredient" class="int" placeholder="재료 수정하세요"></textarea>
+                </span>
+            </div>
+
+            <div>
+                <h3 class="join_title">
+                </h3>
+                <span class="box int_recipe_content">
+                    <textarea id="recipe_content" class="int" placeholder="레시피 내용을 수정하세요"></textarea>
+                </span>
+            </div>
+
+            <div class="btn_area">
+                <button type="button" id="cancel">
+                    <span><a href="">취소</a></span>
+                </button>
+                <button type="button" id="confirm">
+                    <span><a href="">수정 레시피로 저장</a></span>
+                </button>
+            </div>
+
+        </div>
+
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>
