@@ -33,6 +33,6 @@ public class LoginController extends HttpServlet{
 			
 		}
 		
-		response.sendRedirect("/web/recipeList.do");
+		response.sendRedirect("/web/index.jsp");
 	}
 }
