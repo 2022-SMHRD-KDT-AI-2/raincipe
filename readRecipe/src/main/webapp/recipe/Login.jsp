@@ -11,7 +11,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <link rel="stylesheet" href="./cssFolder/ex01.css">
+  <link rel="stylesheet" href="../css/login.css">
 </head>
 <body>
 	<form class="form-inline" action="/web/login.do" method="post">
@@ -29,7 +29,11 @@
 	
 	
 	
-	
+	<!-- header -->
+    <div id="header">
+        <img src="../img/logo.jpg" id="logo">
+    </div>
+
 	<form class="form-inline" action="/web/login.do" method="post">
 	
 	<div id="wrapper">
@@ -44,7 +48,7 @@
                 </h3>
                 <span class="box int_id">
                     <input type="text" id="id" class="int" maxlength="20" placeholder="아이디를 입력하세요">
-                    <img src="id.png" id="id1_img1" class="Img">
+                    <img src="../img/id.png" id="id1_img1" class="Img">
                 </span>
                 <span class="error_next_box"></span>
             </div>
@@ -55,7 +59,7 @@
                 <span class="box int_pass">
                     <input type="password" id="pswd1" class="int" maxlength="20" placeholder="비밀번호를 입력하세요">
                     <span id="alertTxt">사용불가</span>
-                    <img src="pw.png" id="pswd1_img1" class="Img">
+                    <img src="../img/pw.png" id="pswd1_img1" class="Img">
                 </span>
                 <span class="error_next_box"></span>
             </div>
