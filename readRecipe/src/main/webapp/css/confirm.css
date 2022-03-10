@@ -1,0 +1,59 @@
+@charset "EUC-KR";
+/* 레이아웃 틀 */
+html {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    height: 100%;
+    background: white;
+    font-family: Roboto;
+}
+#logo {
+    width: 500px;
+    height: 170px;
+    cursor: pointer;
+}
+
+#header {
+    padding-top: 62px;
+    padding-bottom: 0px;
+    text-align: center;
+}
+
+#wrapper {
+    position: relative;
+    height: 100%;
+}
+
+#content {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    width: 460px;
+}
+
+/* 버튼 */
+
+.btn_area {
+    margin: 30px 0 0px;
+}
+
+#gologin {
+    width: 100%;
+    padding: 21px 0 17px;
+    border: 0;
+    cursor: pointer;
+    color: #fff;
+    background-color: #0B045A;
+    font-size: 20px;
+    font-weight: 400;
+    font-family: Roboto;
+    border-radius: 20px;
+    text-decoration-line: underline;
+
+}
+a:visited{
+    color: #fff;
+}
