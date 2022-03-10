@@ -7,6 +7,7 @@
  <% 
  	RecipeVO vo=(RecipeVO)request.getAttribute("vo");
  	UserVO uv=(UserVO)request.getAttribute("uv");
+ 	String steps = vo.getRecipe_step();
  %>
 <!DOCTYPE html>
 <html lang="en">
@@ -75,7 +76,7 @@
                     <div id="box2_int1">${vo.recipe_ingredient}</div>
                 </div>
                 <div>
-                    <div id="box2_int2">레시피전체</div>
+                    <div id="box2_int2"><br></div>
                 </div>
             </div>
 
@@ -89,40 +90,15 @@
         </div>
 
     </div>
-    
-    
-
-<%-- <div class="container">
-  <h2>MVC Framework 01</h2>
-  <div class="panel panel-default">
-    <div class="panel-heading">TEST</div>
-    <div class="panel-body">
-    	<table class="table table-bordered table-hover">
- 			<tr>
- 				<td>요리 이름</td>
- 				<td>${vo.recipe_name}</td>
- 			</tr>
- 			<tr>
- 				<td>사진</td>
- 				<td><img src = "${vo.recipe_img1}" height="100"></img></td>
- 			</tr>
- 			<tr>
- 				<td>재료</td>
- 				<td>${vo.recipe_ingredient}</td>
- 			</tr>
- 			<tr>
- 				<td colspan="2" align="center">
- 				   <Button class = "btn btn-success btn-sm" onclick="goStep(${vo.recipe_seq})">레시피 시작</Button>
- 				   <Button class = "btn btn-success btn-sm" onclick="goList()">리스트</Button>
- 				   <c:if test="${!empty usVO}">
- 				   		<Button class = "btn btn-success btn-sm" onclick="goUp(${vo.recipe_seq})">수정하기</Button>
- 					</c:if>
- 				</td>
- 			</tr>
- 		</table>
-    </div>
-    <div class="panel-footer"></div>
-  </div>
-</div> --%>
+    <script>
+    	var step_str = "<%=steps%>"
+    	let step_list = step_str.split(';')
+    	console.log(step_list)
+    	$(function(){
+    		for (const step of step_list){
+    			$('#box2_int2').append("<p>"+step+"</p><br>")
+    		}
+    	})
+    </script>
 </body>
 </html>

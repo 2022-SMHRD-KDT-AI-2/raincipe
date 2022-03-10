@@ -56,12 +56,27 @@
 	if (step_list[step_list.length-1]==""){
 		step_list = step_list.slice(0,-1);
 	}
-	
+	// 음성 파일 생성하기
+	$.ajax({
+		url : "http://221.156.243.131:3600/post",
+		type : "post",
+		sucess : function(res){
+			continue
+		},
+		error : function() {alert("error");}
+	})	
     $(function(){
     	$('#step').html(step_list[cnt])
     	while (cnt < step_list.length){
     		// 보이스 저장하기
-			
+			$.ajax({
+				url : "http://221.156.243.131:3600/post",
+				type : "post",
+				success : function(res){ // res : 응답받은값을 자동으로 받아주는 매개변수
+					continue
+				},
+				error : function() {alert("error");}
+			});
     		// 이전 이라면 전 스텝 보여주기
     		if(cnt>0 && voice == "이전"){
     			time = 0;
