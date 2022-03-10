@@ -72,7 +72,7 @@ body {
     border-radius: 10px;
 }
 
-/* #voice_start {
+#start {
     width: 20%;
     height: 125px;
     padding: 15px 0 15px;
@@ -80,13 +80,12 @@ body {
     cursor: pointer;
     color: #fff;
     background-color: #8483BF;
-    font-size: 30px;
+    font-size: 20px;
     font-weight: 400;
     font-family: Roboto;
     border-radius: 20px;
 }
- */
-/* #script {
+ #script {
     width: 20%;
     height: 125px;
     padding: 15px 0 15px;
@@ -94,7 +93,7 @@ body {
     cursor: pointer;
     color: #fff;
     background-color: #8483BF;
-    font-size: 30px;
+    font-size: 20px;
     font-weight: 400;
     font-family: Roboto;
     border-radius: 20px;
@@ -108,14 +107,14 @@ body {
     cursor: pointer;
     color: #fff;
     background-color: #8483BF;
-    font-size: 30px;
+    font-size: 20px;
     font-weight: 400;
     font-family: Roboto;
     border-radius: 20px;
 }
- */
+ 
 .Img{
-    width: 15%;
+    width: 18%;
     height: 100%;
     display: inline-block;
     /* position: absolute; */
@@ -188,9 +187,11 @@ body {
     position: relative;
     text-align: center;
     width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
-#recipe_modify ,#list {
+#recipe_modify{
     width: 25%;
     height: 10%;
     padding: 15px 0 15px;
@@ -204,11 +205,21 @@ body {
     border-radius: 10px;
     text-decoration-line: underline;
 }
-
-.btn_area {
-	display: flex;
-    justify-content: center;
+#list{
+	width: 25%;
+    height: 10%;
+    padding: 15px 0 15px;
+    border: 0;
+    cursor: pointer;
+    color: #fff;
+    background-color: #8483BF;
+    font-size: 15px;
+    font-weight: 400;
+    font-family: Roboto;
+    border-radius: 10px;
+    text-decoration-line: underline;
 }
+
 a:visited{
     color: #fff;
 }
