@@ -8,7 +8,6 @@ String steps = vo.getRecipe_step();
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Bootstrap Example</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet"
@@ -37,11 +36,10 @@ String steps = vo.getRecipe_step();
 				<div id="title">
 					<p><%=vo.getRecipe_name()%></p>
 				</div>
-				<div id="step"></div>
+				<div><span id = "step"></span></div>
 			</div>
 			<div class="btn_area">
 				<Button class="btn btn-success btn-sm" id='pre'>이전</Button>
-				<Button class="btn btn-success btn-sm" id='re'>다시 재생</Button>
 				<Button class="btn btn-success btn-sm" id='next'>다음</Button>
 			</div>
 
@@ -49,14 +47,14 @@ String steps = vo.getRecipe_step();
 	</div>
 	<div class="panel-footer"></div>
 	<script>
-	var step_str = "<%=steps%>
-		"
+	var step_str = "<%=steps%>"
 		let step_list = step_str.split(';')
 		cnt = 0
 		if (step_list[step_list.length - 1] == "") {
 			step_list = step_list.slice(0, -1)
 		}
 		$(function() {
+			console.log(step_list[cnt])
 			$('#step').html(step_list[cnt])
 			$('#pre').click(function() {
 				cnt -= 1
