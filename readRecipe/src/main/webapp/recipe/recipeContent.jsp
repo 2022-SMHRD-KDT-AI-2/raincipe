@@ -63,6 +63,9 @@
                          <button id="subscribe" class = "btn btn-success btn-sm">
                             <a href="">구독 하기</a>
                          </button>
+                         <button id="bookmark" class = "btn btn-success btn-sm">
+                   		 <a href="">즐겨찾기</a>
+                		</button>
                          
                 </div>
             </div>
@@ -83,9 +86,9 @@
                 <button type="button" id="recipe_modify">
                     <span><a href="">나만의 레시피 저장</a></span>
                 </button>
-                <button type="bookmark" id="recipe_modify">
+                <!-- <button type="bookmark" id="recipe_modify">
                     <span><a href="">즐겨찾기</a></span>
-                </button>
+                </button> -->
                 <Button id="list"  onclick="goList()">리스트</Button>
             </div>
 
