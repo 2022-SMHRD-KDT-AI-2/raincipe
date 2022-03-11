@@ -5,9 +5,9 @@ private int my_recipe_seq ;
 private String my_recipe_name ;
 private String my_recipe_ingredient ;
 private String my_recipe_step ;
-private String my_recipe_img1 ;
-private String my_recipe_img2 ;
-private String my_recipe_img3 ;
+private byte[] my_recipe_img1 ;
+private byte[] my_recipe_img2 ;
+private byte[] my_recipe_img3 ;
 private String reg_date ;
 private int recipe_seq ;
 private int likes ;
@@ -20,7 +20,7 @@ private int super_my_recipe_se;
 	public my_recipeVO() {}
 	
 	public my_recipeVO(int my_recipe_seq, String my_recipe_name, String my_recipe_ingredient, String my_recipe_step,
-		String my_recipe_img1, String my_recipe_img2, String my_recipe_img3, String reg_date, int recipe_seq, int likes,
+		byte[] my_recipe_img1, byte[] my_recipe_img2, byte[] my_recipe_img3, String reg_date, int recipe_seq, int likes,
 		int quotes, int cnt, String user_id, String channel_id, int super_my_recipe_se) {
 	
 	this.my_recipe_seq = my_recipe_seq; 
@@ -64,22 +64,22 @@ private int super_my_recipe_se;
 	public void setMy_recipe_step(String my_recipe_step) {
 		this.my_recipe_step = my_recipe_step;
 	}
-	public String getMy_recipe_img1() {
+	public byte[] getMy_recipe_img1() {
 		return my_recipe_img1;
 	}
-	public void setMy_recipe_img1(String my_recipe_img1) {
+	public void setMy_recipe_img1(byte[] my_recipe_img1) {
 		this.my_recipe_img1 = my_recipe_img1;
 	}
-	public String getMy_recipe_img2() {
+	public byte[] getMy_recipe_img2() {
 		return my_recipe_img2;
 	}
-	public void setMy_recipe_img2(String my_recipe_img2) {
+	public void setMy_recipe_img2(byte[] my_recipe_img2) {
 		this.my_recipe_img2 = my_recipe_img2;
 	}
-	public String getMy_recipe_img3() {
+	public byte[] getMy_recipe_img3() {
 		return my_recipe_img3;
 	}
-	public void setMy_recipe_img3(String my_recipe_img3) {
+	public void setMy_recipe_img3(byte[] my_recipe_img3) {
 		this.my_recipe_img3 = my_recipe_img3;
 	}
 	public String getReg_date() {

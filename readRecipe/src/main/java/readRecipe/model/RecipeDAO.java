@@ -35,8 +35,6 @@ public class RecipeDAO{
 	// Recipe table에서 게시판 전체리스트 가져오기
 	public List<RecipeVO> selectAll() {
 		SqlSession session=sqlSessionFactory.openSession();
-		// SqlSession은 어떤 정보를 알고 있어야 할까?
-		// 1. SQL문장이 어디에 있는지
 		List<RecipeVO> list=session.selectList("selectAll");
 		session.close();
 		return list;

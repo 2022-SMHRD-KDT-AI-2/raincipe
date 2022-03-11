@@ -22,11 +22,8 @@ public class ContentController extends HttpServlet {
 		
 		int recipe_seq = Integer.parseInt(request.getParameter("Recipe_seq")); 
 
-		
-		
 		RecipeDAO dao = new RecipeDAO();
 		RecipeVO vo = dao.getByRecipe_seq(recipe_seq);
-		
 	
 		request.setAttribute("vo",vo);
 		RequestDispatcher rd=request.getRequestDispatcher("recipe/recipeContent.jsp");

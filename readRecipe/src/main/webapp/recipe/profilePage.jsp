@@ -19,6 +19,9 @@
    	function goOut(){
   		location.href="/web/logout.do";
   	}
+   	function goList() {
+		location.href="/web/myrecipeList.do"	
+	}
    </script>
 </head>
 <body>
@@ -44,7 +47,9 @@
         <div class="create">
             <div class="community_create">
                 <a href="#" class="btn">글 작성</a>	
-                <a href="#" class="btn">레시피 작성</a>	
+                <Button class = "btn btn-warning btn-sm" onclick="goList()">
+                	<a href="#">내 레시피 리스트</a>
+                </Button>	
             </div>
         </div>
     </main>
