@@ -43,10 +43,13 @@
 				</div>
 			</div>
 		</div>
+		</div>
 
-		<!-- 더보기 할 수 있는 영역 -->
+		<!-- 더보기 할 수 있는 영역 기본레시피-->
+		<div class="content_container">
 		<div id="contents">
 			<div id="js-load" class="main">
+			<h2 class="recipe_menu">기본레시피</h2>
 				<ul class="lists">
 					<% for(int i=0;i<searchedList.size();i++) {
   			 		RecipeVO vo=searchedList.get(i);  %>
@@ -72,6 +75,38 @@
 			</div>
 		</div>
 	</div>
+		
+		<!-- 더보기 할 수 있는 영역 개인레시피 -->
+		<div class="content_container">
+		<div id="contents2">
+			<div id="js-load2" class="main">
+			<h2 class="recipe_menu">개인레시피</h2>
+				<ul class="lists">
+					<% for(int i=0;i<searchedList.size();i++) {
+  			 		RecipeVO vo=searchedList.get(i);  %>
+					<li class="lists__item js-load">
+						<main class="scrip">
+							<div class="recipe_list">
+								<a href="#" class="food_photo"> <img
+									src="<%= vo.getRecipe_img1() %>" alt="" class=food_img>
+								</a> 
+								<a href=/web/recipeContent.do?Recipe_seq=<%=vo.getRecipe_seq()%> class="food_explain">
+									<div class="food_title"><%= vo.getRecipe_name() %></div>
+									<div class="food_ingredients"><%= vo.getRecipe_ingredient() %></div>
+								</a>
+							</div>
+						</main>
+					</li>
+					<% } %>
+				</ul>
+				<!-- 더보기 버튼 -->
+				<div id="js-btn-wrap2" class="btn-wrap">
+					<a href="javascript:;" class="btn">더보기</a>
+				</div>
+			</div>
+		</div>
+</div>
+
 <script src="<%= request.getContextPath()%>/js/search.js"></script>
 
 </body>

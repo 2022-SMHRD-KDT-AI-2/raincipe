@@ -81,6 +81,9 @@ html,body{
 a{
     text-decoration: none;
 }
+.content_container{
+	display: inline-block;
+}
 
 /* 더보기 클릭 관련 */
 .js-load {
@@ -172,6 +175,6 @@ a{
 .food_ingredients{
     height: 60%;
     font-size: 1.3rem;
-    
 
 }
+
