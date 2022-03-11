@@ -9,7 +9,7 @@ arrows.forEach((arrow,i)=>{
     let clickCounter = 0;
     arrow.addEventListener("click",()=>{
         clickCounter++;
-        if(itemNumber-(4+clickCounter)>=0){
+        if(itemNumber-(3+clickCounter)>=0){
             recipeLists[i].style.transform =`translateX(${
                 recipeLists[i].computedStyleMap().get("transform")[0].x.value-300
             }px)`;
