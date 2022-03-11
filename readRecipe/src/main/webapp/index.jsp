@@ -7,7 +7,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+ <!--  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> -->
   
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
@@ -101,7 +101,7 @@
                             <button class="recipe-list-item-button">보러가기</button>
                         </div>
                         <div class="recipe-list-item">
-                            <img class="recipe-list-item-img" src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMTA3MDNfODAg%2FMDAxNjI1MzE4MDM0NzU2.TPuiQ5BIuGUFOzNaGVS_3-6Xjxz-HUg2t33Tlc8FANwg.n8w79Cj-UnB8JS8X4aMgBQEhZGnNwgQtrbbHocJERVIg.PNG.melayeonju%2F36%25C8%25B82%25B6%25F3%25BF%25EE%25B5%25E5%25C0%25BD%25BD%25C45.png&type=sc960_832" alt="">
+                            <img class="recipe-list-item-img" src="https://i.ytimg.com/vi/-dBPLgpC-tk/maxresdefault.jpg" alt="">
                             <span class="recipe-list-item-title">프렌치 토스트</span>
                             <p class="recipe-list-item-desc">백종원의 요리비책 프렌치 토스트</p>
                             <button class="recipe-list-item-button">보러가기</button>
