@@ -57,7 +57,7 @@
 						<main class="scrip">
 							<div class="recipe_list">
 								<a href="#" class="food_photo"> <img
-									src="<%= vo.getRecipe_img1() %>" alt="" class=food_img>
+									src="<%= vo.getRecipe_img1() %>" alt="등록된 이미지가 없습니다." class=food_img>
 								</a> 
 								<a href=/web/recipeContent.do?Recipe_seq=<%=vo.getRecipe_seq()%> class="food_explain">
 									<div class="food_title"><%= vo.getRecipe_name() %></div>
@@ -88,7 +88,7 @@
 						<main class="scrip">
 							<div class="recipe_list">
 								<a href="#" class="food_photo"> <img
-									src="<%= vo.getRecipe_img1() %>" alt="" class=food_img>
+									src="<%= vo.getRecipe_img1() %>" alt="등록된 이미지가 없습니다." class=food_img>
 								</a> 
 								<a href=/web/recipeContent.do?Recipe_seq=<%=vo.getRecipe_seq()%> class="food_explain">
 									<div class="food_title"><%= vo.getRecipe_name() %></div>
