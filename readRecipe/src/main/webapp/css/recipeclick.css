@@ -85,7 +85,7 @@ body {
     font-family: Roboto;
     border-radius: 20px;
 }
- #script {
+ #voice_start {
     width: 20%;
     height: 125px;
     padding: 15px 0 15px;
@@ -193,6 +193,21 @@ body {
 }
 
 #recipe_modify{
+    width: 25%;
+    height: 10%;
+    padding: 15px 0 15px;
+    border: 0;
+    cursor: pointer;
+    color: #fff;
+    background-color: #8483BF;
+    font-size: 15px;
+    font-weight: 400;
+    font-family: Roboto;
+    border-radius: 10px;
+    text-decoration-line: underline;
+}
+
+#bookmark{
     width: 25%;
     height: 10%;
     padding: 15px 0 15px;

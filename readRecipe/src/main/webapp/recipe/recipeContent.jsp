@@ -57,8 +57,8 @@
                          <!-- <button type="button" id="voice_start">
                             <a href="">음성 시작</a>
                          </button> -->
-                         <button id="script" class = "btn btn-success btn-sm">
-                            <a href="">스크랩</a>
+                         <button id="voice_start" class = "btn btn-success btn-sm">
+                            <a href="">음성 시작</a>
                          </button>
                          <button id="subscribe" class = "btn btn-success btn-sm">
                             <a href="">구독 하기</a>
@@ -82,6 +82,9 @@
             <div class="btn_area">
                 <button type="button" id="recipe_modify">
                     <span><a href="">나만의 레시피 저장</a></span>
+                </button>
+                <button type="bookmark" id="recipe_modify">
+                    <span><a href="">즐겨찾기</a></span>
                 </button>
                 <Button id="list"  onclick="goList()">리스트</Button>
             </div>
