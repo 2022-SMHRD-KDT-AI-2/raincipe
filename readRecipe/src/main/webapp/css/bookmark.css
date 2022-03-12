@@ -1,0 +1,222 @@
+@charset "EUC-KR";
+*{
+    color: black;
+    
+}
+
+html,body{
+    margin: 0;
+    height: 150%;
+}
+
+
+.wrapper{
+    display: flex;
+    flex-direction: column;
+}
+.wrapper .header{
+    width: 100%;
+    height: 20vh;
+} 
+.wrapper .prev{
+    width: 7%;
+    height: 15%;
+    position: absolute;
+    top: 7%;
+    left: 3%;
+    opacity: .5;
+}
+
+.wrapper.indexPage{
+    justify-content: center;
+    position: relative;
+
+}
+
+/* 메인부분 */
+.mainSection{
+    display: flex;
+    flex-direction: column;
+    /* 가운데 정렬 */
+    align-items: center;
+}
+.mainSection .searchContainer{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+/* .mainSection .logoContainer img{
+    height: 30vh;
+} */
+
+.mainSection .searchContainer .searchBox{
+    border: none;
+    box-shadow: 0px 2px 0 rgb(0 0 0 / 16%), 0 0 0 1px rgb(0 0 0 / 8%);
+    height: 8vh;
+    border-radius: 22px;
+    width: 75vh;
+    outline: none;
+    display: flex;
+    align-items: center;
+
+}
+.myrecipe_img{
+	width: 35%;
+}
+
+.mainSection .searchContainer .searchBox img{
+    width: 25px;
+    height: 25px;
+    margin: 13px;
+    opacity: 0.5;
+}
+
+.mainSection .searchContainer .searchBox input{
+    flex: 1;
+    height: 95%;
+    margin-right: 20px;
+    border: none;
+    outline: none;
+    font-size: 1.3rem;
+}
+a{
+    text-decoration: none;
+}
+
+/* ul/li */
+
+li{
+    display: flex;
+    padding: 3%;
+}
+
+
+
+
+/* 이미지 */
+.recipe-list-container{
+    padding: 0 20px;
+}
+
+.recipe-list-wrapper{
+    position: relative;
+    overflow: hidden;
+}
+.recipe-list{
+    display: flex;
+    /* height: 30vh; */
+    align-items: center;
+    padding-top: 5%;
+    justify-content: center
+}
+.recipe-list-item{
+    margin-right: 30px;
+    position: relative;
+    
+}
+.recipe-list-item:hover .recipe-list-item-img{
+    transform: scale(1.3);
+    margin: 0 30px;
+    opacity: 0.5;
+}
+.recipe-list-item:hover .recipe-list-item-title,
+.recipe-list-item:hover .recipe-list-item-desc,
+.recipe-list-item:hover .recipe-list-item-button{
+    opacity: 1;
+}
+
+.recipe-list-item-img{
+    transition: all 1s ease-in-out;
+    width: 40vh;
+    height: 35vh;
+    object-fit: cover;
+}
+.recipe-list-item-title{
+    color: #060606;
+    padding: 0 10px;
+    font-size: 1.3rem;
+    font-weight: bold;
+    position: absolute;
+    top: 10%;
+    left: 20%;
+    opacity: 0;
+    transition: 1s all ease-in-out;
+}
+.recipe-list-item-desc{
+    color: rgb(2, 2, 2);
+    padding: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+    position: absolute;
+    top: 15%;
+    left: 20%;
+    width: 65%;
+    opacity: 0;
+    transition: 1s all ease-in-out;
+}
+.recipe-list-item-button{
+    padding: 10px;
+    background-color: orange;
+    color: white;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    bottom: 10%;
+    left: 20%;
+    opacity: 0;
+    transition: 1s all ease-in-out;
+}
+.arrow{
+    width: 7%;
+    position: absolute;
+    top:20%;
+    right: 0;
+    color: black;
+    opacity: .5;
+    cursor: pointer;
+}
+
+
+
+ /* 더보기버튼 */
+
+
+.btn-wrap {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-bottom: 5%;
+}
+.btn{
+    display: inline-block;
+    padding: 1em 1.6em;
+    border-radius: 10px;
+    margin-top:2rem;
+    font-weight: bold;
+    font-size: 1.3rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+    transition: all 250ms ease;
+    background: #25167a;
+    color: whitesmoke;
+}
+
+
+.js-load.active {
+    display: block;
+}
+.is_comp.js-load:after {
+    display: none;
+}
+.btn-wrap, .lists {
+    display: block;
+}
