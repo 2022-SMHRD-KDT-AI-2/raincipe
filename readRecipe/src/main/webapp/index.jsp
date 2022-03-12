@@ -22,6 +22,9 @@
 	function goFa(Recipe_seq){
   		location.href="/web//favorite.do?Recipe_seq="+Recipe_seq;
   	}
+
+	function favorite(){
+		location.href="/web/showfavorite.do";
   </script>
 <body>
     <div class="container">

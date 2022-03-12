@@ -4,7 +4,7 @@
 <%@page import="readRecipe.model.RecipeVO"%>
 <%@page import="java.util.ArrayList"%>
 <%
-	List<RecipeVO> searchedList=(List<RecipeVO>)request.getAttribute("searchedList");
+List<RecipeVO> searchedList=(List<RecipeVO>)request.getAttribute("ad");
 %>
 <!DOCTYPE html>
 <html>
@@ -23,6 +23,7 @@
 </head>
 <body>
 	<div class="container">
+
 		<div class="wrapper indexPage">
 			<img src="<%= request.getContextPath() %>/img/꾸미기.png"
 				class="header"> <a href="#"><img
@@ -32,7 +33,7 @@
 			<div class="mainSection">
 				<!-- 로고 부분 -->
 				<div class="logoContainer">
-					<img src="<%= request.getContextPath() %>/img/logo.jpg">
+					<img src="<%= request.getContextPath() %>/img/logo.jpg" alt="">
 				</div>
 				<!-- 검색부분 -->
 			<form method="post" name="search" action="/web/search.do">
@@ -63,7 +64,7 @@
 									<div class="food_title"><%= vo.getRecipe_name() %></div>
 									<div class="food_ingredients"><%= vo.getRecipe_ingredient() %></div>
 								</a>
-							</div> 
+							</div>
 						</main>
 					</li>
 					<% } %>

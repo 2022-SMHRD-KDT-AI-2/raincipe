@@ -22,6 +22,9 @@
    	function goList() {
 		location.href="/web/myrecipeList.do"	
 	}
+   	function favorite(){
+  		location.href="/web/showfavorite.do";
+   	}
    </script>
 </head>
 <body>
@@ -49,7 +52,10 @@
                 <a href="#" class="btn">글 작성</a>	
                 <Button class = "btn btn-warning btn-sm" onclick="goList()">
                 	<a href="#">내 레시피 리스트</a>
-                </Button>	
+                </Button>
+                 <Button class = "btn" onclick="favorite()">
+                	<a href="#">즐겨찾기 리스트</a>
+                </Button>
             </div>
         </div>
     </main>

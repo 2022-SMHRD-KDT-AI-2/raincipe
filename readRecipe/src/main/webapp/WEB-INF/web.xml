@@ -4,4 +4,14 @@
 
 <web-app>
   <display-name>Archetype Created Web Application</display-name>
+  <servlet>
+  	<servlet-name>ShowFavoriteController</servlet-name>
+  	<display-name>ShowFavoriteController</display-name>
+  	<description></description>
+  	<servlet-class>readRecipe.controller.ShowFavoriteController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>ShowFavoriteController</servlet-name>
+  	<url-pattern>/ShowFavoriteController</url-pattern>
+  </servlet-mapping>
 </web-app>

@@ -29,16 +29,12 @@ protected void service(HttpServletRequest request, HttpServletResponse response)
 	UserVO user =(UserVO) session.getAttribute("usVO");
 	String usid=user.getUser_id();
 
-	
-	
-	
-	
 	FavoriteDAO dao = new FavoriteDAO();
 	FavoriteVO vo = new FavoriteVO();	
 	vo.setFecipe_seq(recipe_seq);
 	vo.setUser_id(usid);
 	dao.favorite(vo);
-	RequestDispatcher rd=request.getRequestDispatcher("recipe/recipeContent.jsp");
+	RequestDispatcher rd=request.getRequestDispatcher("recipe/favorite.jsp");
 	rd.forward(request, response);
 }
 }
