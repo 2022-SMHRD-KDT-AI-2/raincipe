@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mydatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="readRecipe.RecipeMapper">
+   
+   <select id="selectAll" resultType="readRecipe.model.RecipeVO">
+      select * from t_recipe 
+      order by recipe_seq 
+   </select>
+   
+     <select id="selectAll1" resultType="readRecipe.model.my_recipeVO">
+      select * from t_my_recipe 
+      order by my_recipe_seq 
+   	</select>
+   	
+   	<select id="getByRecipe_seq" parameterType ="int" resultType="readRecipe.model.RecipeVO">
+      select * from t_recipe where recipe_seq = #{recipe_seq}
+   </select>
+   	
+   	 <select id="getMy_recipe_seq" parameterType ="int" resultType="readRecipe.model.my_recipeVO">
+      select * from t_my_recipe where my_recipe_seq = #{my_recipe_seq}
+   	</select>
+   
+   
+   <select id="selectRecipes" parameterType = "String" resultType="readRecipe.model.RecipeVO">
+      select * from t_recipe
+      WHERE recipe_name LIKE '%' || #{searchText} || '%'
+      order by recipe_seq 
+   </select>
+     
+    <select id="checkLogin" parameterType="readRecipe.model.UserVO" resultType="readRecipe.model.UserVO">
+        select * from t_user
+        where user_id=#{user_id} and user_pw=#{user_pw}
+     </select>
+    
+
+     <insert id="my_recipe" parameterType="readRecipe.model.my_recipeVO">
+        insert into t_my_recipe(my_recipe_seq,my_recipe_name,my_recipe_ingredient,my_recipe_step,user_id,channel_id,recipe_seq)
+        values(t_my_recipe_my_recipe_seq.nextval,#{my_recipe_name},#{my_recipe_ingredient},#{my_recipe_step},#{user_id},#{channel_id},#{recipe_seq})
+     </insert>
+     
+      <update id = "addCount" parameterType="int">
+         update t_my_recipe
+         set count = count +1 where my_recipe_seq = #{my_recipe_seq}
+      </update>
+      
+      <update id="my_recipe_update" parameterType="readRecipe.model.my_recipeVO">
+        update t_my_recipe set my_recipe_name=#{my_recipe_name}, my_recipe_ingredient=#{my_recipe_ingredient}, my_recipe_step=#{my_recipe_step}
+        where my_recipe_seq=#{my_recipe_seq}
+     </update>
+      
+     <insert id="favorite" parameterType="readRecipe.model.FavoriteVO">
+		insert into t_favorite(favorite_seq,recipe_seq,my_recipe_seq,user_id)
+		
+		values(t_favorite_favorite_seq.nextval,#{recipe_seq},0,#{user_id})
+	</insert>
+	
+	<insert id="signUp" parameterType="readRecipe.model.UserVO">
+		insert into t_user(user_id, user_pw, user_name, user_nick, user_email, user_profile_img, user_joindate, admin_yn, user_intro)
+		values (#{user_id}, #{user_pw}, #{user_name}, #{user_nick}, #{user_email}, #{user_profile_img}, sysdate, 'N', #{user_intro})
+	</insert>
+	
+	<select id="user_id" parameterType="String" resultType="readRecipe.model.UserVO">
+		select * from t_user
+		where user_id = #{"user_id"}
+	</select>
+     
+ 	<delete id="myrecipeDelete" parameterType ="int">
+		delete from t_my_recipe where my_recipe_seq = #{my_recipe_seq}
+	</delete>
+	
+	
+	<delete id="deleteUser" parameterType ="String">
+        delete from t_user where user_id=#{user_id}
+     </delete>
+	
+	<select id="showlist" resultType="int">
+      select RECIPE_SEQ from T_FAVORITE
+      where user_id = #{user_id}
+	</select>
+
+	 <select id="showfavorite" parameterType = "String" resultType="readRecipe.model.RecipeVO">
+      select * from T_RECIPE
+      where RECIPE_SEQ in (select RECIPE_SEQ from T_FAVORITE
+     						 where user_id = #{user_id})
+      order by recipe_seq 
+	</select>
+	
+     
+</mapper>
