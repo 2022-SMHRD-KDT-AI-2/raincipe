@@ -36,10 +36,8 @@
 
             <div>
                 <span class="box int_title">
-                    <!-- <input type="text" id="title" class="int" maxlength="20" placeholder="제목을 입력하세요"> -->
                     <input id="title"  type="text" class="int form-control" name="my_recipe_name" value="${vo.recipe_name}">
                     <img src="../img/camera.png" id="title_img1" class="Img">
-                    <!-- <textarea id="ingredient" class="int" placeholder="재료 수정하세요"></textarea> -->
                     <textarea id="ingredient" rows="5" class="int form-control" name="my_recipe_ingredient">${vo.recipe_ingredient}</textarea>
                 </span>
             </div>
@@ -48,21 +46,14 @@
                 <h3 class="join_title">
                 </h3>
                 <span class="box int_recipe_content">
-                    <!-- <textarea id="recipe_content" class="int" placeholder="레시피 내용을 수정하세요"></textarea> -->
                     <textarea id="recipe_content" rows="30" class="int form-control" name="my_recipe_step">${vo.recipe_step}</textarea>
                 </span>
             </div>
 
             <div class="btn_area">
-               <!--  <button type="button" id="cancel">
-                    <span><a href="">취소</a></span>
-                </button>
-                <button type="button" id="confirm">
-                    <span><a href="">수정 레시피로 저장</a></span>
-                </button> -->
                 <button id="confirm" type="submit" class="btn btn-info btn-sm">수정하기</button>
     			<button id="cancel" type="reset" class="btn btn-warning btn-sm">취소</button>
-                <button id="golist" type="button" class="btn btn-success btn-sm" onclick="location.href='/web/recipeList.do'">리스트</button>
+                <button id="go_list" type="button" class="btn btn-success btn-sm" onclick="location.href='/web/recipeList.do'">리스트</button>
             </div>
 
         </div>
