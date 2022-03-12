@@ -17,7 +17,7 @@ import readRecipe.model.my_recipeVO;
 /**
  * Servlet implementation class CalcController
  */
-@WebServlet("/myrecipeList.do" )
+@WebServlet("/myrecipeList.do")
 public class myrecipeListController extends HttpServlet {
    protected void service(HttpServletRequest request, HttpServletResponse response) 
 		   throws ServletException, IOException {

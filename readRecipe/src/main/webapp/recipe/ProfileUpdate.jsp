@@ -2,7 +2,7 @@
     pageEncoding="EUC-KR"%>
 <!DOCTYPE html>
 <html lang="en">
-<%@ page isELIgnored="false"  %>
+<%@ page isELIgnored="false" %>
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">

@@ -12,7 +12,7 @@ import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 
-public class UserDAO {
+public class UserDAO  {
 	
 private Connection conn; // Connection : 데이터베이스에 접근하게 해주는 하나의 객체 
 
