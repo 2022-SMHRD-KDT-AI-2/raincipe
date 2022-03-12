@@ -29,35 +29,34 @@
 
         <div id="content">
         	<form action="/web/recipeUpdate.do" method="post">
-    		<input type="hidden" name="recipe_seq" value="${vo.recipe_seq}">
-    		<input type="hidden" name="user_id" value="${usVO.user_id}">
-    		<input type="hidden" name="channel_id" value="${usVO.user_nick}">
-    		</form>
-
-            <div>
-                <span class="box int_title">
-                    <input id="title"  type="text" class="int form-control" name="my_recipe_name" value="${vo.recipe_name}">
-                    <img src="../img/camera.png" id="title_img1" class="Img">
-                    <textarea id="ingredient" rows="5" class="int form-control" name="my_recipe_ingredient">${vo.recipe_ingredient}</textarea>
-                </span>
-            </div>
-
-            <div>
-                <h3 class="join_title">
-                </h3>
-                <span class="box int_recipe_content">
-                    <textarea id="recipe_content" rows="30" class="int form-control" name="my_recipe_step">${vo.recipe_step}</textarea>
-                </span>
-            </div>
-
-            <div class="btn_area">
-                <button id="confirm" type="submit" class="btn btn-info btn-sm">수정하기</button>
-    			<button id="cancel" type="reset" class="btn btn-warning btn-sm">취소</button>
-                <button id="go_list" type="button" class="btn btn-success btn-sm" onclick="location.href='/web/recipeList.do'">리스트</button>
-            </div>
-
-        </div>
-
+	    		<input type="hidden" name="recipe_seq" value="${vo.recipe_seq}">
+	    		<input type="hidden" name="user_id" value="${usVO.user_id}">
+	    		<input type="hidden" name="channel_id" value="${usVO.user_nick}">
+	    		
+	            <div>
+	                <span class="box int_title">
+	                    <input id="title"  type="text" class="int form-control" name="my_recipe_name" value="${vo.recipe_name}">
+	                    <img src="../img/camera.png" id="title_img1" class="Img">
+	                    <textarea id="ingredient" rows="5" class="int form-control" name="my_recipe_ingredient">${vo.recipe_ingredient}</textarea>
+	                </span>
+	            </div>
+	
+	            <div>
+	                <h3 class="join_title">
+	                </h3>
+	                <span class="box int_recipe_content">
+	                    <textarea id="recipe_content" rows="30" class="int form-control" name="my_recipe_step">${vo.recipe_step}</textarea>
+	                </span>
+	            </div>
+	
+	            <div class="btn_area">
+	                <button id="confirm" type="submit" class="btn btn-info btn-sm">수정하기</button>
+	    			<button id="cancel" type="reset" class="btn btn-warning btn-sm">취소</button>
+	                <button id="go_list" type="button" class="btn btn-success btn-sm" onclick="location.href='/web/recipeList.do'">리스트</button>
+	            </div>
+	
+	        </div>
+		</form>
     </div>
     <script src="main.js"></script>
 

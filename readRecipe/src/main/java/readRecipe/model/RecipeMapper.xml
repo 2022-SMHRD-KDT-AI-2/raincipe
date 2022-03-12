@@ -70,6 +70,11 @@
 		delete from t_my_recipe where my_recipe_seq = #{my_recipe_seq}
 	</delete>
 	
+	
+	<delete id="deleteUser" parameterType ="String">
+        delete from t_user where user_id=#{user_id}
+     </delete>
+	
 	<select id="showlist" resultType="int">
       select RECIPE_SEQ from T_FAVORITE
       where user_id = #{user_id}

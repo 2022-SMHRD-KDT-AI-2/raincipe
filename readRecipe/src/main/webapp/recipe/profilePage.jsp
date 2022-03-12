@@ -25,6 +25,9 @@
    	function favorite(){
   		location.href="/web/showfavorite.do";
    	}
+   	function proUp(){
+  		location.href="/web/recipe/ProfileUpdate.jsp";
+  	}
    </script>
 </head>
 <body>
@@ -35,7 +38,7 @@
         <div class="my_profile">
             <div class="my_profile_img">
                 <img src="https://blog.kakaocdn.net/dn/dJRe0g/btqWUruqSFN/7lQyAEpK4ZnmBoHrU5lTAk/img.png" alt="">
-                <a href="./profileUpdate.html" class="my_profile_change">프로필 수정</a>
+                <a onclick="proUp()" class="my_profile_change">프로필 수정</a>
             </div>
         </div>
         <div class="my_nick">

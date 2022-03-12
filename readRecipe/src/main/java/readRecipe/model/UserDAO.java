@@ -37,5 +37,12 @@ private Connection conn; // Connection : 데이터베이스에 접근하게 해주는 하나의 �
 		return result;
 	}
 
+	public void deleteUser(String user_id) {
+		SqlSession session = sqlSessionFactory.openSession();
+		session.delete("deleteUser", user_id);
+		session.commit();
+		session.close();
+	}
+
 
 }

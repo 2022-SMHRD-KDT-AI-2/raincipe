@@ -7,7 +7,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import readRecipe.model.RecipeDAO;
 import readRecipe.model.UserDAO;
 import readRecipe.model.UserVO;
 

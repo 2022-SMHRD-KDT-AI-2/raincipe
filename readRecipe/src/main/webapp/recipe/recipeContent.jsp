@@ -51,7 +51,6 @@
                         <Button id="start" class = "btn btn-success btn-sm" onclick="goStep(${vo.recipe_seq})">레시피 시작</Button>
                         <button id="voice_start" class = "btn btn-success btn-sm">음성 시작</button>
                          	<c:if test="${!empty usVO}">
- 				   			<Button id="update_recipe" class = "btn btn-success btn-sm" onclick="goUp(${vo.recipe_seq})">수정하기</Button>
  				   			<Button id="bookmark" class = "btn btn-success btn-sm" onclick="goFa(${vo.recipe_seq})">즐겨찾기</Button>
  				   			<button id="subscribe" class = "btn btn-success btn-sm">구독 하기</button>
  							</c:if>
@@ -76,9 +75,7 @@
             </div>
 
             <div class="btn_area">
-                <button type="button" id="recipe_modify">
-                    <span><a href="">나만의 레시피 저장</a></span>
-                </button>
+                <Button id="update_recipe" class = "btn btn-success btn-sm" onclick="goUp(${vo.recipe_seq})">나만의 레시피 저장</button>
                 <Button id="list"  onclick="goList()">리스트</Button>
             </div>
 
