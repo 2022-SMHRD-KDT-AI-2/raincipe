@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>나의 레시피</title>
+    <link rel="stylesheet" href="../css/myRecipeList.css">
+</head>
+<body>
+    <div class="container">
+        <!-- 웹페이지를 감싸는  -->
+        <div class="wrapper indexPage">
+            <img src="../img/꾸미기.png" alt="" class="header">
+            <a href="#"><img src="../img/left arrow.png" alt="" class="prev"></a>
+            <!-- 메인섹션 -->
+            <div class="mainSection">
+                
+                <!-- 검색부분 -->
+                <div class="searchContainer">
+                    <img src="../img/myrecipe.png" alt="" class="myrecipe_img">
+                    <div class="searchBox">    
+                        <img src="../img/search.png" alt="">
+                        <input type="text"  placeholder="입력한 검색어">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 나의레시피들 -->
+     <div class="content-container">
+        <div class="recipe-list-container">
+                <div class="recipe-list-wrapper">
+                    <div class="recipe-list" id="js-load">
+
+                        <ul class="lists">
+
+                            <li class="lists__item js-load">
+                                <div class="recipe-list-item">
+                                    <img class="recipe-list-item-img" src="https://cdn.pixabay.com/photo/2020/03/26/10/58/norway-4970080_960_720.jpg" alt="">
+                                    <span class="recipe-list-item-title">레시피 이름</span>
+                                    <p class="recipe-list-item-desc">여기는 요리 할때 설명입니다.</p>
+                                    <button class="recipe-list-item-button">보러가기</button>
+                                </div>
+                                <div class="recipe-list-item">
+                                    <img class="recipe-list-item-img" src="https://cdn.pixabay.com/photo/2020/03/26/10/58/norway-4970080_960_720.jpg" alt="">
+                                    <span class="recipe-list-item-title">레시피 이름</span>
+                                    <p class="recipe-list-item-desc">여기는 요리 할때 설명입니다.</p>
+                                    <button class="recipe-list-item-button">보러가기</button>
+                                </div>
+                                <div class="recipe-list-item">
+                                    <img class="recipe-list-item-img" src="https://cdn.pixabay.com/photo/2020/03/26/10/58/norway-4970080_960_720.jpg" alt="">
+                                    <span class="recipe-list-item-title">레시피 이름</span>
+                                    <p class="recipe-list-item-desc">여기는 요리 할때 설명입니다.</p>
+                                    <button class="recipe-list-item-button">보러가기</button>
+                                </div>
+                            </li>
+
+                            <li class="lists__item js-load">
+                                <div class="recipe-list-item">
+                                    <img class="recipe-list-item-img" src="https://cdn.pixabay.com/photo/2020/03/26/10/58/norway-4970080_960_720.jpg" alt="">
+                                    <span class="recipe-list-item-title">레시피 이름</span>
+                                    <p class="recipe-list-item-desc">여기는 요리 할때 설명입니다.</p>
+                                    <button class="recipe-list-item-button">보러가기</button>
+                                </div>
+                                <div class="recipe-list-item">
+                                    <img class="recipe-list-item-img" src="https://cdn.pixabay.com/photo/2020/03/26/10/58/norway-4970080_960_720.jpg" alt="">
+                                    <span class="recipe-list-item-title">레시피 이름</span>
+                                    <p class="recipe-list-item-desc">여기는 요리 할때 설명입니다.</p>
+                                    <button class="recipe-list-item-button">보러가기</button>
+                                </div>
+                                <div class="recipe-list-item">
+                                    <img class="recipe-list-item-img" src="https://cdn.pixabay.com/photo/2020/03/26/10/58/norway-4970080_960_720.jpg" alt="">
+                                    <span class="recipe-list-item-title">레시피 이름</span>
+                                    <p class="recipe-list-item-desc">여기는 요리 할때 설명입니다.</p>
+                                    <button class="recipe-list-item-button">보러가기</button>
+                                </div>
+                            </li>
+
+                            <li class="lists__item js-load">
+                                <div class="recipe-list-item">
+                                    <img class="recipe-list-item-img" src="https://cdn.pixabay.com/photo/2020/03/26/10/58/norway-4970080_960_720.jpg" alt="">
+                                    <span class="recipe-list-item-title">레시피 이름</span>
+                                    <p class="recipe-list-item-desc">여기는 요리 할때 설명입니다.</p>
+                                    <button class="recipe-list-item-button">보러가기</button>
+                                </div>
+                                <div class="recipe-list-item">
+                                    <img class="recipe-list-item-img" src="https://cdn.pixabay.com/photo/2020/03/26/10/58/norway-4970080_960_720.jpg" alt="">
+                                    <span class="recipe-list-item-title">레시피 이름</span>
+                                    <p class="recipe-list-item-desc">여기는 요리 할때 설명입니다.</p>
+                                    <button class="recipe-list-item-button">보러가기</button>
+                                </div>
+                                <div class="recipe-list-item">
+                                    <img class="recipe-list-item-img" src="https://cdn.pixabay.com/photo/2020/03/26/10/58/norway-4970080_960_720.jpg" alt="">
+                                    <span class="recipe-list-item-title">레시피 이름</span>
+                                    <p class="recipe-list-item-desc">여기는 요리 할때 설명입니다.</p>
+                                    <button class="recipe-list-item-button">보러가기</button>
+                                </div>
+                            </li>
+
+                            
+                        </ul>
+
+                    </div>
+                    
+                    <div id="js-btn-wrap" class="btn-wrap"> 
+                        <a href="javascript:;" class="btn">더보기</a> 
+                    </div>
+                   
+                   
+                </div>
+        </div>
+    </div> 
+
+
+
+   
+
+
+<script src="https://kit.fontawesome.com/cef887cfcd.js" crossorigin="anonymous"></script> 
+</body>
+</html>

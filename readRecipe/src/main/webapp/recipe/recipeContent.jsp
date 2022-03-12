@@ -49,8 +49,8 @@
                 <div class="box1_int1">
                 	<img src = "${vo.recipe_img1}" class=Img></img>
                         <Button id="start" class = "btn btn-success btn-sm" onclick="goStep(${vo.recipe_seq})">레시피 시작</Button>
+                        <button id="voice_start" class = "btn btn-success btn-sm">음성 시작</button>
                          	<c:if test="${!empty usVO}">
-                         	<button id="voice_start" class = "btn btn-success btn-sm">음성 시작</button>
  				   			<Button id="update_recipe" class = "btn btn-success btn-sm" onclick="goUp(${vo.recipe_seq})">수정하기</Button>
  				   			<Button id="bookmark" class = "btn btn-success btn-sm" onclick="goFa(${vo.recipe_seq})">즐겨찾기</Button>
  				   			<button id="subscribe" class = "btn btn-success btn-sm">구독 하기</button>
