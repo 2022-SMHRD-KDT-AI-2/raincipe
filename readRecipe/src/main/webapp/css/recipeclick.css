@@ -72,7 +72,7 @@ body {
     border-radius: 10px;
 }
 
-#start,#voice_start,#subscribe,#bookmark{
+#start,#voice_start,#subscribe,#bookmark,#update_recipe{
     width: 20%;
     height: 125px;
     padding: 15px 0 15px;

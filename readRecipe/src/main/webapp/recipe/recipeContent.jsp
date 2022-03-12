@@ -50,22 +50,25 @@
                 	<img src = "${vo.recipe_img1}" class=Img></img>
                         <Button id="start" class = "btn btn-success btn-sm" onclick="goStep(${vo.recipe_seq})">레시피 시작</Button>
                         <!-- <Button id="list" class = "btn btn-success btn-sm" onclick="goList()">리스트</Button> -->
-                       	<c:if test="${!empty usVO}">
- 				   			<Button class = "btn btn-success btn-sm" onclick="goUp(${vo.recipe_seq})">수정하기</Button>
- 				   			<Button class = "btn btn-success btn-sm" onclick="goFa(${vo.recipe_seq})">즐겨찾기</Button>
- 						</c:if>
+                       
                          <!-- <button type="button" id="voice_start">
                             <a href="">음성 시작</a>
                          </button> -->
-                         <button id="voice_start" class = "btn btn-success btn-sm">
-                            <a href="">음성 시작</a>
-                         </button>
-                         <button id="subscribe" class = "btn btn-success btn-sm">
-                            <a href="">구독 하기</a>
-                         </button>
-                         <button id="bookmark" class = "btn btn-success btn-sm">
-                   		 <a href="">즐겨찾기</a>
-                		</button>
+                         <!-- <button id="voice_start" class = "btn btn-success btn-sm">음성 시작</button> -->
+                         	<c:if test="${!empty usVO}">
+                         	<button id="voice_start" class = "btn btn-success btn-sm">음성 시작</button>
+ 				   			<Button id="update_recipe" class = "btn btn-success btn-sm" onclick="goUp(${vo.recipe_seq})">수정하기</Button>
+ 				   			<Button id="bookmark" class = "btn btn-success btn-sm" onclick="goFa(${vo.recipe_seq})">즐겨찾기</Button>
+ 				   			<button id="subscribe" class = "btn btn-success btn-sm">구독 하기</button>
+ 							</c:if>
+ 							<c:if test="${empty usVO}">
+ 				   			<Button id="bookmark" class = "btn btn-success btn-sm">즐겨찾기</Button>
+ 				   			<button id="subscribe" class = "btn btn-success btn-sm">구독 하기</button>
+ 							</c:if>
+ 						
+                         
+                        <!--  <button id="subscribe" class = "btn btn-success btn-sm">구독 하기</button>
+                         <button id="bookmark" class = "btn btn-success btn-sm" >즐겨찾기</button> -->
                          
                 </div>
             </div>
