@@ -3,7 +3,7 @@
 <%@ page isELIgnored="false" %>
 <%@page import="readRecipe.model.UserVO"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<% UserVO vo = (UserVO)request.getAttribute("usVO");%>
+<% UserVO vo = (UserVO)request.getAttribute("usVO"); %>
 <!DOCTYPE html>
 <html lang="en">
 <head>

@@ -13,7 +13,7 @@ import readRecipe.model.RecipeVO;
 public class my_recipeDAO {
 	
 	private static SqlSessionFactory sqlSessionFactory;
-	// 초기화블럭(프로그램 실행시 한번만 실행되는 부분)
+	// 초기화블럭(프로그램 실행시 한번만 실행되는 부분 )
 	static {
 		try {
 		String resource = "readRecipe/model/config.xml";

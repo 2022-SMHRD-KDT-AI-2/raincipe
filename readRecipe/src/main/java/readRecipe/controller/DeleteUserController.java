@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 import readRecipe.model.UserDAO;
 
 
-@WebServlet("/deleteUser.do")
+@WebServlet("/deleteUser.do" )
 public class DeleteUserController extends HttpServlet{
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String user_id=request.getParameter("user_id"); 
