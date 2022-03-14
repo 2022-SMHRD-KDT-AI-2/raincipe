@@ -79,15 +79,13 @@
       select RECIPE_SEQ from T_FAVORITE
       where user_id = #{user_id}
 	</select>
-
-	 <select id="showfavorite" parameterType = "String" resultType="readRecipe.model.RecipeVO">
+	
+	<select id="showfavorite" parameterType = "String" resultType="readRecipe.model.RecipeVO">
       select * from T_RECIPE
       where RECIPE_SEQ in (select RECIPE_SEQ from T_FAVORITE
-     						 where user_id = #{user_id})
-      order by recipe_seq  
-	</select>
-	
-	
-	
+                        where user_id = #{user_id})
+      order by recipe_seq 
+   </select>
+
      
 </mapper>

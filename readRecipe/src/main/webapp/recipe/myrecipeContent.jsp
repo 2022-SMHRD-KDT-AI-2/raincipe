@@ -45,6 +45,9 @@
  				<td>${vo.my_recipe_name}</td>
  			</tr>
  			<tr>
+ 				<td>재료</td>
+ 				<td>${vo.my_recipe_ingredient}</td>
+ 			<tr>
  				<td>레시피</td>
  				<td>${vo.my_recipe_step}</td>
  			</tr>

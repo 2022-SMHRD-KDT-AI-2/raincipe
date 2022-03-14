@@ -23,6 +23,7 @@
         <div id="content">
             <!-- ID -->
             <div>
+             <form action="/web/idCheck.do" method="post">
                 <h3 class="join_title">
                     <label for="user_id">ID</label>
                 </h3>
@@ -33,11 +34,12 @@
                 </span>
                 <span class="error_next_box"></span>
                 <span>
-                    <button class="id_check">중복확인</button>
+			        	<button class="id_check">중복확인</button>    
                 </span>
                 </div>
             </div>
-
+			</form>    
+		
             <!-- PW1 -->
             <div>
                 <h3 class="join_title"><label for="user_pw">PASSWORD</label></h3>

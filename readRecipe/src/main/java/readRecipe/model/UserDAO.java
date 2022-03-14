@@ -43,6 +43,7 @@ private Connection conn; // Connection : 데이터베이스에 접근하게 해주는 하나의 �
 		session.commit();
 		session.close();
 	}
+
 	
 	
 
