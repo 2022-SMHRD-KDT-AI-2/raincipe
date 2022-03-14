@@ -44,7 +44,34 @@ h3 {
     font-size: 14px;
     font-weight: 700;
 }
+.join_id{
+    display: flex;
+    justify-content: space-between;
+}
+.join_id .box{
+    display: block;
+    width: 75%;
+    height: 51px;
+    border: solid 1px #dadada;
+    padding: 10px 14px 10px 14px;
+    box-sizing: border-box;
+    background: #F0EDED;
+    position: relative;
+    border-radius: 20px;
 
+}
+.id_check{
+    display: block;
+    width: 100%;
+    height: 51px;
+    border: solid 1px #dadada;
+    padding: 10px 14px 10px 14px;
+    box-sizing: border-box;
+    background: #F0EDED;
+    position: relative;
+    border-radius: 20px;
+    right: 0;
+}
 
 .box {
     display: block;

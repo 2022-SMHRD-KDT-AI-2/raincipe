@@ -141,5 +141,11 @@ button[type=submit]{
 .withdrawal .btn{
     background-color: rgb(194, 8, 8);
     color: white;
+    width: 150%;
+    border: 1px solid black;
+    cursor: pointer;
+    color: #fff;
+    font-size: 18px;
+    text-decoration-line: underline;
     
 }
