@@ -16,6 +16,7 @@ import readRecipe.model.FavoriteVO;
 import readRecipe.model.RecipeVO;
 import readRecipe.model.ShowFavoriteDAO;
 import readRecipe.model.UserVO;
+import readRecipe.model.my_recipeVO;
 
 @WebServlet("/showfavorite.do")
 public class ShowFavoriteController extends HttpServlet{
@@ -28,16 +29,12 @@ public class ShowFavoriteController extends HttpServlet{
 		
 		
 		ShowFavoriteDAO dao = new ShowFavoriteDAO();
-		List<RecipeVO> ad = dao.showfavorite(usid);
-		
-//		System.out.println("ad출력>>"+ad);
-//		List<RecipeVO> recipelist = dao.far(usid);
-//		request.setAttribute("recipelist", recipelist);
-//	
+		List<RecipeVO> ad = dao.showfavorite(usid); // 공공레시피
+		List<my_recipeVO> bd = dao.showmyfavorite(usid);
 		request.setAttribute("ad", ad);
-		RequestDispatcher rd=request.getRequestDispatcher("recipe/showfavorite.jsp");
-		rd.forward(request, response);
-		
+		request.setAttribute("bd", bd);
+		RequestDispatcher rdd=request.getRequestDispatcher("recipe/showfavorite.jsp");
+		rdd.forward(request, response);
 		
 }
 }

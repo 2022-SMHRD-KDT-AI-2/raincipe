@@ -30,6 +30,12 @@ public class FavoriteDAO {
 		session.close();
 		return cnt;
 	}
-	
+	public int myfavorite(FavoriteVO vo) {
+		SqlSession session=sqlSessionFactory.openSession();   
+		int cnt=session.insert("myfavorite", vo);
+		session.commit();
+		session.close();
+		return cnt;
+	}
 	
 }

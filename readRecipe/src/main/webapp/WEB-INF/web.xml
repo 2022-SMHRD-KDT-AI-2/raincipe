@@ -10,8 +10,28 @@
   	<description></description>
   	<servlet-class>readRecipe.controller.ShowFavoriteController</servlet-class>
   </servlet>
+  <servlet>
+  	<servlet-name>MyFavoriteController</servlet-name>
+  	<display-name>MyFavoriteController</display-name>
+  	<description></description>
+  	<servlet-class>readRecipe.controller.MyFavoriteController</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>ShowMyFavoriteController</servlet-name>
+  	<display-name>ShowMyFavoriteController</display-name>
+  	<description></description>
+  	<servlet-class>readRecipe.controller.ShowMyFavoriteController</servlet-class>
+  </servlet>
   <servlet-mapping>
   	<servlet-name>ShowFavoriteController</servlet-name>
   	<url-pattern>/ShowFavoriteController</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>MyFavoriteController</servlet-name>
+  	<url-pattern>/MyFavoriteController</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>ShowMyFavoriteController</servlet-name>
+  	<url-pattern>/ShowMyFavoriteController</url-pattern>
   </servlet-mapping>
 </web-app>

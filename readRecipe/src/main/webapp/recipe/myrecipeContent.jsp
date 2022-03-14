@@ -19,16 +19,19 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   <script type="text/javascript">
-  	function goList() {
+  function goList() {
 		location.href="/web//myrecipeList.do"	
 	}
-  	function goDel(my_recipe_seq){
-  		location.href="/web//myrecipeDelete.do?my_recipe_seq="+my_recipe_seq;
-  	}
-  	function goUpForm(my_recipe_seq){
-  		location.href="/web//myrecipeUpdateForm.do?my_recipe_seq="+my_recipe_seq;	
-  	}
-  </script>
+	function goDel(my_recipe_seq){
+		location.href="/web//myrecipeDelete.do?my_recipe_seq="+my_recipe_seq;
+	}
+	function goUpForm(my_recipe_seq){
+		location.href="/web//myrecipeUpdateForm.do?my_recipe_seq="+my_recipe_seq;	
+	}
+	function gomyfavorite(my_recipe_seq){
+		location.href="/web//myfavorite.do?my_recipe_seq="+my_recipe_seq;	
+	}
+</script>
 </head>
 <body>
 
@@ -44,15 +47,7 @@
                 <div class="box1_int1">
                 	<%-- <img src = "${vo.recipe_img1}" class=Img></img> --%>
                         <Button id="start" class = "btn btn-success btn-sm" onclick="goStep(${vo.recipe_seq})">레시피 시작</Button>
-                        <button id="voice_start" class = "btn btn-success btn-sm">음성 시작</button>
-                         	<c:if test="${!empty usVO}">
- 				   			<Button id="bookmark" class = "btn btn-success btn-sm" onclick="goFa(${vo.recipe_seq})">즐겨찾기</Button>
-							 <!-- <button id="subscribe" class = "btn btn-success btn-sm">구독 하기</button> -->
- 							</c:if>
- 							<c:if test="${empty usVO}">
- 				   			<Button id="bookmark" class = "btn btn-success btn-sm">즐겨찾기</Button>
- 							</c:if>
-                         
+                        <button id="voice_start" class = "btn btn-success btn-sm">음성 시작</button>           
                 </div>
             </div>
 
@@ -71,7 +66,8 @@
             <div class="btn_area">
                 <Button class = "btn btn-info btn-sm" onclick="goUpForm(${vo.my_recipe_seq})">수정</Button>
 	 			<Button class = "btn btn-warning btn-sm" onclick="goDel(${vo.my_recipe_seq})">삭제</Button>
- 				  <Button class = "btn btn-success btn-sm" onclick="goList()">리스트</Button>
+ 			 	<Button class = "btn btn-success btn-sm" onclick="goList()">리스트</Button>
+ 			  <Button class = "btn btn-success btn-sm" onclick="gomyfavorite(${vo.my_recipe_seq})">즐겨찾기</Button>
             </div>
 
         </div>

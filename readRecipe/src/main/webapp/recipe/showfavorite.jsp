@@ -2,10 +2,13 @@
 	pageEncoding="UTF-8"%>
 <%@page import="java.util.List"%>
 <%@page import="readRecipe.model.RecipeVO"%>
+<%@page import="readRecipe.model.my_recipeVO"%>
 <%@page import="java.util.ArrayList"%>
 <%
 List<RecipeVO> searchedList=(List<RecipeVO>)request.getAttribute("ad");
+List<my_recipeVO> searchedmyList=(List<my_recipeVO>)request.getAttribute("bd");
 %>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -77,6 +80,37 @@ List<RecipeVO> searchedList=(List<RecipeVO>)request.getAttribute("ad");
 		</div>
 	</div>
 <script src="<%= request.getContextPath()%>/js/favorite.js"></script>
+
+<!-- 더보기 할 수 있는 영역 -->
+		<div id="contents">
+			<div id="js-load" class="main">
+				<ul class="lists">
+					<% for(int i=0;i<searchedmyList.size();i++) {
+  			 		my_recipeVO vo=searchedmyList.get(i);  %>
+					<li class="lists__item js-load">
+						<main class="scrip">
+							<div class="recipe_list">
+								<a href="#" class="food_photo"> <img
+									src="<%= vo.getMy_recipe_img1() %>" alt="" class=food_img>
+								</a> 
+								<a href=/web/recipeContent.do?Recipe_seq=<%=vo.getMy_recipe_seq()%> class="food_explain">
+									<div class="food_title"><%= vo.getMy_recipe_name() %></div>
+									<div class="food_ingredients"><%= vo.getMy_recipe_ingredient() %></div>
+								</a>
+							</div>
+						</main>
+					</li>
+					<% } %>
+				</ul>
+				<!-- 더보기 버튼 -->
+				<div id="js-btn-wrap" class="btn-wrap">
+					<a href="javascript:;" class="btn">더보기</a>
+				</div>
+			</div>
+		</div>
+	</div>
+<script src="<%= request.getContextPath()%>/js/favorite.js"></script>
+
 
 </body>
 </html>
