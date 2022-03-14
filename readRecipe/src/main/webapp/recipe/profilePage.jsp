@@ -28,12 +28,16 @@
    	function proUp(){
   		location.href="/web/recipe/ProfileUpdate.jsp";
   	}
+	function goMain() {
+		location.href="/web/index.jsp";
+	}
+
    </script>
 </head>
 <body>
     <div class="wrapper">
     <img src="<%= request.getContextPath() %>/img/꾸미기.png" alt="" class="header">
-    <a href="#"><img src="<%= request.getContextPath() %>/img/left arrow.png" alt="" class="prev"></a>
+    <a href="#"><img src="<%= request.getContextPath() %>/img/left arrow.png" alt="" class="prev" onclick="goMain()"></a>
     <main class="my_page_head my_page_section">
         <div class="my_profile">
             <div class="my_profile_img">

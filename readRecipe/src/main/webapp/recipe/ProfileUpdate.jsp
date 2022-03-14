@@ -15,12 +15,17 @@
    	function DelUser() {
 		location.href="/web/deleteUser.do"	
 	}
+   	function Before() {
+		history.back()	
+	}
+  	
+   	
    </script>
 </head>
 <body>
     <div class="wrapper">
         <img src="../img/²Ù¹Ì±â.png" alt="" class="header">
-        <a href="#"><img src="../img/left arrow.png" alt="" class="prev"></a>
+        <a href="#"><img src="../img/left arrow.png" alt="" class="prev"  onclick="Before()"> ></a>
         <main class="re_my_page_head re_my_page_section">
             <div class="re_my_profile">
                 <div class="re_my_profile_img">

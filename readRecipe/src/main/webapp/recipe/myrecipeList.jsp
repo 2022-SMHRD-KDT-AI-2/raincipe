@@ -1,3 +1,4 @@
+<%@page import="org.apache.ibatis.reflection.SystemMetaObject"%>
 <%@page import="java.util.List"%>
 <%@page import="readRecipe.model.my_recipeVO"%>
 <%@page import="readRecipe.model.UserVO"%>
@@ -8,7 +9,7 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%
 	List<my_recipeVO> list=(List<my_recipeVO>)request.getAttribute("list");
-	my_recipeVO mr =(my_recipeVO)request.getAttribute("mr");
+
 	UserVO uv=(UserVO)request.getAttribute("uv");
 %>
 <html lang="en">
@@ -33,18 +34,16 @@
     		<tr>
     			<td>내 레시피 번호</td>
     			<td>내 레시피 이름</td>
-  			</tr>
-  			<% int a = 1;
-  				for(int i=0;i<list.size();i++) {
-  			 	my_recipeVO vo=list.get(i);  %>
-  			 	<c:if test="${usVO.user_id == mr.user_id}">
+  			</tr>	
+  			<c:forEach items="${list}"  var="vo">
+  			 	<c:if test="${usVO.user_id == vo.user_id}">
   					<tr>
-    					<td><%= a %></td>
-    					<td><a href="/web/myrecipeContent.do?my_recipe_seq=<%=vo.getMy_recipe_seq()%>"><%= vo.getMy_recipe_name() %></a></td>
+  					
+  						<td> ${vo.getMy_recipe_seq()} </td>
+    					<td><a href="/web/myrecipeContent.do?my_recipe_seq=${vo.getMy_recipe_seq()}"><${vo.getMy_recipe_name()}></a></td>
   					</tr>
-  					<% a+=1; %>	
   				</c:if>
-  			<% } %>
+  			</c:forEach>
     	</table>
     </div>
     <div class="panel-footer"></div>

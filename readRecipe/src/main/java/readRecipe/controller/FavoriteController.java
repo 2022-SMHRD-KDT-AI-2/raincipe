@@ -34,9 +34,11 @@ protected void service(HttpServletRequest request, HttpServletResponse response)
 	vo.setFecipe_seq(recipe_seq);
 	vo.setUser_id(usid);
 	dao.favorite(vo);
-	RequestDispatcher rd=request.getRequestDispatcher("recipe/favorite.jsp");
-	rd.forward(request, response);
+	//RequestDispatcher rd=request.getRequestDispatcher("recipe/favorite.jsp");
+	//rd.forward(request, response);
+	response.sendRedirect("/web/index.jsp");
 }
 }
+
 
 

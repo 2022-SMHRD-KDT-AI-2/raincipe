@@ -76,7 +76,7 @@ List<RecipeVO> searchedList=(List<RecipeVO>)request.getAttribute("ad");
 			</div>
 		</div>
 	</div>
-<script src="<%= request.getContextPath()%>/js/search.js"></script>
+<script src="<%= request.getContextPath()%>/js/favorite.js"></script>
 
 </body>
 </html>
