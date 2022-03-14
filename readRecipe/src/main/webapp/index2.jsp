@@ -42,14 +42,13 @@
 			</c:if>
 			<!-- 메인섹션 -->
 			<div class="mainSection">
-				<!-- 로고 부분 -- >
 				<div class="logoContainer">
-					<img src="<%= request.getContextPath() %>/img/logo.jpg" alt="">
+					<img src="<%= request.getContextPath() %>/img/logo.jpg">
 				</div>
-
 				<!-- 검색부분 -->
 				<form method="post" name="search" action="/web/search.do">
 				<div class="searchContainer">
+				
 					<div class="searchBox">
 						<button type="submit" class="searchbutton">
 						<img src="<%= request.getContextPath() %>/img/search.png" alt=""></button>

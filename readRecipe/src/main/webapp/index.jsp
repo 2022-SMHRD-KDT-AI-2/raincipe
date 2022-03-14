@@ -42,7 +42,7 @@
 			</c:if>
 			<!-- 메인섹션 -->
 			<div class="mainSection">
-				<!-- 로고 부분 -- >
+				
 				<div class="logoContainer">
 					<img src="<%= request.getContextPath() %>/img/logo.jpg" alt="">
 				</div>
