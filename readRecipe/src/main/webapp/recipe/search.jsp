@@ -74,6 +74,8 @@
 				</div>
 			</div>
 		</div>
+		
+		
 	</div>
 <script src="<%= request.getContextPath()%>/js/search.js"></script>
 

@@ -72,7 +72,7 @@ body {
     border-radius: 10px;
 }
 
-#start,#voice_start,#subscribe,#bookmark,#update_recipe{
+#start,#voice_start,#subscribe,#bookmark{
     width: 20%;
     height: 125px;
     padding: 15px 0 15px;
@@ -208,23 +208,10 @@ body {
     text-decoration-line: underline;
 }
 
-/* #bookmark{
-    width: 25%;
-    height: 10%;
-    padding: 15px 0 15px;
-    border: 0;
-    cursor: pointer;
-    color: #fff;
-    background-color: #8483BF;
-    font-size: 15px;
-    font-weight: 400;
-    font-family: Roboto;
-    border-radius: 10px;
-    text-decoration-line: underline;
-} */
-#list{
+
+#update_recipe,#list{
 	width: 25%;
-    height: 10%;
+    height: 15%;
     padding: 15px 0 15px;
     border: 0;
     cursor: pointer;
