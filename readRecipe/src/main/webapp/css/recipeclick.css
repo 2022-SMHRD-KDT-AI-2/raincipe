@@ -53,6 +53,19 @@ body {
     justify-content: center;
     align-content: center
 }
+.box1_1 {
+        margin: 20px 0 20px;
+    /* display: block; */
+    width: 100%;
+    /* height: 150px; */
+    border: solid 1px #dadada;
+    padding: 10px 5px 10px 14px;
+    box-sizing: border-box;
+    background: #F0EDED;
+    position: relative;
+    border-radius: 10px;
+
+}
 .box1_int1{
 	display: flex;
     /* align-content: center; */
@@ -72,7 +85,7 @@ body {
     border-radius: 10px;
 }
 
-#start,#voice_start,#subscribe,#bookmark{
+#start,#voice_start,#bookmark{
     width: 20%;
     height: 125px;
     padding: 15px 0 15px;

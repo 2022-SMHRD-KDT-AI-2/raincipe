@@ -31,39 +31,7 @@
   </script>
 </head>
 <body>
-<div class="container">
-  <h2>TEST</h2>
-  <div class="panel panel-default">
-    <div class="panel-heading">BOARD</div>
-    <div class="panel-body">
-    	<table class="table table-bordered table-hover">
-    	 	<tr>
-    	 		<td>번호</td>
-    	 		<td>${vo.my_recipe_seq}</td>
- 			</tr>
- 			<tr>
- 				<td>제목</td>
- 				<td>${vo.my_recipe_name}</td>
- 			</tr>
- 			<tr>
- 				<td>재료</td>
- 				<td>${vo.my_recipe_ingredient}</td>
- 			<tr>
- 				<td>레시피</td>
- 				<td>${vo.my_recipe_step}</td>
- 			</tr>
- 			<tr>
- 				<td>작성일</td>
- 				<td>${fn:split(vo.reg_date," ")[0]}</td>
- 			</tr>
- 			<tr>
- 				<td colspan="2" align="center">
-	 				<Button class = "btn btn-info btn-sm" onclick="goUpForm(${vo.my_recipe_seq})">수정</Button>
-	 				<Button class = "btn btn-warning btn-sm" onclick="goDel(${vo.my_recipe_seq})">삭제</Button>
- 				   <Button class = "btn btn-success btn-sm" onclick="goList()">리스트</Button>
- 				</td>
- 			</tr>
- 		</table>
+
 <div id="header">
         <img src="<%=request.getContextPath()%>/img/꾸미기.png" id="logo">
     </div>

@@ -32,14 +32,6 @@ public class my_recipeDAO {
 		session.close();
 	}
 
-	public int my_recipe(my_recipeVO vo) {
-		SqlSession session=sqlSessionFactory.openSession();   
-		int cnt = session.update("my_recipe", vo);
-		session.commit();
-		session.close();
-		return cnt;
-	}
-	
 	public void addCount(int my_recipe_seq) {
 		SqlSession session = sqlSessionFactory.openSession();
 		session.update("addCount",my_recipe_seq);
@@ -61,6 +53,14 @@ public class my_recipeDAO {
 		session.commit();
 		session.close();
 		return cnt;	
+	}
+	
+	public int my_recipe(my_recipeVO vo) {
+		SqlSession session=sqlSessionFactory.openSession();   
+		int cnt = session.update("my_recipe", vo);
+		session.commit();
+		session.close();
+		return cnt;
 	}
 	
 	public my_recipeVO getMy_recipe_seq(int my_recipe_seq) {

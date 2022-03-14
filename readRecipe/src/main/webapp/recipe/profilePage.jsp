@@ -102,7 +102,7 @@
                         </div>
                         <div class="recipe-list-item">
                             <img class="recipe-list-item-img" src = "https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMDAzMThfNjUg%2FMDAxNTg0NDgxMTk5NTE5.tvfIV8zhWgXJAh4TL23XIysS7PujNPfyrfVMmszuRCQg.cqMblErFI-PVucXFIrYVQ2nfmhKypmSloHg338J7uc0g.JPEG.y0127k%2FIMG_7501.jpg&type=sc960_832" height="250" alt="">
-                            <span class="recipe-list-item-title">호박타락</span>
+                            <span class="recipe-list-item-title">단호박 들깨 꽁치조림</span>
                             <button class="recipe-list-item-button">보러가기</button> 
                         </div>
                         <div class="recipe-list-item">

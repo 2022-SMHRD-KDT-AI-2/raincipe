@@ -8,8 +8,7 @@
 <%@ page isELIgnored="false" %>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%
-	List<my_recipeVO> list=(List<my_recipeVO>)request.getAttribute("list");
-
+   List<my_recipeVO> list=(List<my_recipeVO>)request.getAttribute("list");
 
    UserVO uv=(UserVO)request.getAttribute("uv");
 %>
@@ -42,8 +41,8 @@
                 </div>
             </div>
         </div>
-	</div>
-
+   </div>
+ 
  
 <div class="content_wrapper">
   <div class="content_container">
@@ -53,10 +52,10 @@
            <c:forEach items="${list}"  var="vo">
                <c:if test="${usVO.user_id == vo.user_id}">
                  <div class="recipe_list">
-	                 <div class="recipe_list_title">
-	                 <img class="food_photo" src = "https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMDAzMThfNjUg%2FMDAxNTg0NDgxMTk5NTE5.tvfIV8zhWgXJAh4TL23XIysS7PujNPfyrfVMmszuRCQg.cqMblErFI-PVucXFIrYVQ2nfmhKypmSloHg338J7uc0g.JPEG.y0127k%2FIMG_7501.jpg&type=sc960_832"></img>
-	                 <a class="food_title" href="/web/myrecipeContent.do?my_recipe_seq=${vo.getMy_recipe_seq()}"><${vo.getMy_recipe_name()}></a>
-	                 </div>
+                    <div class="recipe_list_title">
+                    <img class="food_photo" src = "https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMDAzMThfNjUg%2FMDAxNTg0NDgxMTk5NTE5.tvfIV8zhWgXJAh4TL23XIysS7PujNPfyrfVMmszuRCQg.cqMblErFI-PVucXFIrYVQ2nfmhKypmSloHg338J7uc0g.JPEG.y0127k%2FIMG_7501.jpg&type=sc960_832" width="50"></img>
+                    <a class="food_title" href="/web/myrecipeContent.do?my_recipe_seq=${vo.getMy_recipe_seq()}"><${vo.getMy_recipe_name()}></a>
+                    </div>
                  </div>
               </c:if>
            </c:forEach>
@@ -64,5 +63,6 @@
     </div>
   </div>
 </div>
+
 </body>
 </html>

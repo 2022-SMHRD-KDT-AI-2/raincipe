@@ -17,6 +17,11 @@
   <link rel="stylesheet" href="../css/reviserecipe.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+   <script type="text/javascript">
+	function goBack() {
+ 		 history.back();
+	}
+  </script>
 </head>
 <body> 
  
@@ -50,9 +55,8 @@
 	            </div>
 	
 	            <div class="btn_area">
-	                <button id="confirm" type="submit" class="btn btn-info btn-sm">수정하기</button>
-	    			<button id="cancel" type="reset" class="btn btn-warning btn-sm">취소</button>
-	                <button id="go_list" type="button" class="btn btn-success btn-sm" onclick="location.href='/web/recipeList.do'">리스트</button>
+	                <button id="confirm" type="submit" class="btn btn-info btn-sm">등록하기</button>
+	    			<button id="cancel" type="reset" class="btn btn-warning btn-sm" onclick="goBack()">취소</button>
 	            </div>
 	
 	        </div>
