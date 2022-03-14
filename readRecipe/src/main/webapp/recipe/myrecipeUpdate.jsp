@@ -6,7 +6,7 @@
 	my_recipeVO vo=(my_recipeVO)request.getAttribute("vo");	
 	UserVO uv=(UserVO)request.getAttribute("uv");
 %>
-<%@ page isELIgnored="false"  %>
+<%@ page isELIgnored="false"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
