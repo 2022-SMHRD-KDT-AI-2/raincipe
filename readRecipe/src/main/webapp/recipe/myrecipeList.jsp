@@ -27,7 +27,7 @@
   <h2>TEST</h2>
   <div class="panel panel-default">
     <div class="panel-heading">
-	</div>
+	</div> 
 	
     <div class="panel-body">
     	<table class="table table-bordered table-hover">
