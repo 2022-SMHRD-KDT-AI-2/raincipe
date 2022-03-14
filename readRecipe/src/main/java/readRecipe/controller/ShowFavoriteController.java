@@ -30,7 +30,7 @@ public class ShowFavoriteController extends HttpServlet{
 		
 		ShowFavoriteDAO dao = new ShowFavoriteDAO();
 		List<RecipeVO> ad = dao.showfavorite(usid); // 공공레시피
-		List<my_recipeVO> bd = dao.showmyfavorite(usid);
+		List<RecipeVO> bd = dao.showmyfavorite(usid);
 		request.setAttribute("ad", ad);
 		request.setAttribute("bd", bd);
 		RequestDispatcher rdd=request.getRequestDispatcher("recipe/showfavorite.jsp");

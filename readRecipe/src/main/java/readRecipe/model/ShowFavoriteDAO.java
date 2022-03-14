@@ -36,9 +36,9 @@ public class ShowFavoriteDAO {
 		session.close();
 		return favorite;
 	}
-	public List<my_recipeVO> showmyfavorite(String user_id) {
+	public List<RecipeVO> showmyfavorite(String user_id) {
 		SqlSession session=sqlSessionFactory.openSession();                       
-		List<my_recipeVO> myfavorite =session.selectList("showmyfavorite", user_id);
+		List<RecipeVO> myfavorite =session.selectList("showmyfavorite", user_id);
 		session.commit();
 		session.close();
 		return myfavorite;

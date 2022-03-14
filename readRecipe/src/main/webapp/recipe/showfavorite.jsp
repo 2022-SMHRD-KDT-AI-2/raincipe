@@ -74,7 +74,9 @@ List<my_recipeVO> searchedmyList=(List<my_recipeVO>)request.getAttribute("bd");
 				</ul>
 				<!-- 더보기 버튼 -->
 				<div id="js-btn-wrap" class="btn-wrap">
+					<button>
 					<a href="javascript:;" class="btn">더보기</a>
+					</button>
 				</div>
 			</div>
 		</div>
@@ -104,7 +106,9 @@ List<my_recipeVO> searchedmyList=(List<my_recipeVO>)request.getAttribute("bd");
 				</ul>
 				<!-- 더보기 버튼 -->
 				<div id="js-btn-wrap" class="btn-wrap">
+					
 					<a href="javascript:;" class="btn">더보기</a>
+					
 				</div>
 			</div>
 		</div>

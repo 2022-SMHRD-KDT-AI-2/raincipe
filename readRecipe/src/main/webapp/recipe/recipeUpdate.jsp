@@ -58,9 +58,8 @@
 	                <button id="confirm" type="submit" class="btn btn-info btn-sm">등록하기</button>
 	    			<button id="cancel" type="reset" class="btn btn-warning btn-sm" onclick="goBack()">취소</button>
 	            </div>
-	
-	        </div>
-		</form>
+			</form>
+	      </div>
     </div>
     <script src="main.js"></script>
 
