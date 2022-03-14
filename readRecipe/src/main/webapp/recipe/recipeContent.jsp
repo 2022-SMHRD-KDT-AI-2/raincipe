@@ -52,11 +52,10 @@
                         <button id="voice_start" class = "btn btn-success btn-sm">음성 시작</button>
                          	<c:if test="${!empty usVO}">
  				   			<Button id="bookmark" class = "btn btn-success btn-sm" onclick="goFa(${vo.recipe_seq})">즐겨찾기</Button>
- 				   			<button id="subscribe" class = "btn btn-success btn-sm">구독 하기</button>
+							 <!-- <button id="subscribe" class = "btn btn-success btn-sm">구독 하기</button> -->
  							</c:if>
  							<c:if test="${empty usVO}">
  				   			<Button id="bookmark" class = "btn btn-success btn-sm">즐겨찾기</Button>
- 				   			<button id="subscribe" class = "btn btn-success btn-sm">구독 하기</button>
  							</c:if>
                          
                 </div>

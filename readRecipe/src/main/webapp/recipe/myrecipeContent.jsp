@@ -15,6 +15,7 @@
 <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="<%=request.getContextPath()%>/css/recipeclick.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   <script type="text/javascript">
@@ -30,39 +31,51 @@
   </script>
 </head>
 <body>
-<div class="container">
-  <h2>TEST</h2>
-  <div class="panel panel-default">
-    <div class="panel-heading">BOARD</div>
-    <div class="panel-body">
-    	<table class="table table-bordered table-hover">
-    	 	<tr>
-    	 		<td>번호</td>
-    	 		<td>${vo.my_recipe_seq}</td>
- 			</tr>
- 			<tr>
- 				<td>제목</td>
- 				<td>${vo.my_recipe_name}</td>
- 			</tr>
- 			<tr>
- 				<td>레시피</td>
- 				<td>${vo.my_recipe_step}</td>
- 			</tr>
- 			<tr>
- 				<td>작성일</td>
- 				<td>${fn:split(vo.reg_date," ")[0]}</td>
- 			</tr>
- 			<tr>
- 				<td colspan="2" align="center">
-	 				<Button class = "btn btn-info btn-sm" onclick="goUpForm(${vo.my_recipe_seq})">수정</Button>
-	 				<Button class = "btn btn-warning btn-sm" onclick="goDel(${vo.my_recipe_seq})">삭제</Button>
- 				   <Button class = "btn btn-success btn-sm" onclick="goList()">리스트</Button>
- 				</td>
- 			</tr>
- 		</table>
+<div id="header">
+        <img src="<%=request.getContextPath()%>/img/꾸미기.png" id="logo">
     </div>
-    <div class="panel-footer"></div>
-  </div>
-</div>
+    
+    <div id="wrapper">
+
+        <div id="content">
+
+            <div class="box1_1">
+                <div class="box1_int1">
+                	<%-- <img src = "${vo.recipe_img1}" class=Img></img> --%>
+                        <Button id="start" class = "btn btn-success btn-sm" onclick="goStep(${vo.recipe_seq})">레시피 시작</Button>
+                        <button id="voice_start" class = "btn btn-success btn-sm">음성 시작</button>
+                         	<c:if test="${!empty usVO}">
+ 				   			<Button id="bookmark" class = "btn btn-success btn-sm" onclick="goFa(${vo.recipe_seq})">즐겨찾기</Button>
+							 <!-- <button id="subscribe" class = "btn btn-success btn-sm">구독 하기</button> -->
+ 							</c:if>
+ 							<c:if test="${empty usVO}">
+ 				   			<Button id="bookmark" class = "btn btn-success btn-sm">즐겨찾기</Button>
+ 							</c:if>
+                         
+                </div>
+            </div>
+
+            <div class="box2">
+            	 <div>
+                    <div id="box2_int3">${vo.my_recipe_name}</div>
+                </div>
+                <div>
+                    <div id="box2_int1">${vo.my_recipe_ingredient}</div>
+                </div>
+                <div>
+                    <div id="box2_int2"><br>${vo.my_recipe_step}</div>
+                </div>
+            </div>
+
+            <div class="btn_area">
+                <Button class = "btn btn-info btn-sm" onclick="goUpForm(${vo.my_recipe_seq})">수정</Button>
+	 			<Button class = "btn btn-warning btn-sm" onclick="goDel(${vo.my_recipe_seq})">삭제</Button>
+ 				  <Button class = "btn btn-success btn-sm" onclick="goList()">리스트</Button>
+            </div>
+
+        </div>
+
+    </div>
+
 </body>
 </html>

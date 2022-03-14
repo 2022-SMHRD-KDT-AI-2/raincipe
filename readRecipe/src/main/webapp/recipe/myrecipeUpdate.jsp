@@ -53,7 +53,7 @@
             <div class="btn_area">
                 <button id="confirm" type="submit" class="btn btn-info btn-sm">수정하기</button>
     			<button id="cancel" type="reset" class="btn btn-warning btn-sm">취소</button>
-                <button type="go_list" class="btn btn-success btn-sm" onclick="location.href='/web/myrecipeList.do'">리스트</button>
+                <button id="go_list" type="button" class="btn btn-success btn-sm" onclick="location.href='/web/myrecipeList.do'">리스트</button>
             </div>
             </form>
 

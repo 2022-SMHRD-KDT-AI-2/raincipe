@@ -100,7 +100,7 @@ a{
 .main {
     width: 90%;
     margin: 0 auto;
-    height: 25vh;
+ /*    height: 25vh; */
 }
 .lists {
     margin-bottom: 2rem;
@@ -143,10 +143,10 @@ a{
     align-items: center;
     border-radius: 10px;
     border: 1px solid #a4a0a0;
+    margin: 5vh;
  }
  .food_photo{
     width: 30%;
-    height: 80%;
     margin:1%;
 }
 
@@ -167,8 +167,12 @@ a{
     height: 70%;
 } */
 .food_title{
+	font-size: 1.5rem;
 
-    font-size: 2rem;
+}
 
+.recipe_list_title{
+	display: flex;
+    align-items: center;
 }
 
