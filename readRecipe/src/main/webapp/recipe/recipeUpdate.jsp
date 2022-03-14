@@ -22,7 +22,6 @@
  
     <div id="header">
         <img src="../img/꾸미기.png" id="logo">
-        <a href="#"><img src="../img/left arrow.png" alt="" class="prev"></a>
     </div>
 
     <div id="wrapper">
