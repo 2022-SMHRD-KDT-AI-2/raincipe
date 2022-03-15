@@ -115,13 +115,13 @@ a{
 
 .btn-wrap {
     text-align: center;
-    /* display: flex;
+  	display: flex;
     justify-content: center;
     margin-top: 20px;
     margin-bottom: 20px;
-    padding-bottom: 5%; */
+    padding-bottom: 5%;
 }
-.btn{
+.btn,.btn2{
     display: inline-block;
     padding: 1em 1.6em;
     border-radius: 10px;
@@ -159,13 +159,13 @@ a{
     border-radius: 10%;
 }
 
-.food_explain{
+ .food_explain{
     display: flex;
     flex-direction: column;
     width: 100%;
     margin: 3%;
     text-align: left;
-    /* border: 1px solid black; */
+    border: 1px solid black;
     height: 70%;
 }
 .food_title{
