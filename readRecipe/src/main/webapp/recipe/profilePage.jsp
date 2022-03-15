@@ -1,23 +1,22 @@
 <%@page import="org.apache.ibatis.reflection.SystemMetaObject"%>
 <%@page import="java.util.List"%>
 <%@page import="readRecipe.model.my_recipeVO"%>
+<%@page import="readRecipe.model.UserVO"%>
 <%@page import="java.util.ArrayList"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ page isELIgnored="false"%>
-<%@page import="readRecipe.model.UserVO"%>
-<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <% 
 	UserVO vo = (UserVO)request.getAttribute("usVO"); 
-	List<my_recipeVO> list=(List<my_recipeVO>)request.getAttribute("list");
+	List<my_recipeVO> list=null;
+	list=(List<my_recipeVO>)session.getAttribute("list");
 %>
-<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -85,47 +84,16 @@
             </div>
                 <div class="recipe-list-wrapper">
                     <div class="recipe-list">
-                        <div class="recipe-list-item">
-                            <img class="recipe-list-item-img" src = "https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMDAzMThfNjUg%2FMDAxNTg0NDgxMTk5NTE5.tvfIV8zhWgXJAh4TL23XIysS7PujNPfyrfVMmszuRCQg.cqMblErFI-PVucXFIrYVQ2nfmhKypmSloHg338J7uc0g.JPEG.y0127k%2FIMG_7501.jpg&type=sc960_832" height="250" alt="">
-                            <span class="recipe-list-item-title">전복 김치</span>        
-                            <button class="recipe-list-item-button" location.href="/web//myrecipeList.do">보러가기</button>
-                        </div>
-                        <div class="recipe-list-item">
-                            <img class="recipe-list-item-img" src = "https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMDAzMThfNjUg%2FMDAxNTg0NDgxMTk5NTE5.tvfIV8zhWgXJAh4TL23XIysS7PujNPfyrfVMmszuRCQg.cqMblErFI-PVucXFIrYVQ2nfmhKypmSloHg338J7uc0g.JPEG.y0127k%2FIMG_7501.jpg&type=sc960_832" height="250" alt="">
-                            <span class="recipe-list-item-title">과일 겉절이</span>
-                            <button class="recipe-list-item-button">보러가기</button>
-                        </div>
-                        <div class="recipe-list-item">
-                            <img class="recipe-list-item-img" src = "https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMDAzMThfNjUg%2FMDAxNTg0NDgxMTk5NTE5.tvfIV8zhWgXJAh4TL23XIysS7PujNPfyrfVMmszuRCQg.cqMblErFI-PVucXFIrYVQ2nfmhKypmSloHg338J7uc0g.JPEG.y0127k%2FIMG_7501.jpg&type=sc960_832" height="250" alt="">
-                            <span class="recipe-list-item-title">누룽지 두부 계란밥</span>
-                            <button class="recipe-list-item-button">보러가기</button>
-                        </div>
-                        <div class="recipe-list-item">
-                            <img class="recipe-list-item-img" src = "https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMDAzMThfNjUg%2FMDAxNTg0NDgxMTk5NTE5.tvfIV8zhWgXJAh4TL23XIysS7PujNPfyrfVMmszuRCQg.cqMblErFI-PVucXFIrYVQ2nfmhKypmSloHg338J7uc0g.JPEG.y0127k%2FIMG_7501.jpg&type=sc960_832" height="250" alt="">
-                            <span class="recipe-list-item-title">단호박 들깨 꽁치조림</span>
-                            <button class="recipe-list-item-button">보러가기</button> 
-                        </div>
-                        <div class="recipe-list-item">
-                            <img class="recipe-list-item-img" src = "https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMDAzMThfNjUg%2FMDAxNTg0NDgxMTk5NTE5.tvfIV8zhWgXJAh4TL23XIysS7PujNPfyrfVMmszuRCQg.cqMblErFI-PVucXFIrYVQ2nfmhKypmSloHg338J7uc0g.JPEG.y0127k%2FIMG_7501.jpg&type=sc960_832" height="250" alt="">
-                            <span class="recipe-list-item-title">약재 소스를 곁들인 닭가슴살롤</span>
-                            <button class="recipe-list-item-button">보러가기</button>
-                        </div>
-                        <div class="recipe-list-item">
-                            <img class="recipe-list-item-img" src = "https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMDAzMThfNjUg%2FMDAxNTg0NDgxMTk5NTE5.tvfIV8zhWgXJAh4TL23XIysS7PujNPfyrfVMmszuRCQg.cqMblErFI-PVucXFIrYVQ2nfmhKypmSloHg338J7uc0g.JPEG.y0127k%2FIMG_7501.jpg&type=sc960_832" height="250" alt="">
-                            <span class="recipe-list-item-title">롤 삼계탕</span>
-                        </div>
-                        <div class="recipe-list-item">
-                            <img class="recipe-list-item-img" src="https://cdn.pixabay.com/photo/2020/03/26/10/58/norway-4970080_960_720.jpg" alt="">
-                            <span class="recipe-list-item-title">레시피 이름</span>
-                            <p class="recipe-list-item-desc">여기는 요리 할때 설명입니다.</p>
-                            <button class="recipe-list-item-button">보러가기</button>
-                        </div>
-                        <div class="recipe-list-item">
-                            <img class="recipe-list-item-img" src="https://cdn.pixabay.com/photo/2020/03/26/10/58/norway-4970080_960_720.jpg" alt="">
-                            <span class="recipe-list-item-title">레시피 이름</span>
-                            <p class="recipe-list-item-desc">여기는 요리 할때 설명입니다.</p>
-                            <button class="recipe-list-item-button">보러가기</button>
-                        </div>
+                       <c:forEach items="${list}"  var="vo">
+	               			<c:if test="${usVO.user_id == vo.user_id}">
+		               			<div class="recipe-list-item">
+		                            <img class="recipe-list-item-img" src = "https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMDAzMThfNjUg%2FMDAxNTg0NDgxMTk5NTE5.tvfIV8zhWgXJAh4TL23XIysS7PujNPfyrfVMmszuRCQg.cqMblErFI-PVucXFIrYVQ2nfmhKypmSloHg338J7uc0g.JPEG.y0127k%2FIMG_7501.jpg&type=sc960_832" height="250" alt=""></img>
+		                            <span class="recipe-list-item-title">${vo.getMy_recipe_name()}</span>        
+		                            <button class="recipe-list-item-button">보러가기</button>
+		                         </div>
+	                        </c:if>
+           				</c:forEach>
+           				
                     </div>
                     <img src="<%= request.getContextPath() %>/img/right arrow.png" class="arrow">
                 </div>
@@ -139,51 +107,43 @@
                 <div class="recipe-list-wrapper">
                     <div class="recipe-list">
                         <div class="recipe-list-item">
-                            <img class="recipe-list-item-img" src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMDAzMThfNjUg%2FMDAxNTg0NDgxMTk5NTE5.tvfIV8zhWgXJAh4TL23XIysS7PujNPfyrfVMmszuRCQg.cqMblErFI-PVucXFIrYVQ2nfmhKypmSloHg338J7uc0g.JPEG.y0127k%2FIMG_7501.jpg&type=sc960_832" alt="">
-                            <span class="recipe-list-item-title">레시피 이름</span>
-                            <p class="recipe-list-item-desc">여기는 요리 할때 설명입니다.</p>
+                            <img class="recipe-list-item-img" src = "https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMDAzMThfNjUg%2FMDAxNTg0NDgxMTk5NTE5.tvfIV8zhWgXJAh4TL23XIysS7PujNPfyrfVMmszuRCQg.cqMblErFI-PVucXFIrYVQ2nfmhKypmSloHg338J7uc0g.JPEG.y0127k%2FIMG_7501.jpg&type=sc960_832" height="250" alt=""></img> 
+                            <span class="recipe-list-item-title">레시피 이름</span>                     
                             <button class="recipe-list-item-button">보러가기</button>
                         </div>
                         <div class="recipe-list-item">
-                            <img class="recipe-list-item-img" src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMDAzMThfNjUg%2FMDAxNTg0NDgxMTk5NTE5.tvfIV8zhWgXJAh4TL23XIysS7PujNPfyrfVMmszuRCQg.cqMblErFI-PVucXFIrYVQ2nfmhKypmSloHg338J7uc0g.JPEG.y0127k%2FIMG_7501.jpg&type=sc960_832" alt="">
+                            <img class="recipe-list-item-img" src = "https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMDAzMThfNjUg%2FMDAxNTg0NDgxMTk5NTE5.tvfIV8zhWgXJAh4TL23XIysS7PujNPfyrfVMmszuRCQg.cqMblErFI-PVucXFIrYVQ2nfmhKypmSloHg338J7uc0g.JPEG.y0127k%2FIMG_7501.jpg&type=sc960_832" height="250" alt=""></img>
                             <span class="recipe-list-item-title">레시피 이름</span>
-                            <p class="recipe-list-item-desc">여기는 요리 할때 설명입니다.</p>
                             <button class="recipe-list-item-button">보러가기</button>
                         </div>
                         <div class="recipe-list-item">
-                            <img class="recipe-list-item-img" src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMDAzMThfNjUg%2FMDAxNTg0NDgxMTk5NTE5.tvfIV8zhWgXJAh4TL23XIysS7PujNPfyrfVMmszuRCQg.cqMblErFI-PVucXFIrYVQ2nfmhKypmSloHg338J7uc0g.JPEG.y0127k%2FIMG_7501.jpg&type=sc960_832" alt="">
+                            <img class="recipe-list-item-img" src = "https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMDAzMThfNjUg%2FMDAxNTg0NDgxMTk5NTE5.tvfIV8zhWgXJAh4TL23XIysS7PujNPfyrfVMmszuRCQg.cqMblErFI-PVucXFIrYVQ2nfmhKypmSloHg338J7uc0g.JPEG.y0127k%2FIMG_7501.jpg&type=sc960_832" height="250" alt=""></img>
                             <span class="recipe-list-item-title">레시피 이름</span>
-                            <p class="recipe-list-item-desc">여기는 요리 할때 설명입니다.</p>
                             <button class="recipe-list-item-button">보러가기</button>
                         </div>
                         <div class="recipe-list-item">
-                            <img class="recipe-list-item-img" src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMDAzMThfNjUg%2FMDAxNTg0NDgxMTk5NTE5.tvfIV8zhWgXJAh4TL23XIysS7PujNPfyrfVMmszuRCQg.cqMblErFI-PVucXFIrYVQ2nfmhKypmSloHg338J7uc0g.JPEG.y0127k%2FIMG_7501.jpg&type=sc960_832" alt="">
+                            <img class="recipe-list-item-img" src = "https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMDAzMThfNjUg%2FMDAxNTg0NDgxMTk5NTE5.tvfIV8zhWgXJAh4TL23XIysS7PujNPfyrfVMmszuRCQg.cqMblErFI-PVucXFIrYVQ2nfmhKypmSloHg338J7uc0g.JPEG.y0127k%2FIMG_7501.jpg&type=sc960_832" height="250" alt=""></img>
                             <span class="recipe-list-item-title">레시피 이름</span>
-                            <p class="recipe-list-item-desc">여기는 요리 할때 설명입니다.</p>
                             <button class="recipe-list-item-button">보러가기</button>
                         </div>
                         <div class="recipe-list-item">
-                            <img class="recipe-list-item-img" src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMDAzMThfNjUg%2FMDAxNTg0NDgxMTk5NTE5.tvfIV8zhWgXJAh4TL23XIysS7PujNPfyrfVMmszuRCQg.cqMblErFI-PVucXFIrYVQ2nfmhKypmSloHg338J7uc0g.JPEG.y0127k%2FIMG_7501.jpg&type=sc960_832" alt="">
+                            <img class="recipe-list-item-img" src = "https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMDAzMThfNjUg%2FMDAxNTg0NDgxMTk5NTE5.tvfIV8zhWgXJAh4TL23XIysS7PujNPfyrfVMmszuRCQg.cqMblErFI-PVucXFIrYVQ2nfmhKypmSloHg338J7uc0g.JPEG.y0127k%2FIMG_7501.jpg&type=sc960_832" height="250" alt=""></img>
                             <span class="recipe-list-item-title">레시피 이름</span>
-                            <p class="recipe-list-item-desc">여기는 요리 할때 설명입니다.</p>
                             <button class="recipe-list-item-button">보러가기</button>
                         </div>
                         <div class="recipe-list-item">
-                            <img class="recipe-list-item-img" src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMDAzMThfNjUg%2FMDAxNTg0NDgxMTk5NTE5.tvfIV8zhWgXJAh4TL23XIysS7PujNPfyrfVMmszuRCQg.cqMblErFI-PVucXFIrYVQ2nfmhKypmSloHg338J7uc0g.JPEG.y0127k%2FIMG_7501.jpg&type=sc960_832" alt="">
+                            <img class="recipe-list-item-img" src = "https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMDAzMThfNjUg%2FMDAxNTg0NDgxMTk5NTE5.tvfIV8zhWgXJAh4TL23XIysS7PujNPfyrfVMmszuRCQg.cqMblErFI-PVucXFIrYVQ2nfmhKypmSloHg338J7uc0g.JPEG.y0127k%2FIMG_7501.jpg&type=sc960_832" height="250" alt=""></img>
                             <span class="recipe-list-item-title">레시피 이름</span>
-                            <p class="recipe-list-item-desc">여기는 요리 할때 설명입니다.</p>
                             <button class="recipe-list-item-button">보러가기</button>
                         </div>
                         <div class="recipe-list-item">
-                            <img class="recipe-list-item-img" src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMDAzMThfNjUg%2FMDAxNTg0NDgxMTk5NTE5.tvfIV8zhWgXJAh4TL23XIysS7PujNPfyrfVMmszuRCQg.cqMblErFI-PVucXFIrYVQ2nfmhKypmSloHg338J7uc0g.JPEG.y0127k%2FIMG_7501.jpg&type=sc960_832" alt="">
+                            <img class="recipe-list-item-img" src = "https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMDAzMThfNjUg%2FMDAxNTg0NDgxMTk5NTE5.tvfIV8zhWgXJAh4TL23XIysS7PujNPfyrfVMmszuRCQg.cqMblErFI-PVucXFIrYVQ2nfmhKypmSloHg338J7uc0g.JPEG.y0127k%2FIMG_7501.jpg&type=sc960_832" height="250" alt=""></img>
                             <span class="recipe-list-item-title">레시피 이름</span>
-                            <p class="recipe-list-item-desc">여기는 요리 할때 설명입니다.</p>
                             <button class="recipe-list-item-button">보러가기</button>
                         </div>
                         <div class="recipe-list-item">
-                            <img class="recipe-list-item-img" src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMDAzMThfNjUg%2FMDAxNTg0NDgxMTk5NTE5.tvfIV8zhWgXJAh4TL23XIysS7PujNPfyrfVMmszuRCQg.cqMblErFI-PVucXFIrYVQ2nfmhKypmSloHg338J7uc0g.JPEG.y0127k%2FIMG_7501.jpg&type=sc960_832" alt="">
+                            <img class="recipe-list-item-img" src = "https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMDAzMThfNjUg%2FMDAxNTg0NDgxMTk5NTE5.tvfIV8zhWgXJAh4TL23XIysS7PujNPfyrfVMmszuRCQg.cqMblErFI-PVucXFIrYVQ2nfmhKypmSloHg338J7uc0g.JPEG.y0127k%2FIMG_7501.jpg&type=sc960_832" height="250" alt=""></img>
                             <span class="recipe-list-item-title">레시피 이름</span>
-                            <p class="recipe-list-item-desc">여기는 요리 할때 설명입니다.</p>
                             <button class="recipe-list-item-button">보러가기</button>
                         </div>
                     </div>
@@ -191,6 +151,58 @@
                 </div>
         </div>
 
+        <div class="recipe-list-container">
+            <div class="recipe-title-section">
+                <h2 class="recipe-list-title">여기에 타이틀을 적어요</h2>
+                <a href="#" class="more-view">더보기</a>
+            </div>
+                <div class="recipe-list-wrapper">
+                    <div class="recipe-list">
+                        <div class="recipe-list-item">
+                            <img class="recipe-list-item-img" src = "https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMDAzMThfNjUg%2FMDAxNTg0NDgxMTk5NTE5.tvfIV8zhWgXJAh4TL23XIysS7PujNPfyrfVMmszuRCQg.cqMblErFI-PVucXFIrYVQ2nfmhKypmSloHg338J7uc0g.JPEG.y0127k%2FIMG_7501.jpg&type=sc960_832" height="250" alt=""></img>
+                            <span class="recipe-list-item-title">레시피 이름</span>
+                            <button class="recipe-list-item-button">보러가기</button>
+                        </div>
+                        <div class="recipe-list-item">
+                            <img class="recipe-list-item-img" src = "https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMDAzMThfNjUg%2FMDAxNTg0NDgxMTk5NTE5.tvfIV8zhWgXJAh4TL23XIysS7PujNPfyrfVMmszuRCQg.cqMblErFI-PVucXFIrYVQ2nfmhKypmSloHg338J7uc0g.JPEG.y0127k%2FIMG_7501.jpg&type=sc960_832" height="250" alt=""></img>
+                            <span class="recipe-list-item-title">레시피 이름</span>
+                            <button class="recipe-list-item-button">보러가기</button>
+                        </div>
+                        <div class="recipe-list-item">
+                            <img class="recipe-list-item-img" src = "https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMDAzMThfNjUg%2FMDAxNTg0NDgxMTk5NTE5.tvfIV8zhWgXJAh4TL23XIysS7PujNPfyrfVMmszuRCQg.cqMblErFI-PVucXFIrYVQ2nfmhKypmSloHg338J7uc0g.JPEG.y0127k%2FIMG_7501.jpg&type=sc960_832" height="250" alt=""></img>
+                            <span class="recipe-list-item-title">레시피 이름</span>
+                            <button class="recipe-list-item-button">보러가기</button>
+                        </div>
+                        <div class="recipe-list-item">
+                            <img class="recipe-list-item-img" src = "https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMDAzMThfNjUg%2FMDAxNTg0NDgxMTk5NTE5.tvfIV8zhWgXJAh4TL23XIysS7PujNPfyrfVMmszuRCQg.cqMblErFI-PVucXFIrYVQ2nfmhKypmSloHg338J7uc0g.JPEG.y0127k%2FIMG_7501.jpg&type=sc960_832" height="250" alt=""></img>
+                            <span class="recipe-list-item-title">레시피 이름</span>
+                            <button class="recipe-list-item-button">보러가기</button>
+                        </div>
+                        <div class="recipe-list-item">
+                            <img class="recipe-list-item-img" src = "https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMDAzMThfNjUg%2FMDAxNTg0NDgxMTk5NTE5.tvfIV8zhWgXJAh4TL23XIysS7PujNPfyrfVMmszuRCQg.cqMblErFI-PVucXFIrYVQ2nfmhKypmSloHg338J7uc0g.JPEG.y0127k%2FIMG_7501.jpg&type=sc960_832" height="250" alt=""></img>
+                            <span class="recipe-list-item-title">레시피 이름</span>
+                            <button class="recipe-list-item-button">보러가기</button>
+                        </div>
+                        <div class="recipe-list-item">
+                            <img class="recipe-list-item-img" src = "https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMDAzMThfNjUg%2FMDAxNTg0NDgxMTk5NTE5.tvfIV8zhWgXJAh4TL23XIysS7PujNPfyrfVMmszuRCQg.cqMblErFI-PVucXFIrYVQ2nfmhKypmSloHg338J7uc0g.JPEG.y0127k%2FIMG_7501.jpg&type=sc960_832" height="250" alt=""></img>
+                            <span class="recipe-list-item-title">레시피 이름</span>
+                            <button class="recipe-list-item-button">보러가기</button>
+                        </div>
+                        <div class="recipe-list-item">
+                            <img class="recipe-list-item-img" src = "https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMDAzMThfNjUg%2FMDAxNTg0NDgxMTk5NTE5.tvfIV8zhWgXJAh4TL23XIysS7PujNPfyrfVMmszuRCQg.cqMblErFI-PVucXFIrYVQ2nfmhKypmSloHg338J7uc0g.JPEG.y0127k%2FIMG_7501.jpg&type=sc960_832" height="250" alt=""></img>
+                            <span class="recipe-list-item-title">레시피 이름</span>
+                            <button class="recipe-list-item-button">보러가기</button>
+                        </div>
+                        <div class="recipe-list-item">
+                            <img class="recipe-list-item-img" src = "https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMDAzMThfNjUg%2FMDAxNTg0NDgxMTk5NTE5.tvfIV8zhWgXJAh4TL23XIysS7PujNPfyrfVMmszuRCQg.cqMblErFI-PVucXFIrYVQ2nfmhKypmSloHg338J7uc0g.JPEG.y0127k%2FIMG_7501.jpg&type=sc960_832" height="250" alt=""></img>
+                            <span class="recipe-list-item-title">레시피 이름</span>
+                            <button class="recipe-list-item-button">보러가기</button>
+                        </div>
+                    </div>
+                    <img src="<%= request.getContextPath() %>/img/right arrow.png" class="arrow">
+                </div>
+             </div>
+        </div>
         
         <!-- 더보기 버튼 -->
         <div class="more_view">

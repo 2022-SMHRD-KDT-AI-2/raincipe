@@ -1,6 +1,7 @@
 package readRecipe.controller;
 
 import java.io.IOException;
+import java.util.List;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -10,6 +11,8 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import readRecipe.model.UserVO;
+import readRecipe.model.my_recipeDAO;
+import readRecipe.model.my_recipeVO;
 import readRecipe.model.RecipeDAO;
 
 
@@ -27,9 +30,17 @@ public class LoginController extends HttpServlet{
 		RecipeDAO dao = new RecipeDAO();
 		UserVO usVO = dao.checkLogin(vo);
 		
+		
 		if(usVO != null) {
 			HttpSession session=request.getSession();
 			session.setAttribute("usVO", usVO);
+			
+			my_recipeDAO re_dao = new my_recipeDAO();
+	  		List<my_recipeVO> list =re_dao.selectAll1();
+	  		
+	  		System.out.println("testSize"+list.size());
+	  		session.setAttribute("list", list);
+		
 			
 		}
 		
