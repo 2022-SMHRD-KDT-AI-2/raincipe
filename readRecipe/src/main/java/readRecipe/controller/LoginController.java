@@ -14,6 +14,8 @@ import readRecipe.model.UserVO;
 import readRecipe.model.my_recipeDAO;
 import readRecipe.model.my_recipeVO;
 import readRecipe.model.RecipeDAO;
+import readRecipe.model.RecipeVO;
+import readRecipe.model.ShowFavoriteDAO;
 
 
 @WebServlet("/login.do")
@@ -38,9 +40,14 @@ public class LoginController extends HttpServlet{
 			my_recipeDAO re_dao = new my_recipeDAO();
 	  		List<my_recipeVO> list =re_dao.selectAll1();
 	  		
-	  		System.out.println("testSize"+list.size());
 	  		session.setAttribute("list", list);
+	  		
+	  		ShowFavoriteDAO dao2 = new ShowFavoriteDAO();
+			List<RecipeVO> ad = dao2.showfavorite(user_id); 
+			List<my_recipeVO> bd = dao2.showmyfavorite(user_id);
 		
+			session.setAttribute("ad", ad);
+			session.setAttribute("bd", bd);
 			
 		}
 		

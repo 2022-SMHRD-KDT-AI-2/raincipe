@@ -25,14 +25,14 @@ public class ShowFavoriteController extends HttpServlet{
 	
 		HttpSession session=request.getSession();
 		UserVO user =(UserVO) session.getAttribute("usVO");
-		String usid=user.getUser_id();
+		String user_id=user.getUser_id();
 		
 		
 		ShowFavoriteDAO dao = new ShowFavoriteDAO();
-		List<RecipeVO> ad = dao.showfavorite(usid); // 공공레시피
-		List<RecipeVO> bd = dao.showmyfavorite(usid);
-		request.setAttribute("ad", ad);
-		request.setAttribute("bd", bd);
+		List<RecipeVO> ad = dao.showfavorite(user_id); // 공공레시피
+		List<my_recipeVO> bd = dao.showmyfavorite(user_id);
+		session.setAttribute("ad", ad);
+		session.setAttribute("bd", bd);
 		RequestDispatcher rdd=request.getRequestDispatcher("recipe/showfavorite.jsp");
 		rdd.forward(request, response);
 		

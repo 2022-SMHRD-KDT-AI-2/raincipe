@@ -80,7 +80,7 @@
         </div>
       
         
-        <button type="submit">
+        <button type="submit" onclick="Before()">
             변경완료
         </button>
     </div>

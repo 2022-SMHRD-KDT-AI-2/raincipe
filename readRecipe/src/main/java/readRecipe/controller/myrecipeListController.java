@@ -25,8 +25,9 @@ public class myrecipeListController extends HttpServlet {
   		my_recipeDAO dao = new my_recipeDAO();
   		List<my_recipeVO> list =dao.selectAll1();
 	
-     
-      request.setAttribute("list", list);
+  	  HttpSession session=request.getSession();
+      session.setAttribute("list", list);
+      
       RequestDispatcher rd=request.getRequestDispatcher("recipe/myrecipeList.jsp");
       rd.forward(request, response);
       }

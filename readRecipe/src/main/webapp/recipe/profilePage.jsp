@@ -1,6 +1,7 @@
 <%@page import="org.apache.ibatis.reflection.SystemMetaObject"%>
 <%@page import="java.util.List"%>
 <%@page import="readRecipe.model.my_recipeVO"%>
+<%@page import="readRecipe.model.RecipeVO"%>
 <%@page import="readRecipe.model.UserVO"%>
 <%@page import="java.util.ArrayList"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
@@ -9,8 +10,10 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <% 
 	UserVO vo = (UserVO)request.getAttribute("usVO"); 
-	List<my_recipeVO> list=null;
-	list=(List<my_recipeVO>)session.getAttribute("list");
+	
+	List<my_recipeVO> list=(List<my_recipeVO>)session.getAttribute("list");
+	List<RecipeVO> searchedList=(List<RecipeVO>)session.getAttribute("ad");
+	List<my_recipeVO> searchedmyList=(List<my_recipeVO>)session.getAttribute("bd");
 %>
 <html lang="en">
 <head>
@@ -36,6 +39,15 @@
   	}
 	function goMain() {
 		location.href="/web/index.jsp";
+	}
+	function goCon(my_recipe_seq){
+		location.href="/web//myrecipeContent.do?my_recipe_seq="+my_recipe_seq;
+	}
+	function goFaCon(Recipe_seq){
+		location.href="/web//recipeContent.do?Recipe_seq="+Recipe_seq;
+	}
+	function goFaMyCon(my_recipe_seq){
+		location.href="/web//myrecipeContent.do?my_recipe_seq="+my_recipe_seq;
 	}
    </script>
 </head>
@@ -89,7 +101,7 @@
 		               			<div class="recipe-list-item">
 		                            <img class="recipe-list-item-img" src = "https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMDAzMThfNjUg%2FMDAxNTg0NDgxMTk5NTE5.tvfIV8zhWgXJAh4TL23XIysS7PujNPfyrfVMmszuRCQg.cqMblErFI-PVucXFIrYVQ2nfmhKypmSloHg338J7uc0g.JPEG.y0127k%2FIMG_7501.jpg&type=sc960_832" height="250" alt=""></img>
 		                            <span class="recipe-list-item-title">${vo.getMy_recipe_name()}</span>        
-		                            <button class="recipe-list-item-button">보러가기</button>
+		                            <button class="recipe-list-item-button" onclick="goCon(${vo.getMy_recipe_seq()})">보러가기</button>
 		                         </div>
 	                        </c:if>
            				</c:forEach>
@@ -106,47 +118,23 @@
             </div>
                 <div class="recipe-list-wrapper">
                     <div class="recipe-list">
-                        <div class="recipe-list-item">
-                            <img class="recipe-list-item-img" src = "https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMDAzMThfNjUg%2FMDAxNTg0NDgxMTk5NTE5.tvfIV8zhWgXJAh4TL23XIysS7PujNPfyrfVMmszuRCQg.cqMblErFI-PVucXFIrYVQ2nfmhKypmSloHg338J7uc0g.JPEG.y0127k%2FIMG_7501.jpg&type=sc960_832" height="250" alt=""></img> 
-                            <span class="recipe-list-item-title">레시피 이름</span>                     
-                            <button class="recipe-list-item-button">보러가기</button>
-                        </div>
-                        <div class="recipe-list-item">
-                            <img class="recipe-list-item-img" src = "https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMDAzMThfNjUg%2FMDAxNTg0NDgxMTk5NTE5.tvfIV8zhWgXJAh4TL23XIysS7PujNPfyrfVMmszuRCQg.cqMblErFI-PVucXFIrYVQ2nfmhKypmSloHg338J7uc0g.JPEG.y0127k%2FIMG_7501.jpg&type=sc960_832" height="250" alt=""></img>
-                            <span class="recipe-list-item-title">레시피 이름</span>
-                            <button class="recipe-list-item-button">보러가기</button>
-                        </div>
-                        <div class="recipe-list-item">
-                            <img class="recipe-list-item-img" src = "https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMDAzMThfNjUg%2FMDAxNTg0NDgxMTk5NTE5.tvfIV8zhWgXJAh4TL23XIysS7PujNPfyrfVMmszuRCQg.cqMblErFI-PVucXFIrYVQ2nfmhKypmSloHg338J7uc0g.JPEG.y0127k%2FIMG_7501.jpg&type=sc960_832" height="250" alt=""></img>
-                            <span class="recipe-list-item-title">레시피 이름</span>
-                            <button class="recipe-list-item-button">보러가기</button>
-                        </div>
-                        <div class="recipe-list-item">
-                            <img class="recipe-list-item-img" src = "https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMDAzMThfNjUg%2FMDAxNTg0NDgxMTk5NTE5.tvfIV8zhWgXJAh4TL23XIysS7PujNPfyrfVMmszuRCQg.cqMblErFI-PVucXFIrYVQ2nfmhKypmSloHg338J7uc0g.JPEG.y0127k%2FIMG_7501.jpg&type=sc960_832" height="250" alt=""></img>
-                            <span class="recipe-list-item-title">레시피 이름</span>
-                            <button class="recipe-list-item-button">보러가기</button>
-                        </div>
-                        <div class="recipe-list-item">
-                            <img class="recipe-list-item-img" src = "https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMDAzMThfNjUg%2FMDAxNTg0NDgxMTk5NTE5.tvfIV8zhWgXJAh4TL23XIysS7PujNPfyrfVMmszuRCQg.cqMblErFI-PVucXFIrYVQ2nfmhKypmSloHg338J7uc0g.JPEG.y0127k%2FIMG_7501.jpg&type=sc960_832" height="250" alt=""></img>
-                            <span class="recipe-list-item-title">레시피 이름</span>
-                            <button class="recipe-list-item-button">보러가기</button>
-                        </div>
-                        <div class="recipe-list-item">
-                            <img class="recipe-list-item-img" src = "https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMDAzMThfNjUg%2FMDAxNTg0NDgxMTk5NTE5.tvfIV8zhWgXJAh4TL23XIysS7PujNPfyrfVMmszuRCQg.cqMblErFI-PVucXFIrYVQ2nfmhKypmSloHg338J7uc0g.JPEG.y0127k%2FIMG_7501.jpg&type=sc960_832" height="250" alt=""></img>
-                            <span class="recipe-list-item-title">레시피 이름</span>
-                            <button class="recipe-list-item-button">보러가기</button>
-                        </div>
-                        <div class="recipe-list-item">
-                            <img class="recipe-list-item-img" src = "https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMDAzMThfNjUg%2FMDAxNTg0NDgxMTk5NTE5.tvfIV8zhWgXJAh4TL23XIysS7PujNPfyrfVMmszuRCQg.cqMblErFI-PVucXFIrYVQ2nfmhKypmSloHg338J7uc0g.JPEG.y0127k%2FIMG_7501.jpg&type=sc960_832" height="250" alt=""></img>
-                            <span class="recipe-list-item-title">레시피 이름</span>
-                            <button class="recipe-list-item-button">보러가기</button>
-                        </div>
-                        <div class="recipe-list-item">
-                            <img class="recipe-list-item-img" src = "https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMDAzMThfNjUg%2FMDAxNTg0NDgxMTk5NTE5.tvfIV8zhWgXJAh4TL23XIysS7PujNPfyrfVMmszuRCQg.cqMblErFI-PVucXFIrYVQ2nfmhKypmSloHg338J7uc0g.JPEG.y0127k%2FIMG_7501.jpg&type=sc960_832" height="250" alt=""></img>
-                            <span class="recipe-list-item-title">레시피 이름</span>
-                            <button class="recipe-list-item-button">보러가기</button>
-                        </div>
-                    </div>
+                       <c:forEach items="${ad}"  var="vo">
+		               			<div class="recipe-list-item">
+		                            <img class="recipe-list-item-img" src="${vo.getRecipe_img1()}" height="250" alt=""></img>
+		                            <span class="recipe-list-item-title">${vo.getRecipe_name()}</span>        
+		                            <button class="recipe-list-item-button" onclick="goFaCon(${vo.getRecipe_seq()})">보러가기</button>
+		                         </div>
+           				</c:forEach>
+                    
+                    
+                    <c:forEach items="${bd}"  var="vo">
+		               			<div class="recipe-list-item">
+		                           <img class="recipe-list-item-img" src = "https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMDAzMThfNjUg%2FMDAxNTg0NDgxMTk5NTE5.tvfIV8zhWgXJAh4TL23XIysS7PujNPfyrfVMmszuRCQg.cqMblErFI-PVucXFIrYVQ2nfmhKypmSloHg338J7uc0g.JPEG.y0127k%2FIMG_7501.jpg&type=sc960_832" height="250" alt=""></img>
+		                            <span class="recipe-list-item-title">${vo.getMy_recipe_name()}</span>        
+		                            <button class="recipe-list-item-button" onclick="goFaMyCon(${vo.getMy_recipe_seq()})">보러가기</button>
+		                         </div>
+           				</c:forEach>
+           				</div>
                     <img src="<%= request.getContextPath() %>/img/right arrow.png" class="arrow">
                 </div>
         </div>

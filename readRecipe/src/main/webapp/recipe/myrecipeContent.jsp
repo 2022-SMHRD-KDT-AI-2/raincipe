@@ -7,6 +7,7 @@
  <%@taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"  %>
  <% 
  	my_recipeVO vo=(my_recipeVO)request.getAttribute("vo");
+ 	String steps = vo.getMy_recipe_step();
  %>
 <!DOCTYPE html>
 <html lang="en">
@@ -31,6 +32,9 @@
 	function gomyfavorite(my_recipe_seq){
 		location.href="/web//myfavorite.do?my_recipe_seq="+my_recipe_seq;	
 	}
+	function goStep(my_recipe_seq){
+  		location.href="/web//myrecipeStep.do?my_recipe_seq="+my_recipe_seq;
+  	}
 </script>
 </head>
 <body>
@@ -46,8 +50,9 @@
             <div class="box1_1">
                 <div class="box1_int1">
                 	<%-- <img src = "${vo.recipe_img1}" class=Img></img> --%>
-                        <Button id="start" class = "btn btn-success btn-sm" onclick="goStep(${vo.recipe_seq})">레시피 시작</Button>
+                        <Button id="start" class = "btn btn-success btn-sm" onclick="goStep(${vo.my_recipe_seq})">레시피 시작</Button>
                         <button id="voice_start" class = "btn btn-success btn-sm">음성 시작</button>           
+            			<Button id="favoirte" class = "btn btn-success btn-sm" onclick="gomyfavorite(${vo.my_recipe_seq})">즐겨찾기</Button>
                 </div>
             </div>
 
@@ -66,13 +71,21 @@
             <div class="btn_area">
                 <Button class = "btn btn-info btn-sm" onclick="goUpForm(${vo.my_recipe_seq})">수정</Button>
 	 			<Button class = "btn btn-warning btn-sm" onclick="goDel(${vo.my_recipe_seq})">삭제</Button>
- 			 	<Button class = "btn btn-success btn-sm" onclick="goList()">리스트</Button>
- 			  <Button class = "btn btn-success btn-sm" onclick="gomyfavorite(${vo.my_recipe_seq})">즐겨찾기</Button>
+ 			 	<Button class = "btn btn-success btn-sm" onclick="goList()">리스트</Button>  
             </div>
 
         </div>
 
     </div>
-
+  <script>
+    	var step_str = "<%=steps%>"
+    	let step_list = step_str.split(';')
+    	console.log(step_list)
+    	$(function(){
+    		for (const step of step_list){
+    			$('#box2_int2').append("<p>"+step+"</p><br>")
+    		}
+    	})
+    </script>
 </body>
 </html>
