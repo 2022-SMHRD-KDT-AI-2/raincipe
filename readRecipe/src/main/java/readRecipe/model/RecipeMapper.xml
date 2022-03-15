@@ -28,6 +28,12 @@
       WHERE recipe_name LIKE '%' || #{searchText} || '%'
       order by recipe_seq 
    </select>
+   
+   <select id="selectMyRecipes" parameterType = "String" resultType="readRecipe.model.my_recipeVO">
+      select * from t_my_recipe
+      WHERE my_recipe_name LIKE '%' || #{searchText} || '%'
+      order by my_recipe_seq 
+   </select>
      
     <select id="checkLogin" parameterType="readRecipe.model.UserVO" resultType="readRecipe.model.UserVO">
         select * from t_user
@@ -102,11 +108,5 @@
       order by my_recipe_seq 
 	</select>
 	
-	<select id="selectMyRecipes" parameterType = "String" resultType="readRecipe.model.my_recipeVO">
-      select * from t_my_recipe
-      WHERE my_recipe_name LIKE '%' || #{searchText} || '%'
-      order by recipe_seq 
-    </select>
 
-     
 </mapper>
