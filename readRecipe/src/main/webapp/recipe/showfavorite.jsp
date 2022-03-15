@@ -73,28 +73,24 @@ List<my_recipeVO> searchedmyList=(List<my_recipeVO>)request.getAttribute("bd");
 					<% } %>
 				</ul>
 				<!-- 더보기 버튼 -->
-				<div id="js-btn-wrap" class="btn-wrap">
-					<button>
-					<a href="javascript:;" class="btn">더보기</a>
-					</button>
-				</div>
-			</div>
-		</div>
-	</div>
-<script src="<%= request.getContextPath()%>/js/favorite.js"></script>
-
-<!-- 더보기 할 수 있는 영역 -->
-		<div id="contents">
-			<div id="js-load" class="main">
 				<ul class="lists">
 					<% for(int i=0;i<searchedmyList.size();i++) {
   			 		my_recipeVO vo=searchedmyList.get(i);  %>
 					<li class="lists__item js-load">
 						<main class="scrip">
 							<div class="recipe_list">
+						<c:choose>
+						 <c:when test = "${empty vo.getMy_recipe_img1()}">
+								<a href="#" class="food_photo"> <img
+									src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMDAzMThfNjUg%2FMDAxNTg0NDgxMTk5NTE5.tvfIV8zhWgXJAh4TL23XIysS7PujNPfyrfVMmszuRCQg.cqMblErFI-PVucXFIrYVQ2nfmhKypmSloHg338J7uc0g.JPEG.y0127k%2FIMG_7501.jpg&type=sc960_832" alt="" class=food_img>
+								</a> 
+						</c:when>
+						<c:otherwise>
 								<a href="#" class="food_photo"> <img
 									src="<%= vo.getMy_recipe_img1() %>" alt="" class=food_img>
 								</a> 
+						</c:otherwise>
+						</c:choose>
 								<a href=/web/recipeContent.do?Recipe_seq=<%=vo.getMy_recipe_seq()%> class="food_explain">
 									<div class="food_title"><%= vo.getMy_recipe_name() %></div>
 									<div class="food_ingredients"><%= vo.getMy_recipe_ingredient() %></div>
@@ -113,7 +109,7 @@ List<my_recipeVO> searchedmyList=(List<my_recipeVO>)request.getAttribute("bd");
 			</div>
 		</div>
 	</div>
-<script src="<%= request.getContextPath()%>/js/favorite.js"></script>
+<script src="<%=request.getContextPath()%>/js/favorite.js"></script>
 
 
 </body>
