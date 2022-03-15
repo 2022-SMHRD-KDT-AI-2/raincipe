@@ -21,7 +21,7 @@ function load(id, cnt, btn) {
     $(girls_list + ":lt(" + girls_total_cnt + ")").addClass("active");
 }
 
- /*$(window).on('load', function () {
+ $(window).on('load', function () {
     load('#js-load2', '5');
     $("#js-btn-wrap2 .btn").on("click", function () {
         load('#js-load2', '5', '#js-btn-wrap2');
@@ -39,4 +39,4 @@ function load(id, cnt, btn) {
         $('.btn').hide()
     }
     $(girls_list + ":lt(" + girls_total_cnt + ")").addClass("active");
-}*/
+}

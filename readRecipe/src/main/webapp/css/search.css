@@ -83,6 +83,7 @@ a{
 }
 .content_container{
 	display: inline-block;
+	margin-top: 5%
 }
 
 /* 더보기 클릭 관련 */
@@ -114,11 +115,11 @@ a{
 
 .btn-wrap {
     text-align: center;
-    display: flex;
+    /* display: flex;
     justify-content: center;
     margin-top: 20px;
     margin-bottom: 20px;
-    padding-bottom: 5%;
+    padding-bottom: 5%; */
 }
 .btn{
     display: inline-block;

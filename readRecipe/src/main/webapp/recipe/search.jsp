@@ -45,8 +45,11 @@
 				</div>
 			</div>
 		</div>
+		</div>
+
 
 		<!-- 더보기 할 수 있는 영역 -->
+	<div class="content_container">
 		<div id="contents">
 			<div id="js-load" class="main">
 				<ul class="lists">
@@ -72,7 +75,11 @@
 					<a href="javascript:;" class="btn">더보기</a>
 				</div>
 			</div>
+		</div>
+		</div>	
 			
+	<div class="content_container">
+		<div id="contents2">
 			<div id="js-load2" class="main">
 				<ul class="lists">
 					<% for(int i=0;i<mySearchedList.size();i++) {
@@ -99,6 +106,7 @@
 			</div>
 		</div>
 	</div>
+
 <script src="<%= request.getContextPath()%>/js/search.js"></script>
 
 </body>
