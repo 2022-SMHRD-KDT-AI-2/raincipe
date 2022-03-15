@@ -2,9 +2,11 @@
 	pageEncoding="UTF-8"%>
 <%@page import="java.util.List"%>
 <%@page import="readRecipe.model.RecipeVO"%>
+<%@page import="readRecipe.model.my_recipeVO"%>
 <%@page import="java.util.ArrayList"%>
 <%
 	List<RecipeVO> searchedList=(List<RecipeVO>)request.getAttribute("searchedList");
+	List<my_recipeVO> mySearchedList=(List<my_recipeVO>)request.getAttribute("mySearchedList");
 %>
 <!DOCTYPE html>
 <html>
@@ -35,15 +37,12 @@
 					<img src="<%= request.getContextPath() %>/img/logo.jpg">
 				</div>
 				<!-- 검색부분 -->
-			<form method="post" name="search" action="/web/search.do">
 				<div class="searchContainer">
 					<div class="searchBox">
-						<button type="submit" class="searchbutton">
-						<img src="<%= request.getContextPath() %>/img/search.png"  alt=""> </button>
-						<input type="text" placeholder="입력한 검색어" name="searchText" >	
+						<img src="<%= request.getContextPath()%>/img/search.png">
+						<input type="text" placeholder="입력한 검색어">
 					</div>
 				</div>
-			</form>
 			</div>
 		</div>
 
@@ -63,7 +62,7 @@
 									<div class="food_title"><%= vo.getRecipe_name() %></div>
 									<div class="food_ingredients"><%= vo.getRecipe_ingredient() %></div>
 								</a>
-							</div> 
+							</div>
 						</main>
 					</li>
 					<% } %>
@@ -73,11 +72,32 @@
 					<a href="javascript:;" class="btn">더보기</a>
 				</div>
 			</div>
+			
+			<div id="js-load2" class="main">
+				<ul class="lists">
+					<% for(int i=0;i<mySearchedList.size();i++) {
+					my_recipeVO myVo= mySearchedList.get(i);  %>
+					<li class="lists__item js-load2">
+						<main class="scrip">
+							<div class="recipe_list">
+								<a href="#" class="food_photo"> <img
+									src="https://img.icons8.com/stickers/2x/gmail-new.png"" alt="" class=food_img>
+								</a> 
+								<a href=/web/recipeContent.do?Recipe_seq=<%=myVo.getMy_recipe_seq()%> class="food_explain">
+									<div class="food_title"><%= myVo.getMy_recipe_name() %></div>
+									<div class="food_ingredients"><%= myVo.getMy_recipe_ingredient() %></div>
+								</a>
+							</div>
+						</main>
+					</li>
+					<% } %>
+				</ul>
+				<!-- 더보기 버튼 -->
+				<div id="js-btn-wrap2" class="btn-wrap">
+					<a href="javascript:;" class="btn">더보기</a>
+				</div>
+			</div>
 		</div>
-		
-		
-
-		
 	</div>
 <script src="<%= request.getContextPath()%>/js/search.js"></script>
 

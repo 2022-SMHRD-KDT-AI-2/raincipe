@@ -83,5 +83,11 @@ public class my_recipeDAO {
 		session.close();
 		return usVO;
 	}
-
+	
+	public List<my_recipeVO> getMySearch(String searchText){
+		SqlSession session = sqlSessionFactory.openSession();
+		List<my_recipeVO> searched_list = session.selectList("selectMyRecipes",searchText);
+		session.close();
+        return searched_list;
+	}
 }
