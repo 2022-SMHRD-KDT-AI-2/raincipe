@@ -85,7 +85,7 @@ body {
     border-radius: 10px;
 }
 
-#start,#voice_start,#bookmark{
+#start, #voice_start, #bookmark{
     width: 20%;
     height: 125px;
     padding: 15px 0 15px;
@@ -98,7 +98,7 @@ body {
     font-family: Roboto;
     border-radius: 20px;
 }
-/*  #voice_start {
+ #favoirte {
     width: 20%;
     height: 125px;
     padding: 15px 0 15px;
@@ -112,7 +112,7 @@ body {
     border-radius: 20px;
 }
 
-#subscribe {
+/* #subscribe {
     width: 20%;
     height: 125px;
     padding: 15px 0 15px;
@@ -125,7 +125,7 @@ body {
     font-family: Roboto;
     border-radius: 20px;
 }
- */
+  */
  
 .Img{
     width: 18%;

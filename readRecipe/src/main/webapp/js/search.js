@@ -18,7 +18,7 @@ function load(id, cnt, btn) {
         recipes_total_cnt = recipes_length;
      	$('.btn').hide()
     }
-    $(girls_list + ":lt(" + girls_total_cnt + ")").addClass("active");
+    $(recipes_list + ":lt(" + recipes_total_cnt + ")").addClass("active");
 }
 
 

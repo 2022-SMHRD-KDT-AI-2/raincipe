@@ -6,8 +6,8 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
  <%@taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"  %>
  <% 
- 	my_recipeVO vo=(my_recipeVO)request.getAttribute("vo");
- 	String steps = vo.getMy_recipe_step();
+    my_recipeVO vo=(my_recipeVO)request.getAttribute("vo");
+    String steps = vo.getMy_recipe_step();
  %>
 <!DOCTYPE html>
 <html lang="en">
@@ -21,20 +21,20 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   <script type="text/javascript">
   function goList() {
-		location.href="/web//myrecipeList.do"	
-	}
-	function goDel(my_recipe_seq){
-		location.href="/web//myrecipeDelete.do?my_recipe_seq="+my_recipe_seq;
-	}
-	function goUpForm(my_recipe_seq){
-		location.href="/web//myrecipeUpdateForm.do?my_recipe_seq="+my_recipe_seq;	
-	}
-	function gomyfavorite(my_recipe_seq){
-		location.href="/web//myfavorite.do?my_recipe_seq="+my_recipe_seq;	
-	}
-	function goStep(my_recipe_seq){
-  		location.href="/web//myrecipeStep.do?my_recipe_seq="+my_recipe_seq;
-  	}
+      location.href="/web//myrecipeList.do"   
+   }
+   function goDel(my_recipe_seq){
+      location.href="/web//myrecipeDelete.do?my_recipe_seq="+my_recipe_seq;
+   }
+   function goUpForm(my_recipe_seq){
+      location.href="/web//myrecipeUpdateForm.do?my_recipe_seq="+my_recipe_seq;   
+   }
+   function gomyfavorite(my_recipe_seq){
+      location.href="/web//myfavorite.do?my_recipe_seq="+my_recipe_seq;   
+   }
+   function goStep(my_recipe_seq){
+        location.href="/web//myrecipeStep.do?my_recipe_seq="+my_recipe_seq;
+     }
 </script>
 </head>
 <body>
@@ -49,15 +49,21 @@
 
             <div class="box1_1">
                 <div class="box1_int1">
-                	<%-- <img src = "${vo.recipe_img1}" class=Img></img> --%>
+                   <img src = "https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMDAzMThfNjUg%2FMDAxNTg0NDgxMTk5NTE5.tvfIV8zhWgXJAh4TL23XIysS7PujNPfyrfVMmszuRCQg.cqMblErFI-PVucXFIrYVQ2nfmhKypmSloHg338J7uc0g.JPEG.y0127k%2FIMG_7501.jpg&type=sc960_832" class=Img></img>
                         <Button id="start" class = "btn btn-success btn-sm" onclick="goStep(${vo.my_recipe_seq})">레시피 시작</Button>
-                        <button id="voice_start" class = "btn btn-success btn-sm">음성 시작</button>           
-            			<Button id="favoirte" class = "btn btn-success btn-sm" onclick="gomyfavorite(${vo.my_recipe_seq})">즐겨찾기</Button>
+                       <button id="voice_start" class = "btn btn-success btn-sm">음성 시작</button>
+                            <c:if test="${!empty usVO}">
+                         <Button id="bookmark" class = "btn btn-success btn-sm" onclick="goFa(${vo.recipe_seq})">즐겨찾기</Button>
+                      <!-- <button id="subscribe" class = "btn btn-success btn-sm">구독 하기</button> -->
+                      </c:if>
+                      <c:if test="${empty usVO}">
+                         <Button id="bookmark" class = "btn btn-success btn-sm">즐겨찾기</Button>
+                      </c:if>
                 </div>
             </div>
 
             <div class="box2">
-            	 <div>
+                <div>
                     <div id="box2_int3">${vo.my_recipe_name}</div>
                 </div>
                 <div>
@@ -68,24 +74,23 @@
                 </div>
             </div>
 
-            <div class="btn_area">
-                <Button class = "btn btn-info btn-sm" onclick="goUpForm(${vo.my_recipe_seq})">수정</Button>
-	 			<Button class = "btn btn-warning btn-sm" onclick="goDel(${vo.my_recipe_seq})">삭제</Button>
- 			 	<Button class = "btn btn-success btn-sm" onclick="goList()">리스트</Button>  
+           <div class="btn_area">
+                <Button id="update_recipe" class = "btn btn-success btn-sm" onclick="goUp(${vo.recipe_seq})">나만의 레시피 저장</button>
+                <Button id="list"  onclick="goList()">리스트</Button>
             </div>
 
         </div>
 
     </div>
   <script>
-    	var step_str = "<%=steps%>"
-    	let step_list = step_str.split(';')
-    	console.log(step_list)
-    	$(function(){
-    		for (const step of step_list){
-    			$('#box2_int2').append("<p>"+step+"</p><br>")
-    		}
-    	})
+       var step_str = "<%=steps%>"
+       let step_list = step_str.split(';')
+       console.log(step_list)
+       $(function(){
+          for (const step of step_list){
+             $('#box2_int2').append("<p>"+step+"</p><br>")
+          }
+       })
     </script>
 </body>
 </html>
