@@ -20,7 +20,6 @@ public class MySearchController extends HttpServlet {
 		
 		  my_recipeDAO myDao = new my_recipeDAO();
 	      String searchMyText = request.getParameter("searchMyText");
-	      System.out.println(searchMyText);
 	      
 	      List<my_recipeVO> myrecipeSearch = myDao.getMyrecipeSearch(searchMyText);
 	      

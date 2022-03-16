@@ -35,7 +35,7 @@
                 <div class="searchContainer">
                   <img src="<%= request.getContextPath() %>/img/myrecipe.png" alt="" class="myrecipe_logo">
                     <div class="searchBox"> 
-                       	<button type="submit" class="searchbutton">
+                       	<button type="submit" id="searchbutton">
                         <img src="<%= request.getContextPath() %>/img/search.png" alt=""></button>
                         <input type="text" name="searchMyText" placeholder="검색어를 입력하세요">
                     </div>
@@ -50,7 +50,6 @@
   <div class="content_container">
     <div id="contents">
        <div  class="main">  
-       
           <c:forEach items="${list}"  var="vo">
                <c:if test="${usVO.user_id == vo.user_id}">
                  <div class="recipe_list">

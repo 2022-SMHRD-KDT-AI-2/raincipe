@@ -20,9 +20,30 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   <script type="text/javascript">
-  function goList() {
-      location.href="/web//myrecipeList.do"   
-   }
+	function sleep(ms) {
+		const wakeUpTime = Date.now() + ms;
+	  	while (Date.now() < wakeUpTime) {}
+	}
+
+	function goList() {
+ 		 history.back();
+	}
+	
+	function goVoice(stringStep,my_recipe_seq){
+		$.ajax({
+			url : 'http://221.156.243.131:3600/tts',
+			type : 'post',
+			data : {
+				step : stringStep
+			},
+		success : function(res){
+			sleep(1000*5)
+			location.href="/web//myVoice.do?my_recipe_seq="+my_recipe_seq;
+		},
+		error : setTimeout(function(){console('finish')},120000)
+		})
+	}
+
    function goDel(my_recipe_seq){
       location.href="/web//myrecipeDelete.do?my_recipe_seq="+my_recipe_seq;
    }
@@ -51,10 +72,9 @@
                 <div class="box1_int1">
                    <img src = "https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMDAzMThfNjUg%2FMDAxNTg0NDgxMTk5NTE5.tvfIV8zhWgXJAh4TL23XIysS7PujNPfyrfVMmszuRCQg.cqMblErFI-PVucXFIrYVQ2nfmhKypmSloHg338J7uc0g.JPEG.y0127k%2FIMG_7501.jpg&type=sc960_832" class=Img></img>
                         <Button id="start" class = "btn btn-success btn-sm" onclick="goStep(${vo.my_recipe_seq})">레시피 시작</Button>
-                       <button id="voice_start" class = "btn btn-success btn-sm">음성 시작</button>
+                       <button id="voice_start" class = "btn btn-success btn-sm" onclick="goVoice('${vo.my_recipe_step}',${vo.my_recipe_seq})">음성 시작</button>
                             <c:if test="${!empty usVO}">
-                         <Button id="bookmark" class = "btn btn-success btn-sm" onclick="goFa(${vo.recipe_seq})">즐겨찾기</Button>
-                      <!-- <button id="subscribe" class = "btn btn-success btn-sm">구독 하기</button> -->
+                         <Button id="bookmark" class = "btn btn-success btn-sm" onclick="goFa(${vo.my_recipe_seq})">즐겨찾기</Button>
                       </c:if>
                       <c:if test="${empty usVO}">
                          <Button id="bookmark" class = "btn btn-success btn-sm">즐겨찾기</Button>

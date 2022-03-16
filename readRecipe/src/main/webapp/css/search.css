@@ -63,6 +63,11 @@ html,body{
 
 }
 
+.mainSection #searchbutton{
+	background-color : white;
+	border:0;
+}
+
 .mainSection .searchContainer .searchBox img{
     width: 25px;
     height: 25px;
@@ -78,6 +83,8 @@ html,body{
     outline: none;
     font-size: 1.3rem;
 }
+
+
 a{
     text-decoration: none;
 }

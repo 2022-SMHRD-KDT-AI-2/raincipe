@@ -1,9 +1,9 @@
-<%@page import="readRecipe.model.RecipeVO"%>
+<%@page import="readRecipe.model.my_recipeVO"%>
 <%@ page language="java" contentType="text/html; charset=utf-8"
 	pageEncoding="utf-8"%>
 <%
-RecipeVO vo = (RecipeVO) request.getAttribute("vo");
-String steps = vo.getRecipe_step();
+my_recipeVO vo = (my_recipeVO) request.getAttribute("vo");
+String steps = vo.getMy_recipe_step();
 %>
 <!DOCTYPE html>
 <html lang="en">
@@ -19,9 +19,9 @@ String steps = vo.getRecipe_step();
 <script
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 <script type="text/javascript">
-function goList() {
-	location.href="/web//index.jsp"	
-}
+	function goList() {
+		location.href="/web//recipeList.do"	
+	}
   </script>
 </head>
 <body>
@@ -29,7 +29,7 @@ function goList() {
 	<div id="header">
 		<img src="<%=request.getContextPath()%>/img/꾸미기.png" id="logo">
 		<a href="#"><img
-			src="<%=request.getContextPath()%>/img/left arrow.png" alt="" onclick = "goList()"
+			src="<%=request.getContextPath()%>/img/left arrow.png" alt=""
 			class="prev"></a>
 	</div>
 	<div id="wrapper">
@@ -38,7 +38,7 @@ function goList() {
 
 			<div class="box1">
 				<div id="title">
-					<p><%=vo.getRecipe_name()%></p>
+					<p><%=vo.getMy_recipe_name()%></p>
 				</div>
 				<div>
 					<span id="step"></span>

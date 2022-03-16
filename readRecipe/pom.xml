@@ -1,13 +1,14 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>com.smhrd</groupId>
-  <artifactId>readRecipe</artifactId>
-  <packaging>war</packaging>
-  <version>0.0.1-SNAPSHOT</version>
-  <name>readRecipe Maven Webapp</name>
-  <url>http://maven.apache.org</url>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.smhrd</groupId>
+	<artifactId>readRecipe</artifactId>
+	<packaging>war</packaging>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>readRecipe Maven Webapp</name>
+	<url>http://maven.apache.org</url>
+	
 	<dependencies>
+
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
@@ -15,17 +16,20 @@
 			<scope>test</scope>
 		</dependency>
 		<!-- https://mvnrepository.com/artifact/org.apache.tomcat/tomcat-servlet-api -->
+
 		<dependency>
 			<groupId>org.apache.tomcat</groupId>
 			<artifactId>tomcat-servlet-api</artifactId>
 			<version>8.5.75</version>
 		</dependency>
+
 		<!-- https://mvnrepository.com/artifact/com.oracle.database.jdbc/ojdbc10 -->
 		<dependency>
 			<groupId>com.oracle.database.jdbc</groupId>
 			<artifactId>ojdbc10</artifactId>
 			<version>19.12.0.0</version>
 		</dependency>
+
 		<!-- https://mvnrepository.com/artifact/com.google.code.gson/gson -->
 		<dependency>
 			<groupId>com.google.code.gson</groupId>
@@ -33,44 +37,51 @@
 			<version>2.8.5</version>
 		</dependency>
 		<!-- 역시 라이브러리가 없네용 jstl도 라이브러리에요-->
-		<!-- 제발 막 그렇게 움직이지 말아줄래용 -->
-		<!-- maven에서는 그렇게 jar파일 가져와서 넣어봐야 작동안합니다. 이 pom.xml에 기술 해줘야 자동으로 다운받고 동작시키는거에요. -->
-		<!-- https://mvnrepository.com/ 필요한 라이브러리를 maven repository에서 검색해, dependency를 추가 해줘야합니다. -->
-		<!-- https://mvnrepository.com/artifact/javax.servlet.jsp.jstl/jstl -->
-		<!-- 왼쪽에 생긴거 보이죠  넵 이렇게 라이브러리 관리 하는겁니다.-->
-		
+
 		<!-- jstl.jar 다운로드 -->
 		<!-- https://mvnrepository.com/artifact/javax.servlet/jstl -->
 		<dependency>
-		    <groupId>javax.servlet</groupId>
-		    <artifactId>jstl</artifactId>
-		    <version>1.2</version>
-		</dependency>		
-		
+			<groupId>javax.servlet</groupId>
+			<artifactId>jstl</artifactId>
+			<version>1.2</version>
+		</dependency>
+
 		<!-- https://mvnrepository.com/artifact/org.apache.taglibs/taglibs-standard-jstlel -->
 		<dependency>
-		    <groupId>org.apache.taglibs</groupId>
-		    <artifactId>taglibs-standard-jstlel</artifactId>
-		    <version>1.2.5</version>
+			<groupId>org.apache.taglibs</groupId>
+			<artifactId>taglibs-standard-jstlel</artifactId>
+			<version>1.2.5</version>
 		</dependency>
-		
+
 		<!-- https://mvnrepository.com/artifact/org.mybatis/mybatis -->
 		<dependency>
-		    <groupId>org.mybatis</groupId>
-		    <artifactId>mybatis</artifactId>
-		    <version>3.5.8</version>
+			<groupId>org.mybatis</groupId>
+			<artifactId>mybatis</artifactId>
+			<version>3.5.8</version>
 		</dependency>
 
-
 	</dependencies>
-  <build>
- 
-    <finalName>readRecipe</finalName>
-    <plugins>
-    	<plugin>
-          <artifactId>maven-war-plugin</artifactId>
-          <version>3.2.2</version>
-        </plugin>
-    </plugins>
-  </build>
+	
+	<build>
+		<finalName> raincipe </finalName>
+		<pluginManagement>
+			<plugins>
+				<!-- 서버 배포 셋팅 -->
+				<plugin>
+					<groupId>org.apache.tomcat.maven</groupId>
+					<artifactId>tomcat7-maven-plugin</artifactId>
+					<version>2.2</version>
+					<configuration>
+						<server>github</server>
+						<path>/${project.build.finalName}</path>
+						<url>${my.url}</url>
+						<username>${my.username}</username>
+						<password>${my.password}</password>
+						<update>true</update>
+					</configuration>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+
+	</build>
 </project>

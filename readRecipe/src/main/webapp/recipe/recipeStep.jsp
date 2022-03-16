@@ -19,14 +19,14 @@ String steps = vo.getRecipe_step();
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 <script type="text/javascript">
 	function goList() {
-		location.href="/web//recipeList.do"	
+		location.href="/web//index.jsp"	
 	}
   </script>
 </head>
 <body>
 	<div id="header">
 		<img src="../img/꾸미기.png" id="logo"> <a href="#"><img
-			src="../img/left arrow.png" alt="" class="prev"></a>
+			src="../img/left arrow.png" alt="" class="prev" onclick = "goList()"></a>
 	</div>
 	<div id="wrapper">
 
@@ -40,7 +40,6 @@ String steps = vo.getRecipe_step();
 			</div>
 			<div class="btn_area">
 				<Button class="btn btn-success btn-sm" id="pre">이전</Button>
-				<Button class="btn btn-success btn-sm" id="list">리스트</Button>
 				<Button class="btn btn-success btn-sm" id="next">다음</Button>
 			</div>
 
@@ -48,7 +47,7 @@ String steps = vo.getRecipe_step();
 	</div>
 	<div class="panel-footer"></div>
 	<script>
-	var step_str = "<%=steps%>"
+		var step_str = "<%=steps%>"
 		let step_list = step_str.split(';')
 		cnt = 0
 		if (step_list[step_list.length - 1] == "") {
