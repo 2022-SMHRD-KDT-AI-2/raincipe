@@ -3,6 +3,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <%@ page isELIgnored="false" %>
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -35,10 +36,10 @@
             </div>
             <div class="re_my_nick">
                 <div id="re_my_nick_name">
-                    <span>행운을 빌어줘</span>
+                    <span>${usVO.user_nick}</span>
                 </div>
                 <div id="re_my_introduction">
-                    <textarea>아무쪼록 행운을 빌어줘 내 앞길에 행복을 빌어줘 계절이 흘러 되돌아오면 더 나은 내가 되어있을테니 기대해줘</textarea>
+                    <textarea>${usVO.user_intro}</textarea>
                 </div>
             </div>
         </main>

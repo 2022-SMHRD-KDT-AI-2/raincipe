@@ -18,15 +18,15 @@ String steps = vo.getMy_recipe_step();
 <script
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 <script type="text/javascript">
-	function goList() {
-		location.href="/web//myrecipeList.do"	
+	function goIndex() {
+		location.href="/web//index.jsp"	
 	}
   </script>
 </head>
 <body>
 	<div id="header">
 		<img src="../img/꾸미기.png" id="logo"> <a href="#"><img
-			src="../img/left arrow.png" alt="" class="prev"></a>
+			src="../img/left arrow.png" alt="" class="prev" onclick = "goIndex"></a>
 	</div>
 	<div id="wrapper">
 

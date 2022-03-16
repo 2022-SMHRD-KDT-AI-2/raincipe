@@ -42,14 +42,14 @@ List<my_recipeVO> searchedmyList=(List<my_recipeVO>)session.getAttribute("bd");
          <form method="post" name="search" action="/web/search.do">
             <div class="searchContainer">
                <div class="searchBox">
-                  <button type="submit" class="searchbutton">
+                  <button type="submit" id="searchbutton">
                   <img src="<%= request.getContextPath() %>/img/search.png"  alt=""> </button>
                   <input type="text" placeholder="입력한 검색어" name="searchText" >   
                </div>
             </div>
          </form>
          </div>
-      </div>
+      </div>  
 
       <!-- 더보기 할 수 있는 영역 -->
       <div id="contents">

@@ -74,10 +74,14 @@ String steps = vo.getRecipe_step();
 						onclick="goVoice('${vo.recipe_step}',${vo.recipe_seq})">
 						음성 시작</button>
 					<!-- </form> -->
-					<button id="bookmark" class="btn btn-success btn-sm">
-						<a href="">즐겨찾기</a>
-					</button>
-
+					<c:if test="${!empty usVO}">
+						<Button id="bookmark" class="btn btn-success btn-sm"
+							onclick="goFa(${vo.recipe_seq})">즐겨찾기</Button>
+						<!-- <button id="subscribe" class = "btn btn-success btn-sm">구독 하기</button> -->
+					</c:if>
+					<c:if test="${empty usVO}">
+						<Button id="bookmark" class="btn btn-success btn-sm">즐겨찾기</Button>
+					</c:if>
 				</div>
 			</div>
 
@@ -96,7 +100,8 @@ String steps = vo.getRecipe_step();
 			</div>
 
 			<div class="btn_area">
-				<button type="button" id="recipe_modify" onclick="goUp(${vo.recipe_seq})">
+				<button type="button" id="recipe_modify"
+					onclick="goUp(${vo.recipe_seq})">
 					<span><a href="">나만의 레시피 저장</a></span>
 				</button>
 
