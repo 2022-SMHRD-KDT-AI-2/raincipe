@@ -3,8 +3,8 @@
 <%@page import="readRecipe.model.my_recipeVO"%>
 <%@page import="readRecipe.model.UserVO"%>
 <%@page import="java.util.ArrayList"%>
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <%@ page isELIgnored="false" %>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%
@@ -23,21 +23,24 @@
 </head>
 <body> 
  <div class="container">
-        <!-- À¥ÆäÀÌÁö¸¦ °¨½Î´Â  -->
+        <!-- ì›¹íŽ˜ì´ì§€ë¥¼ ê°ì‹¸ëŠ”  -->
         <div class="wrapper indexPage">
-            <img src="<%= request.getContextPath() %>/img/²Ù¹Ì±â.png" alt="" class="header">
+            <img src="<%= request.getContextPath() %>/img/ê¾¸ë¯¸ê¸°.png" alt="" class="header">
             <a href="#"><img src="<%= request.getContextPath() %>/img/left arrow.png" alt="" class="prev"></a>
-            <!-- ¸ÞÀÎ¼½¼Ç -->
+            <!-- ë©”ì¸ì„¹ì…˜ -->
             <div class="mainSection">
                
-                <!-- °Ë»öºÎºÐ -->
+                <!-- ê²€ìƒ‰ë¶€ë¶„ -->
+                <form method="post" name="search" action="/web/mysearch.do">
                 <div class="searchContainer">
                   <img src="<%= request.getContextPath() %>/img/myrecipe.png" alt="" class="myrecipe_logo">
-                    <div class="searchBox">    
-                        <img src="<%= request.getContextPath() %>/img/search.png" alt="">
-                        <input type="text"  placeholder="°Ë»ö¾î¸¦ ÀÔ·ÂÇÏ¼¼¿ä">
+                    <div class="searchBox"> 
+                       	<button type="submit" class="searchbutton">
+                        <img src="<%= request.getContextPath() %>/img/search.png" alt=""></button>
+                        <input type="text" name="searchMyText" placeholder="ê²€ìƒ‰ì–´ë¥¼ ìž…ë ¥í•˜ì„¸ìš”">
                     </div>
                 </div>
+                </form>
             </div>
         </div>
    </div>

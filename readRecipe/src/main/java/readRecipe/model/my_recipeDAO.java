@@ -90,4 +90,11 @@ public class my_recipeDAO {
 		session.close();
         return searched_list;
 	}
+	
+	public List<my_recipeVO> getMyrecipeSearch(String searchMyText){
+		SqlSession session = sqlSessionFactory.openSession();
+		List<my_recipeVO> myrecipeSearch = session.selectList("MyRecipesselect",searchMyText);
+		session.close();
+        return myrecipeSearch;
+	}
 }
