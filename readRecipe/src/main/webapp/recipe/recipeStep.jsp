@@ -39,8 +39,9 @@ String steps = vo.getRecipe_step();
 				<div><span id = "step"></span></div>
 			</div>
 			<div class="btn_area">
-				<Button class="btn btn-success btn-sm" id='pre'>이전</Button>
-				<Button class="btn btn-success btn-sm" id='next'>다음</Button>
+				<Button class="btn btn-success btn-sm" id="pre">이전</Button>
+				<Button class="btn btn-success btn-sm" id="list">리스트</Button>
+				<Button class="btn btn-success btn-sm" id="next">다음</Button>
 			</div>
 
 		</div>
