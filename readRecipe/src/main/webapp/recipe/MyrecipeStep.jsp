@@ -26,7 +26,7 @@ String steps = vo.getMy_recipe_step();
 <body>
 	<div id="header">
 		<img src="../img/꾸미기.png" id="logo"> <a href="#"><img
-			src="../img/left arrow.png" alt="" class="prev" onclick = "goIndex"></a>
+			src="../img/left arrow.png" alt="" class="prev" onclick = "goIndex()"></a>
 	</div>
 	<div id="wrapper">
 

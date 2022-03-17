@@ -32,10 +32,6 @@
                     <input type="text" name="user_id" class="int" maxlength="20" placeholder="아이디 입력">
                     <img src="<%= request.getContextPath() %>/img/id.png" id="id1_img1" class="Img">
                 </span>
-                <span class="error_next_box"></span>
-                <span>
-			        	<button class="id_check">중복확인</button>    
-                </span>
                 </div>
             </div>
 			</form>    

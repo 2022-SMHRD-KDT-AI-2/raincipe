@@ -79,12 +79,12 @@
 		const audio_q = document.getElementById("searchQ")
 		
 		audio_q.onended = function(){
-			console.log("strat")
 			$.ajax({
 				url : 'http://221.156.243.131:3600/voiceSearch',
 				type : 'post',
 			success : function(res){
 				control = res
+				console.log("2")
 			},
 			error : setTimeout(function(){console('finish');},120000)
 			}).then(control => {

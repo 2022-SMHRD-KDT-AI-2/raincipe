@@ -100,9 +100,9 @@ String steps = vo.getRecipe_step();
 			</div>
 
 			<div class="btn_area">
-				<button type="button" id="recipe_modify"
-					onclick="goUp(${vo.recipe_seq})">
-					<span><a href="">나만의 레시피 저장</a></span>
+				<button type="button" id="recipe_modify" onclick="goUp(${vo.recipe_seq})"
+					>
+					<span>나만의 레시피 저장</span>
 				</button>
 
 				<Button id="list" onclick="goList()">리스트</Button>

@@ -20,13 +20,18 @@
   <link rel="stylesheet" href="<%= request.getContextPath() %>/css/myRecipeList.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script>
+	function goIndex() {
+		location.href="/web//index.jsp"	
+	}
+	</script>
 </head>
 <body> 
  <div class="container">
         <!-- 웹페이지를 감싸는  -->
         <div class="wrapper indexPage">
             <img src="<%= request.getContextPath() %>/img/꾸미기.png" alt="" class="header">
-            <a href="#"><img src="<%= request.getContextPath() %>/img/left arrow.png" alt="" class="prev"></a>
+            <a href="#"><img src="<%= request.getContextPath() %>/img/left arrow.png" alt="" class="prev" onclick= "goIndex()"></a>
             <!-- 메인섹션 -->
             <div class="mainSection">
                
