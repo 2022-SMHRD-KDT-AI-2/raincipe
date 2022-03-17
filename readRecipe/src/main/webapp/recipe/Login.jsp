@@ -28,7 +28,7 @@
 
         <!-- content-->
         <div id="content">
-			<form class="form-inline" action="/web/login.do" method="post">
+			<form class="form-inline" action="/readRecipe/login.do" method="post">
             <!-- ID -->
             <div class="form-group">
                 <h3 class="join_title">
