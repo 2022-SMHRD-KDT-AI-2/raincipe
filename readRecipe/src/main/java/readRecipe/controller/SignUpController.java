@@ -35,7 +35,7 @@ public class SignUpController extends HttpServlet {
 		
 		if (result > 0){
 			System.out.println("회원가입 성공!");
-			response.sendRedirect("/web/recipe/Login.jsp");
+			response.sendRedirect("/readRecipe/recipe/Login.jsp");
 		} else {
 			System.out.println("회원가입 실패....");
 		}

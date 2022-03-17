@@ -23,7 +23,7 @@
         <div id="content">
             <!-- ID -->
             <div>
-             <form action="/web/idCheck.do" method="post">
+             <form action="/readRecipe/idCheck.do" method="post">
                 <h3 class="join_title">
                     <label for="user_id">ID</label>
                 </h3>
@@ -86,7 +86,7 @@
                 </button>
             </div>
             <div class="btn_area">
-                <button type="button" id="btnJoincancel" onclick="location.href='/web/recipe/Login.jsp'">
+                <button type="button" id="btnJoincancel" onclick="location.href='/readRecipe/recipe/Login.jsp'">
                     <span>회원가입취소</span>
                 </button>
             </div>

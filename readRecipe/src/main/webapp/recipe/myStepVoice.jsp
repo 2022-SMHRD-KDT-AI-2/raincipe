@@ -20,7 +20,7 @@ String steps = vo.getMy_recipe_step();
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 <script type="text/javascript">
 	function goIndex() {
-		location.href="/web//index.jsp"	
+		location.href="/readRecipe//index.jsp"	
 	}
   </script>
 </head>
@@ -68,8 +68,7 @@ String steps = vo.getMy_recipe_step();
 		
 		const audio = new Audio()
 		audio.src="../sound/"+ cnt +".mp3";
-		//audio.src="C:/Users/smhrd/git/raincipe/readRecipe/src/main/webapp/sound/"+ cnt +".mp3";
-		//audio.autoplay = true;	
+
 		
 		if (step_list[step_list.length - 1] == "") {
 			step_list = step_list.slice(0, -1)

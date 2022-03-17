@@ -43,19 +43,19 @@ String steps = vo.getRecipe_step();
 			},
 		success : function(res){
 			sleep(1000*5)
-			location.href="/web//recipeVoice.do?Recipe_seq="+Recipe_seq;
+			location.href="/readRecipe//recipeVoice.do?Recipe_seq="+Recipe_seq;
 		},
 		error : setTimeout(function(){console('finish')},120000)
 		})
 	}
   	function goStep(Recipe_seq){
-  		location.href="/web//recipeStep.do?Recipe_seq="+Recipe_seq;
+  		location.href="/readRecipe//recipeStep.do?Recipe_seq="+Recipe_seq;
   	}
   	function goUp(Recipe_seq){
-  		location.href="/web//recipeUpdateForm.do?Recipe_seq="+Recipe_seq;
+  		location.href="/readRecipe//recipeUpdateForm.do?Recipe_seq="+Recipe_seq;
   	}
 	function goFa(Recipe_seq){
-  		location.href="/web//favorite.do?Recipe_seq="+Recipe_seq;
+  		location.href="/readRecipe//favorite.do?Recipe_seq="+Recipe_seq;
   	}
   </script>
 </head>

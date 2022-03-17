@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="<%= request.getContextPath() %>/css/search.css">
 <script type="text/javascript">
 	function goMain() {
-		location.href="/web/index.jsp";
+		location.href="/readRecipe/index.jsp";
 	}
 </script>
 </head>
@@ -37,7 +37,7 @@
 					<img src="<%= request.getContextPath() %>/img/logo.jpg">
 				</div>
 				<!-- 검색부분 -->
-				<form method="post" name="search" action="/web/search.do">
+				<form method="post" name="search" action="/readRecipe/search.do">
 					<div class="searchContainer">
 						<div class="searchBox">
 							<button type="submit" id="searchbutton">
@@ -66,7 +66,7 @@
 								<a href="#" class="food_photo"> <img
 									src="<%= vo.getRecipe_img1() %>" alt="" class=food_img>
 								</a> 
-								<a href=/web/recipeContent.do?Recipe_seq=<%=vo.getRecipe_seq()%> class="food_explain">
+								<a href=/readRecipe/recipeContent.do?Recipe_seq=<%=vo.getRecipe_seq()%> class="food_explain">
 									<div class="food_title"><%= vo.getRecipe_name() %></div>
 									<div class="food_ingredients"><%= vo.getRecipe_ingredient() %></div>
 								</a>

@@ -25,6 +25,6 @@ public class DeleteUserController extends HttpServlet{
 		HttpSession session = request.getSession();
 		session.invalidate(); 
 	
-		response.sendRedirect("/web/index.jsp");
+		response.sendRedirect("/readRecipe/index.jsp");
 	}
 }

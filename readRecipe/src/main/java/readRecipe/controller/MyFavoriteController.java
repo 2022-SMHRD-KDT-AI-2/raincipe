@@ -28,6 +28,6 @@ protected void service(HttpServletRequest request, HttpServletResponse response)
 	dao.myfavorite(vo);
 	//RequestDispatcher rd=request.getRequestDispatcher("recipe/favorite.jsp");
 	//rd.forward(request, response);
-	response.sendRedirect("/web/index.jsp");
+	response.sendRedirect("/readRecipe/index.jsp");
 }
 }

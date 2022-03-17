@@ -51,6 +51,6 @@ public class LoginController extends HttpServlet{
 			
 		}
 		
-		response.sendRedirect("/web/index.jsp");
+		response.sendRedirect("/readRecipe/index.jsp");
 	}
 }

@@ -33,6 +33,6 @@ public class myrecipeUpdateController extends HttpServlet{
 		
 		dao.my_recipe_update(vo);
 		
-		response.sendRedirect("/web/myrecipeList.do");
+		response.sendRedirect("/readRecipe/myrecipeList.do");
 	}
 }

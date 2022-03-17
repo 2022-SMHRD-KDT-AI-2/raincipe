@@ -38,23 +38,23 @@
 			},
 		success : function(res){
 			sleep(1000*5)
-			location.href="/web//myVoice.do?my_recipe_seq="+my_recipe_seq;
+			location.href="/readRecipe//myVoice.do?my_recipe_seq="+my_recipe_seq;
 		},
 		error : setTimeout(function(){console('finish')},120000)
 		})
 	}
 
    function goDel(my_recipe_seq){
-      location.href="/web//myrecipeDelete.do?my_recipe_seq="+my_recipe_seq;
+      location.href="/readRecipe//myrecipeDelete.do?my_recipe_seq="+my_recipe_seq;
    }
    function goUpForm(my_recipe_seq){
-      location.href="/web//myrecipeUpdateForm.do?my_recipe_seq="+my_recipe_seq;   
+      location.href="/readRecipe//myrecipeUpdateForm.do?my_recipe_seq="+my_recipe_seq;   
    }
    function gomyfavorite(my_recipe_seq){
-      location.href="/web//myfavorite.do?my_recipe_seq="+my_recipe_seq;   
+      location.href="/readRecipe//myfavorite.do?my_recipe_seq="+my_recipe_seq;   
    }
    function goStep(my_recipe_seq){
-        location.href="/web//myrecipeStep.do?my_recipe_seq="+my_recipe_seq;
+        location.href="/readRecipe//myrecipeStep.do?my_recipe_seq="+my_recipe_seq;
      }
 </script>
 </head>

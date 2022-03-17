@@ -19,7 +19,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   <script type="text/javascript">
   	function goList() {
-		location.href="/web//myrecipeList.do"	
+		location.href="/readRecipe//myrecipeList.do"	
 	}
   </script>
 </head>
@@ -32,7 +32,7 @@
     <div id="wrapper">
 
         <div id="content">
-        	<form action="/web/myrecipeUpdate.do" method="post">
+        	<form action="/readRecipe/myrecipeUpdate.do" method="post">
 	   			<input type="hidden" name="my_recipe_seq" value="${vo.my_recipe_seq}">
 	    		<input type="hidden" name="recipe_seq" value="${vo.recipe_seq}">
 	    		<input type="hidden" name="user_id" value="${usVO.user_id}">

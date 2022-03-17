@@ -19,10 +19,10 @@
 </head>
 <script type="text/javascript">
 	function goOut() {
-		location.href = "/web/logout.do";
+		location.href = "/readRecipe/logout.do";
 	}
 	function goFa(Recipe_seq) {
-		location.href = "/web//favorite.do?Recipe_seq=" + Recipe_seq;
+		location.href = "/readRecipe//favorite.do?Recipe_seq=" + Recipe_seq;
 	}
 </script>
 <body>
@@ -40,8 +40,8 @@
 			</c:if>
 			<c:if test="${!empty usVO}">
 				<div>
-					<form method="post" action="/web/profilePage.do">
-						<a href="/web/profilePage.do?user_id=${usVO.user_id}"><img
+					<form method="post" action="/readRecipe/profilePage.do">
+						<a href="/readRecipe/profilePage.do?user_id=${usVO.user_id}"><img
 							src="<%=request.getContextPath()%>/img/menu.png" alt=""
 							class="bar"></a>
 					</form>
@@ -53,7 +53,7 @@
 					<img src="<%=request.getContextPath()%>/img/logo.jpg">
 				</div>
 				<!-- 검색부분 -->
-				<form method="post" name="search" action="/web/search.do">
+				<form method="post" name="search" action="/readRecipe/search.do">
 					<div class="searchContainer">
 
 						<div class="searchBox">

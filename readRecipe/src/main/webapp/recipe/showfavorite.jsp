@@ -20,7 +20,7 @@ List<my_recipeVO> searchedmyList=(List<my_recipeVO>)session.getAttribute("bd");
     <link rel="stylesheet" href="<%= request.getContextPath() %>/css/search.css">
 <script type="text/javascript">
    function goMain() {
-      location.href="/web/index.jsp";
+      location.href="/readRecipe/index.jsp";
    }
 </script>
 </head>
@@ -39,7 +39,7 @@ List<my_recipeVO> searchedmyList=(List<my_recipeVO>)session.getAttribute("bd");
                <img src="<%= request.getContextPath() %>/img/logo.jpg" alt="">
             </div>
             <!-- 검색부분 -->
-         <form method="post" name="search" action="/web/search.do">
+         <form method="post" name="search" action="/readRecipe/search.do">
             <div class="searchContainer">
                <div class="searchBox">
                   <button type="submit" id="searchbutton">
@@ -74,7 +74,7 @@ List<my_recipeVO> searchedmyList=(List<my_recipeVO>)session.getAttribute("bd");
                         </a> 
                   </c:otherwise>
                   </c:choose>
-                        <a href=/web/myrecipeContent.do?my_recipe_seq=<%=vs.getMy_recipe_seq()%> class="food_explain">
+                        <a href=/readRecipe/myrecipeContent.do?my_recipe_seq=<%=vs.getMy_recipe_seq()%> class="food_explain">
                            <div class="food_title"><%= vs.getMy_recipe_name() %></div>
                            <div class="food_ingredients"><%= vs.getMy_recipe_ingredient() %></div>
                         </a>
@@ -92,7 +92,7 @@ List<my_recipeVO> searchedmyList=(List<my_recipeVO>)session.getAttribute("bd");
                         <a href="#" class="food_photo"> <img
                            src="<%= vo.getRecipe_img1() %>" alt="" class=food_img>
                         </a> 
-                        <a href=/web/recipeContent.do?Recipe_seq=<%=vo.getRecipe_seq()%> class="food_explain">
+                        <a href=/readRecipe/recipeContent.do?Recipe_seq=<%=vo.getRecipe_seq()%> class="food_explain">
                            <div class="food_title"><%= vo.getRecipe_name() %></div>
                            <div class="food_ingredients"><%= vo.getRecipe_ingredient() %></div>
                         </a>

@@ -14,7 +14,7 @@
   <link rel="stylesheet" href="<%= request.getContextPath() %>/css/login.css">
   <script type="text/javascript">
    	function goSign(){
-  		location.href="/web/recipe/signUp.jsp";
+  		location.href="/readRecipe/recipe/signUp.jsp";
   	}
   </script>
 </head>

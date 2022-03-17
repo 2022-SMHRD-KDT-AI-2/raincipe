@@ -26,28 +26,28 @@
   <link rel="stylesheet" href="<%= request.getContextPath() %>/css/profile.css">
   <script type="text/javascript">
    	function goOut(){
-  		location.href="/web/logout.do";
+  		location.href="/readRecipe/logout.do";
   	}
    	function goList() {
-		location.href="/web/myrecipeList.do"	
+		location.href="/readRecipe/myrecipeList.do"	
 	}
    	function favorite(){
-  		location.href="/web/showfavorite.do";
+  		location.href="/readRecipe/showfavorite.do";
    	}
    	function proUp(){
-  		location.href="/web/recipe/ProfileUpdate.jsp";
+  		location.href="/readRecipe/recipe/ProfileUpdate.jsp";
   	}
 	function goMain() {
-		location.href="/web/index.jsp";
+		location.href="/readRecipe/index.jsp";
 	}
 	function goCon(my_recipe_seq){
-		location.href="/web//myrecipeContent.do?my_recipe_seq="+my_recipe_seq;
+		location.href="/readRecipe//myrecipeContent.do?my_recipe_seq="+my_recipe_seq;
 	}
 	function goFaCon(Recipe_seq){
-		location.href="/web//recipeContent.do?Recipe_seq="+Recipe_seq;
+		location.href="/readRecipe//recipeContent.do?Recipe_seq="+Recipe_seq;
 	}
 	function goFaMyCon(my_recipe_seq){
-		location.href="/web//myrecipeContent.do?my_recipe_seq="+my_recipe_seq;
+		location.href="/readRecipe//myrecipeContent.do?my_recipe_seq="+my_recipe_seq;
 	}
    </script>
 </head>

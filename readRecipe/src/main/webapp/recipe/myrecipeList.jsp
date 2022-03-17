@@ -22,7 +22,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   <script>
 	function goIndex() {
-		location.href="/web//index.jsp"	
+		location.href="/readReicpe/index.jsp"	
 	}
 	</script>
 </head>

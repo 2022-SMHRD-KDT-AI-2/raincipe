@@ -19,6 +19,6 @@ public class myrecipedeleteController extends HttpServlet{
 		
 		dao.myrecipeDelete(my_recipe_seq); // 성공 -> 다시 리스트 페이지로 응답을 돌리기
 	
-		response.sendRedirect("/web/myrecipeList.do");
+		response.sendRedirect("/readRecipe/myrecipeList.do");
 	}
 }

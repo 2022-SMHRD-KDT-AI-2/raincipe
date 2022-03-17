@@ -14,7 +14,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   <script type="text/javascript">
    	function DelUser() {
-		location.href="/web/deleteUser.do"	
+		location.href="/readRecipe/deleteUser.do"	
 	}
    	function Before() {
 		history.back()	
@@ -91,7 +91,7 @@
         <p>탈퇴를 하시면 정보들이 전부 소멸할 수 있으니 신중하게 진행해 주세요.</p>
        
        
-       <form action="/web/deleteUser.do" method="post">
+       <form action="/readRecipe/deleteUser.do" method="post">
         	<input type="hidden" name="user_id" value="${usVO.user_id}">
         	<button type="submit" class="btn" onclick="DelUser()">
             	탈퇴

@@ -24,7 +24,7 @@ List<my_recipeVO> myrecipeSearch = (List<my_recipeVO>) request.getAttribute("myr
 	href="<%=request.getContextPath()%>/css/myRecipeList.css">
 <script type="text/javascript">
 	function goMain() {
-		location.href = "/web/index.jsp";
+		location.href = "/readRecipe/index.jsp";
 	}
 </script>
 </head>

@@ -18,6 +18,6 @@ public class LogoutController extends HttpServlet {
 		
 		HttpSession session = request.getSession();
 		session.invalidate(); // 세션 무효화
-		response.sendRedirect("/web/index.jsp");
+		response.sendRedirect("/readRecipe/index.jsp");
 	}
 }

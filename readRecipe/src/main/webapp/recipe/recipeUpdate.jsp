@@ -33,7 +33,7 @@
     <div id="wrapper">
 
         <div id="content">
-        	<form action="/web/recipeUpdate.do" method="post">
+        	<form action="/readRecipe/recipeUpdate.do" method="post">
 	    		<input type="hidden" name="recipe_seq" value="${vo.recipe_seq}">
 	    		<input type="hidden" name="user_id" value="${usVO.user_id}">
 	    		<input type="hidden" name="channel_id" value="${usVO.user_nick}">
