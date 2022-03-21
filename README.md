@@ -44,7 +44,7 @@ main/srch
 │
 ├── java/readRecipe
 │   ├── model
-│   └── Controller
+│   └── controller
 └─── webapp
     ├── raincipe (View 폴더)
     ├── css
