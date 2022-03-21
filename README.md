@@ -40,13 +40,15 @@
 # Improtant Folder
 
 ```bash
+main/srch
+│
 ├── java/readRecipe
 │   ├── model
 │   └── Controller
-├── webapp
-│   ├── raincipe (View 폴더)
-│   ├── css
-│   ├── js
-│   └── sound (Flask 폴더)
-└── run.sh
+└─── webapp
+    ├── raincipe (View 폴더)
+    ├── css
+    ├── js
+    └── sound (Flask 폴더)
+
 ``` 
