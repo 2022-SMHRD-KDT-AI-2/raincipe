@@ -40,7 +40,7 @@
 # Improtant Folder
 
 ```bash
-main/srch
+main/src
 │
 ├── java/readRecipe
 │   ├── model
