@@ -13,7 +13,7 @@
 
 ## Server
 - Tomcat
-- Falsk
+- Flask
 
 ## Database
 - Oracle
